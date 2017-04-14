@@ -1,0 +1,12 @@
+<div 
+    class="switch"
+    :class="{ tiny:tiny , small:small , large:large }"
+    :style="style"
+    >
+  <input class="switch-input" :id="id" :type="type" :name="name">
+  <label class="switch-paddle" :for="id">
+    <span class="show-for-sr">{{ alt }}</span>
+    <span v-if="on" class="switch-active" aria-hidden="true">{{ on }}</span>
+    <span v-if="off" class="switch-inactive" aria-hidden="true">{{ off }}</span>
+  </label>
+</div>
