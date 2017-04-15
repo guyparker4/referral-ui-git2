@@ -40,6 +40,18 @@ var mappingModule = function(){
         console.log('a.accmenuitem');
         mul.get( 'iprint.a.accmenuitem' , resolve , this );
     });
+    Vue.component( 'a.drillmenu' , function( resolve , reject ){
+        console.log('a.drillmenu');
+        mul.get( 'iprint.a.drillmenu' , resolve , this );
+    });
+    Vue.component( 'a.drillsubmenu' , function( resolve , reject ){
+        console.log('a.drillsubmenu');
+        mul.get( 'iprint.a.drillsubmenu' , resolve , this );
+    });
+    Vue.component( 'a.drillmenuitem' , function( resolve , reject ){
+        console.log('a.drillmenuitem');
+        mul.get( 'iprint.a.drillmenuitem' , resolve , this );
+    });
 }
 
 module.exports = mappingModule;
