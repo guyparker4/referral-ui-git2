@@ -1,5 +1,5 @@
 <li role="menuitem" 
     class="is-submenu-item is-dropdown-submenu-item"
     :class="{ active:active }">
-    <a href="{{href}}">{{title}}</a>
+    <a href="{{href}}"><i v-if="icon" :class="icon"></i><span>{{title}}</span></a>
 </li>
