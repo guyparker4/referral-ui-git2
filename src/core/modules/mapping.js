@@ -28,6 +28,18 @@ var mappingModule = function(){
         console.log('a.menuitem');
         mul.get( 'iprint.a.menuitem' , resolve , this );
     });
+    Vue.component( 'a.accmenu' , function( resolve , reject ){
+        console.log('a.accmenu');
+        mul.get( 'iprint.a.accmenu' , resolve , this );
+    });
+    Vue.component( 'a.accsubmenu' , function( resolve , reject ){
+        console.log('a.accsubmenu');
+        mul.get( 'iprint.a.accsubmenu' , resolve , this );
+    });
+    Vue.component( 'a.accmenuitem' , function( resolve , reject ){
+        console.log('a.accmenuitem');
+        mul.get( 'iprint.a.accmenuitem' , resolve , this );
+    });
 }
 
 module.exports = mappingModule;

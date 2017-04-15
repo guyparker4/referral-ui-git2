@@ -1,0 +1,12 @@
+<li 
+    role="menuitem"
+    class="is-accordion-submenu-parent"
+    :class="{'is-active':active}"
+    aria-haspopup="true"
+    aria-label="{{title}}">
+    <a @click="visible=!visible">{{title}}</a>
+    <ul v-if="visible" class="menu vertical nested submenu is-accordion-submenu" :class="{'is-active':visible}" role="menu">
+        <slot></slot>
+    </ul>
+</li>
+            
