@@ -16,6 +16,18 @@ var mappingModule = function(){
         console.log('a.switch');
         mul.get( 'iprint.a.switch' , resolve , this );
     });
+    Vue.component( 'a.menu' , function( resolve , reject ){
+        console.log('a.menu');
+        mul.get( 'iprint.a.menu' , resolve , this );
+    });
+    Vue.component( 'a.submenu' , function( resolve , reject ){
+        console.log('a.submenu');
+        mul.get( 'iprint.a.submenu' , resolve , this );
+    });
+    Vue.component( 'a.menuitem' , function( resolve , reject ){
+        console.log('a.menuitem');
+        mul.get( 'iprint.a.menuitem' , resolve , this );
+    });
 }
 
 module.exports = mappingModule;
