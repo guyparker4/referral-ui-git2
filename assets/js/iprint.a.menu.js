@@ -1,1 +1,1 @@
-"use strict";mul.set("iprint.a.menu",[],{template:'<ul class="dropdown menu" :class="{ vertical:vertical }" role="menubar">\n    <slot></slot>\n</ul>',props:["vertical"]});
+"use strict";mul.set("iprint.a.menu",[],{template:"<ul class=\"dropdown menu\" :class=\"{ vertical:vertical , 'align-right':alignRight, 'align-left':alignLeft, expanded:expanded, 'align-centered':alignCenter, simple:simple }\" role=\"menubar\">\n    <slot></slot>\n</ul>",props:["vertical","alignRight","alignLeft","alignCenter","expanded","simple"]});
