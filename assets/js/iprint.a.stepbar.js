@@ -1,0 +1,1 @@
+"use strict";mul.set("iprint.a.stepbar",[],{template:'<div style="background-color: rgb(42,55,81);height: 2.8em;">\n    <h4 style="position: relative;top: 0.4em;padding-left: 12%;color: #ffffff;">{{step}}</h4>\n</div>',props:["step"]});

@@ -1,0 +1,1 @@
+"use strict";mul.set("iprint.p.home",[],{template:'<div>\n    <m.header></m.header>\n    <img alt="Harland Clarke" :src="bgImg"/>\n</div>\n',props:["bgImg"]});
