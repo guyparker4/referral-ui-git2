@@ -56,6 +56,7 @@ var mappingModule = function(){
         console.log('a.topbar');
         mul.get( 'iprint.a.topbar' , resolve , this );
     });
+<<<<<<< HEAD
     Vue.component( 'a.col' , function( resolve , reject ){
         console.log('a.col');
         mul.get( 'iprint.a.col' , resolve , this );
@@ -64,6 +65,20 @@ var mappingModule = function(){
         console.log('a.row');
         mul.get( 'iprint.a.row' , resolve , this );
     });
+=======
+	Vue.component( 'm.header' , function( resolve , reject ){
+		console.log('m.header');
+		mul.get( 'iprint.m.header' , resolve , this );
+	});
+	Vue.component( 'p.home' , function( resolve , reject ){
+		console.log('p.home');
+		mul.get( 'iprint.p.home' , resolve , this );
+	});
+	Vue.component( 'a.stepbar' , function( resolve , reject ){
+		console.log('a.stepbar');
+		mul.get( 'iprint.a.stepbar' , resolve , this );
+	});
+>>>>>>> d3a0cf8f200e7f1b7ff63a06da1c871df7556301
 }
 
 module.exports = mappingModule;

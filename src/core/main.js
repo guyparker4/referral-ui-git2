@@ -14,6 +14,7 @@ app._ = {};
 
 app.Vue = Vue;
 app.Vue.config.debug = true;
+Vue.config.devtools = true
 
 //async
 app.mul = require( './modules/mul' );
