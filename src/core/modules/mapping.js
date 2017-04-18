@@ -52,6 +52,10 @@ var mappingModule = function(){
         console.log('a.drillmenuitem');
         mul.get( 'iprint.a.drillmenuitem' , resolve , this );
     });
+    Vue.component( 'a.topbar' , function( resolve , reject ){
+        console.log('a.topbar');
+        mul.get( 'iprint.a.topbar' , resolve , this );
+    });
 }
 
 module.exports = mappingModule;
