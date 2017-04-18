@@ -2,15 +2,27 @@ mul.set( "iprint.a.col" , [] , {
     template: embed( './templates/iprint.a.col.html' ),
     props:{
         "style":String,
-        "small":{
+        "s":{
              type:String,
              default:''
         },
-        "medium":{
+        "m":{
              type:String,
              default:''
         },
-        "large":{
+        "l":{
+             type:String,
+             default:''
+        },
+        "so":{
+             type:String,
+             default:''
+        },
+        "mo":{
+             type:String,
+             default:''
+        },
+        "lo":{
              type:String,
              default:''
         }
@@ -18,14 +30,23 @@ mul.set( "iprint.a.col" , [] , {
     computed: {
         classObject: function () {
             var d = {};
-            if( this.small ){
-                d[ 'small-' + this.small ] = true;
+            if( this.s ){
+                d[ 'small-' + this.s ] = true;
             }
-            if( this.medium ){
-                d[ 'medium-' + this.medium ] = true;
+            if( this.m ){
+                d[ 'medium-' + this.m ] = true;
             }
-            if( this.large ){
-                d[ 'large-' + this.large ] = true;
+            if( this.l ){
+                d[ 'large-' + this.l ] = true;
+            }
+            if( this.so ){
+                d[ 'small-offset' + this.so ] = true;
+            }
+            if( this.mo ){
+                d[ 'medium-offset' + this.mo ] = true;
+            }
+            if( this.lo ){
+                d[ 'large-offset' + this.lo ] = true;
             }
             return d;
         }
