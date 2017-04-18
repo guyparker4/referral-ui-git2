@@ -56,6 +56,14 @@ var mappingModule = function(){
         console.log('a.topbar');
         mul.get( 'iprint.a.topbar' , resolve , this );
     });
+    Vue.component( 'a.col' , function( resolve , reject ){
+        console.log('a.col');
+        mul.get( 'iprint.a.col' , resolve , this );
+    });
+    Vue.component( 'a.row' , function( resolve , reject ){
+        console.log('a.row');
+        mul.get( 'iprint.a.row' , resolve , this );
+    });
 }
 
 module.exports = mappingModule;

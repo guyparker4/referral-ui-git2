@@ -1,0 +1,1 @@
+"use strict";mul.set("iprint.a.col",[],{template:'<div\n    class="columns"\n    :class="classes"\n    :style="style"\n><slot></slot></div>',props:["small","medium","large"],data:function(){var s={};return s.classes={},this.small&&(s.classes["small-"+small]=!0),this.medium&&(s.classes["medium-"+medium]=!0),this.large&&(s.classes["large-"+large]=!0),s}});

@@ -1,0 +1,1 @@
+"use strict";mul.set("iprint.a.row",[],{template:'<div\n    class="row"\n    :class="{ colum:column , expanded:expanded}"\n    :style="style"\n><slot></slot></div>',props:["style","expanded","column"]});

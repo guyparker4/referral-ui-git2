@@ -47,6 +47,12 @@ try{
     app.model.version = 'v.' + app.version + '.???';
 }
 
+Vue.mixin({
+    created(){
+      this.version="1.2.1";
+    }
+})
+
 
 app.methods.resize();
 window.addEventListener( 'resize' , app.methods.debounce( app.methods.resize , 50 ) );
