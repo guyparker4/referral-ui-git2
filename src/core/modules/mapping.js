@@ -64,6 +64,8 @@ var mappingModule = function(){
         console.log('a.row');
         mul.get( 'iprint.a.row' , resolve , this );
     });
+
+    
 	Vue.component( 'm.header' , function( resolve , reject ){
 		console.log('m.header');
 		mul.get( 'iprint.m.header' , resolve , this );

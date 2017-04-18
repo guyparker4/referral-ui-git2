@@ -1,18 +1,33 @@
 mul.set( "iprint.a.col" , [] , {
     template: embed( './templates/iprint.a.col.html' ),
-    props:[ "small" , "medium" , "large" ],
-    data(){
-        var d = {};
-        d.classes = {};
-        if( this.small ){
-            d.classes[ 'small-' + small ] = true;
+    props:{
+        "style":String,
+        "small":{
+             type:String,
+             default:''
+        },
+        "medium":{
+             type:String,
+             default:''
+        },
+        "large":{
+             type:String,
+             default:''
         }
-        if( this.medium ){
-            d.classes[ 'medium-' + medium ] = true;
+    },
+    computed: {
+        classObject: function () {
+            var d = {};
+            if( this.small ){
+                d[ 'small-' + this.small ] = true;
+            }
+            if( this.medium ){
+                d[ 'medium-' + this.medium ] = true;
+            }
+            if( this.large ){
+                d[ 'large-' + this.large ] = true;
+            }
+            return d;
         }
-        if( this.large ){
-            d.classes[ 'large-' + large ] = true;
-        }
-        return d;
     }
 });
