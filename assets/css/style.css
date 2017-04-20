@@ -1,0 +1,100 @@
+/*header*/
+.nav-font li a{
+    color: #000000;
+    font-size: 0.9em;
+}
+.header-nav-smaller li a, .footer-font li a{
+    font-size: .7em;
+}
+.footer-font li a {
+    color: #b0b0b0;
+}
+.nav-font li a:hover{
+    color: rgb(46,125,203)
+}
+.nav-font li a:active{
+    color: rgb(60,156,251)
+}
+
+/*description*/
+.description-font h6{
+    font-weight: bold;
+}
+.description-font span{
+    display: block;
+    font-size: 0.9em;
+}
+
+.other-product-font span{
+    font-size: 0.9em;
+}
+.card-checkbox {
+    padding: 1em 0 5em 0;
+    color: #b0b0b0;
+}
+.header-spacer{
+    height: 130.7px;
+}
+.checkout-btn {
+    position: fixed;
+    top: 6.5em;
+    background-color: rgb(255, 255, 255);
+    z-index: 10;
+    margin-right: 12%;
+}
+.address-align span{
+    display: block;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.check-style-align a{
+    width: 45%;
+    margin-bottom:0.5em !important;
+}
+.quantity-btn a{
+    width: 100%;
+    margin-bottom: 0;
+}
+.quantity-btn span{
+    font-size: 0.9em;
+    color: #b0b0b0;
+}
+
+/*fraudrecovery*/
+.fraud-recovery-block {
+    margin: 2em 0;
+}
+.fraud-recovery-block span{
+    font-size: 0.9em;
+    display: block;
+}
+
+
+/*orderchecks btn*/
+.orderchecks-btns{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

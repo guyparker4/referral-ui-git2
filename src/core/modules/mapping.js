@@ -65,7 +65,7 @@ var mappingModule = function(){
         mul.get( 'iprint.a.row' , resolve , this );
     });
 
-    
+
 	Vue.component( 'm.header' , function( resolve , reject ){
 		console.log('m.header');
 		mul.get( 'iprint.m.header' , resolve , this );
@@ -74,9 +74,69 @@ var mappingModule = function(){
 		console.log('p.home');
 		mul.get( 'iprint.p.home' , resolve , this );
 	});
-	Vue.component( 'a.stepbar' , function( resolve , reject ){
-		console.log('a.stepbar');
-		mul.get( 'iprint.a.stepbar' , resolve , this );
+	Vue.component( 'm.stepbar' , function( resolve , reject ){
+		console.log('m.stepbar');
+		mul.get( 'iprint.m.stepbar' , resolve , this );
+	});
+	Vue.component( 'm.footer' , function( resolve , reject ){
+		console.log('m.footer');
+		mul.get( 'iprint.m.footer' , resolve , this );
+	});
+	Vue.component( 'p.welcome' , function( resolve , reject ){
+		console.log('p.welcome');
+		mul.get( 'iprint.p.welcome' , resolve , this );
+	});
+	Vue.component( 'p.orderchecks' , function( resolve , reject ){
+		console.log('p.orderchecks');
+		mul.get( 'iprint.p.orderchecks' , resolve , this );
+	});
+	Vue.component( 'm.addressblock' , function( resolve , reject ){
+		console.log('m.addressblock');
+		mul.get( 'iprint.m.addressblock' , resolve , this );
+	});
+	Vue.component( 'm.checknumber' , function( resolve , reject ){
+		console.log('m.checknumber');
+		mul.get( 'iprint.m.checknumber' , resolve , this );
+	});
+	Vue.component( 'm.checkoutbtn' , function( resolve , reject ){
+		console.log('m.checkoutbtn');
+		mul.get( 'iprint.m.checkoutbtn' , resolve , this );
+	});
+	Vue.component( 'm.checkstyle' , function( resolve , reject ){
+		console.log('m.checkstyle');
+		mul.get( 'iprint.m.checkstyle' , resolve , this );
+	});
+	Vue.component( 'm.description' , function( resolve , reject ){
+		console.log('m.description');
+		mul.get( 'iprint.m.description' , resolve , this );
+	});
+	Vue.component( 'm.fraudrecovery' , function( resolve , reject ){
+		console.log('m.fraudrecovery');
+		mul.get( 'iprint.m.fraudrecovery' , resolve , this );
+	});
+	Vue.component( 'm.orderchecksbtns' , function( resolve , reject ){
+		console.log('m.orderchecksbtns');
+		mul.get( 'iprint.m.orderchecksbtns' , resolve , this );
+	});
+	Vue.component( 'm.otherproducts' , function( resolve , reject ){
+		console.log('m.otherproducts');
+		mul.get( 'iprint.m.otherproducts' , resolve , this );
+	});
+	Vue.component( 'm.quantity' , function( resolve , reject ){
+		console.log('m.quantity');
+		mul.get( 'iprint.m.quantity' , resolve , this );
+	});
+	Vue.component( 'm.stepindicator' , function( resolve , reject ){
+		console.log('m.stepindicator');
+		mul.get( 'iprint.m.stepindicator' , resolve , this );
+	});
+	Vue.component( 'm.occarousel' , function( resolve , reject ){
+		console.log('m.occarousel');
+		mul.get( 'iprint.m.occarousel' , resolve , this );
+	});
+	Vue.component( 'a.card' , function( resolve , reject ){
+		console.log('a.card');
+		mul.get( 'iprint.a.card' , resolve , this );
 	});
 }
 
