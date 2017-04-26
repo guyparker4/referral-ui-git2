@@ -138,6 +138,30 @@ var mappingModule = function(){
 		console.log('a.card');
 		mul.get( 'iprint.a.card' , resolve , this );
 	});
+	Vue.component( 'm.centeraccent' , function( resolve , reject ){
+		console.log('m.centeraccent');
+		mul.get( 'iprint.m.centeraccent' , resolve , this );
+	});
+	Vue.component( 'm.customfont' , function( resolve , reject ){
+		console.log('m.customfont');
+		mul.get( 'iprint.m.customfont' , resolve , this );
+	});
+	Vue.component( 'm.leftaccent' , function( resolve , reject ){
+		console.log('m.leftaccent');
+		mul.get( 'iprint.m.leftaccent' , resolve , this );
+	});
+	Vue.component( 'm.oneliners' , function( resolve , reject ){
+		console.log('m.oneliners');
+		mul.get( 'iprint.m.oneliners' , resolve , this );
+	});
+	Vue.component( 'a.modal' , function( resolve , reject ){
+		console.log('a.modal');
+		mul.get( 'iprint.a.modal' , resolve , this );
+	});
+	Vue.component( 'm.newproduct' , function( resolve , reject ){
+		console.log('m.newproduct');
+		mul.get( 'iprint.m.newproduct' , resolve , this );
+	});
 }
 
 module.exports = mappingModule;

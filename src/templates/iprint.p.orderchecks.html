@@ -13,12 +13,20 @@
             <div style="height: 8em;"></div>
             <m.stepindicator></m.stepindicator>
             <div style="padding: 0 1em;">
-                <m.addressblock></m.addressblock>
-                <m.checknumber></m.checknumber>
-                <m.checkstyle></m.checkstyle>
-                <m.quantity></m.quantity>
-                <m.fraudrecovery></m.fraudrecovery>
-                <m.orderchecksbtns></m.orderchecksbtns>
+                <div v-if="step == 'CHECK OPTIONS'">
+                    <m.addressblock></m.addressblock>
+                    <m.checknumber></m.checknumber>
+                    <m.checkstyle></m.checkstyle>
+                    <m.quantity></m.quantity>
+                    <m.fraudrecovery></m.fraudrecovery>
+                </div>
+                <m.customfont v-if="step == 'PERSONALIZE'"></m.customfont>
+                <m.leftaccent v-if="step == 'PERSONALIZE' || step == 'Change Left Accent'"></m.leftaccent>
+                <div v-if="step == 'PERSONALIZE'">
+                    <m.centeraccent></m.centeraccent>
+                    <m.oneliners></m.oneliners>
+                </div>
+                <m.orderchecksbtns v-if="step != 'Change Left Accent'"></m.orderchecksbtns>
             </div>
         </a.col>
     </a.row>

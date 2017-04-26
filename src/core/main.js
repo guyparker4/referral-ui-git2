@@ -38,6 +38,9 @@ app.model.errors = [];
 app.model.scroll = {};
 app.model.history = [];
 
+//global variable
+app.model.step = "CHECK OPTIONS";
+
 app.model.current = JSON.parse( document.getElementById( 'app_basepage' ).text );
 //}catch(e){
 //    app.model.current = [];

@@ -2,4 +2,44 @@
     <m.header step="LOGIN"></m.header>
     <img alt="Harland Clarke" :src="bgImg"/>
     <m.footer></m.footer>
+    <a.modal class="home-modal">
+        <div slot="header">
+            <h6 style="margin-bottom: 0">Ready for more checks?</h6>
+            <span style="font-size: 0.7em;">Provide your checking account information to get started.</span>
+        </div>
+        <div slot="body">
+            <form>
+                <a.row>
+                    <a.col s="12">
+                        <label>
+                            Account Number*
+                            <input type="number" placeholder="Enter Account Number">
+                        </label>
+                    </a.col>
+                </a.row>
+                <a.row>
+                    <a.col s="12">
+                        <label>
+                            Routing Number *
+                            <input type="number" placeholder="Enter Routing Number">
+                        </label>
+                    </a.col>
+                </a.row>
+                <a.row>
+                    <a.col s="12">
+                        <fieldset>
+                            <legend>Account Type</legend>
+                            <input type="radio" name="accountType" value="Personal" id="personalAcc" required><label for="personalAcc">Personal</label>
+                            <input type="radio" name="accountType" value="Business" id="businesslAcc"><label for="businesslAcc">Business</label>
+                        </fieldset>
+                    </a.col>
+                </a.row>
+                <a.row>
+                    <a.col s="6" sp="6">
+                        <a.button style="width:100%;margin-bottom: 0;" title="CONTINUE"></a.button>
+                    </a.col>
+                </a.row>
+            </form>
+        </div>
+    </a.modal>
 </div>
