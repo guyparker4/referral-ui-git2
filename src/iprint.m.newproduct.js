@@ -8,12 +8,14 @@ mul.set( "iprint.m.newproduct" , [] , {
 		}
 	},
 	methods:{
+		beforeCloseModal:function () {
+			this.confirm = true;
+		},
 		closeModal:function () {
 			document.getElementsByClassName("newproduct-modal")[0].style.display = "none";
 		},
 		add:function () {
 			this.addIt = "ADDED!";
-			this.confirm = true;
 		}
 	}
 });
