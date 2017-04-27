@@ -214,3 +214,32 @@ input[type="number"] {
 .newproduct-confirm .modal-container{
     width: 450px;
 }
+.catalog-font a{
+    font-size: 0.7em;
+}
+.catalog-font a{
+    color: rgb(106,115,125);
+}
+.catalog-font a:hover, .catalog-font a:focus {
+    color: #1468a0;
+}
+.catalog-categories li{
+    list-style: none;
+    text-align: center;
+}
+.catalog-categories p{
+    margin: 0.5em 0 1em 0;
+}
+.catalog-categories ul{
+    margin-left:0;
+}
+.catalog-modal {
+    background-color: transparent;
+    z-index: 1;
+    position: relative;
+    color:gray;
+}
+.catalog-modal .modal-container {
+    background-color: rgb(218,218,218);
+    width: inherit;
+}
