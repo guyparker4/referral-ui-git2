@@ -1,0 +1,85 @@
+<div>
+    <m.header step="SHOP THE CATALOG"></m.header>
+    <div class="header-spacer"></div>
+    <a.row>
+        <a.col sc="1" s="10">
+            <a.row style="margin: 2em 0;">
+                <a.col s="8">
+                    <h4>Browse all our products to find the right ones for you.</h4>
+                </a.col>
+                <a.col s="4">
+                    <input type="search" placeholder="Search">
+                </a.col>
+            </a.row>
+            <m.carousel src="../../assets/png/demo-catalog.png"></m.carousel>
+        </a.col>
+    </a.row>
+
+    <div class="top-bar">
+        <a.row>
+            <a.col sc="1" s="10">
+                <div class="menu-centered catalog-font">
+                    <ul class="menu">
+                        <li><a href="#">CHECKS</a></li>
+                        <li>  |  </li>
+                        <li><a href="#">HOME OFFICE</a></li>
+                        <li>  |  </li>
+                        <li><a href="#">COVER AND WALLETS</a></li>
+                        <li>  |  </li>
+                        <li><a href="#">ADDRESS LABELS</a></li>
+                        <li>  |  </li>
+                        <li><a href="#">DEPOSIT TICKETS</a></li>
+                        <li>  |  </li>
+                        <li><a href="#">STAMPS</a></li>
+                        <li>  |  </li>
+                        <li><a href="#">OTHER ACCESSORIES</a></li>
+                    </ul>
+                </div>
+            </a.col>
+        </a.row>
+    </div>
+
+    <a.row class="catalog-categories">
+        <a.col sc="1" s="10">
+            <div>
+                <h4 style="margin: 2em 0 1em 0;">Popular Check Categories</h4>
+                <ul>
+                    <li v-for="check in categories">
+                        <a.col s="3">
+                            <img :src="check.src">
+                            <p>{{check.name}}</p>
+                        </a.col>
+                    </li>
+                </ul>
+            </div>
+        </a.col>
+    </a.row>
+
+    <a.row style="text-align: center;">
+        <a.button style="margin: 1em 0 3em 0;" title="SHOP ALL CHECKS"></a.button>
+    </a.row>
+
+    <a.row style="margin-bottom: 4em;">
+        <a.col sc="1" s="10">
+            <a.col s="5">
+                <a.modal class="catalog-modal">
+                    <div slot="body" style="text-align: center;">
+                        <div>
+                            <span>PROMOTIONAL CONTENT</span>
+                        </div>
+                    </div>
+                </a.modal>
+            </a.col>
+            <a.col s="7">
+                <a.modal class="catalog-modal">
+                    <div slot="body" style="text-align: center;">
+                        <div>
+                            <span>PROMOTIONAL CONTENT</span>
+                        </div>
+                    </div>
+                </a.modal>
+            </a.col>
+        </a.col>
+    </a.row>
+    <m.footer></m.footer>
+</div>

@@ -130,9 +130,9 @@ var mappingModule = function(){
 		console.log('m.stepindicator');
 		mul.get( 'iprint.m.stepindicator' , resolve , this );
 	});
-	Vue.component( 'm.occarousel' , function( resolve , reject ){
-		console.log('m.occarousel');
-		mul.get( 'iprint.m.occarousel' , resolve , this );
+	Vue.component( 'm.carousel' , function( resolve , reject ){
+		console.log('m.carousel');
+		mul.get( 'iprint.m.carousel' , resolve , this );
 	});
 	Vue.component( 'a.card' , function( resolve , reject ){
 		console.log('a.card');
@@ -161,6 +161,10 @@ var mappingModule = function(){
 	Vue.component( 'm.newproduct' , function( resolve , reject ){
 		console.log('m.newproduct');
 		mul.get( 'iprint.m.newproduct' , resolve , this );
+	});
+	Vue.component( 'p.catalog' , function( resolve , reject ){
+		console.log('p.catalog');
+		mul.get( 'iprint.p.catalog' , resolve , this );
 	});
 }
 
