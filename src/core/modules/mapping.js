@@ -166,6 +166,10 @@ var mappingModule = function(){
 		console.log('p.catalog');
 		mul.get( 'iprint.p.catalog' , resolve , this );
 	});
+	Vue.component( 'm.pagination' , function( resolve , reject ){
+		console.log('m.pagination');
+		mul.get( 'iprint.m.pagination' , resolve , this );
+	});
 }
 
 module.exports = mappingModule;
