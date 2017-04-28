@@ -223,15 +223,18 @@ input[type="number"] {
 .catalog-font a:hover, .catalog-font a:focus {
     color: #1468a0;
 }
-.catalog-categories li{
+.catalog-list li{
     list-style: none;
     text-align: center;
 }
-.catalog-categories p{
+.catalog-list p{
     margin: 0.5em 0 1em 0;
 }
-.catalog-categories ul{
+.catalog-list ul{
     margin-left:0;
+}
+.catalog-list a{
+    width: 100%;
 }
 .catalog-modal {
     background-color: transparent;
