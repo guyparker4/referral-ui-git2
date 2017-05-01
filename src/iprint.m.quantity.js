@@ -1,4 +1,9 @@
 mul.set( "iprint.m.quantity" , [] , {
 	template: embed( './templates/iprint.m.quantity.html' ),
-	props:[]
+	props:{
+		manual:{
+			type: Boolean,
+			default: false
+		}
+	}
 });

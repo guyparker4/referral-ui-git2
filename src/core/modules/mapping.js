@@ -170,6 +170,14 @@ var mappingModule = function(){
 		console.log('m.pagination');
 		mul.get( 'iprint.m.pagination' , resolve , this );
 	});
+	Vue.component( 'p.checkdetails' , function( resolve , reject ){
+		console.log('p.checkdetails');
+		mul.get( 'iprint.p.checkdetails' , resolve , this );
+	});
+	Vue.component( 'p.productdetails' , function( resolve , reject ){
+		console.log('p.productdetails');
+		mul.get( 'iprint.p.productdetails' , resolve , this );
+	});
 }
 
 module.exports = mappingModule;

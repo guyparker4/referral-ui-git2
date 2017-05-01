@@ -1,36 +1,36 @@
-<div class="other-product-font" style="border:1px solid rgb(208,208,208); margin: 2em 0;width: 110%">
+<div class="other-product-font" style="border:2px solid rgb(208,208,208); margin: 2em 0;width: 110%">
     <div style="padding: 2em">
-        <h6>GOES WELL WITH</h6>
+        <h6>{{title}}</h6>
         <a.row>
             <a.col s="4">
-                <a.card></a.card>
+                <a.card :src="src"></a.card>
                 <span>Name of Product*</span>
                 <span>$10.99</span>
-                <label @click="addNewProduct($event)" class="card-checkbox" for="prod1">
+                <label v-if="checkbox" @click="addNewProduct($event)" class="card-checkbox" for="prod1">
                     <input type="checkbox" id="prod1">
                     <span>Add to cart</span>
                 </label>
             </a.col>
             <a.col s="4">
-                <a.card></a.card>
+                <a.card :src="src"></a.card>
                 <span>Name of Product*</span>
                 <span>$10.99</span>
-                <label @click="addNewProduct($event)" class="card-checkbox" for="prod2">
+                <label v-if="checkbox" @click="addNewProduct($event)" class="card-checkbox" for="prod2">
                     <input type="checkbox" id="prod2">
                     <span>Add to cart</span>
                 </label>
             </a.col>
             <a.col s="4">
-                <a.card></a.card>
+                <a.card :src="src"></a.card>
                 <span>Name of Product*</span>
                 <span>$10.99</span>
-                <label @click="addNewProduct($event)" class="card-checkbox" for="prod3">
+                <label v-if="checkbox" @click="addNewProduct($event)" class="card-checkbox" for="prod3">
                     <input type="checkbox" id="prod3">
                     <span>Add to cart</span>
                 </label>
             </a.col>
         </a.row>
-        <span style="color: #b0b0b0;">*You'll have a chance to customize this item before checkout.</span>
+        <span v-if="msg" style="color: #b0b0b0;">*You'll have a chance to customize this item before checkout.</span>
     </div>
     <m.newproduct></m.newproduct>
 </div>

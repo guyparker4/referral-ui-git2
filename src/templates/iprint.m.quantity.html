@@ -1,17 +1,22 @@
 <div class="quantity-btn">
     <h6>Quantity</h6>
     <a.row style="text-align: center">
-        <a.col s="4">
-            <a.button style="margin-right: 5%" hollow="1" title="120"></a.button>
-            <span>$24.99</span>
-        </a.col>
-        <a.col s="4">
-            <a.button style="margin-right: 5%" hollow="1" secondary="1"  title="240"></a.button>
-            <span>$54.99</span>
-        </a.col>
-        <a.col s="4">
-            <a.button hollow="1" secondary="1"  title="400"></a.button>
-            <span>$74.99</span>
-        </a.col>
+        <div  v-if="!manual">
+            <a.col s="4">
+                <a.button style="margin-right: 5%" hollow="1" title="120"></a.button>
+                <span>$24.99</span>
+            </a.col>
+            <a.col s="4">
+                <a.button style="margin-right: 5%" hollow="1" secondary="1"  title="240"></a.button>
+                <span>$54.99</span>
+            </a.col>
+            <a.col s="4">
+                <a.button hollow="1" secondary="1"  title="400"></a.button>
+                <span>$74.99</span>
+            </a.col>
+        </div>
+        <div v-else style="padding-left: 1em;">
+            <input type="number" placeholder="701" style="width: 6em;text-align: center;">
+        </div>
     </a.row>
 </div>

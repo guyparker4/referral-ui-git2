@@ -1,6 +1,17 @@
 mul.set( "iprint.m.otherproducts" , [] , {
 	template: embed( './templates/iprint.m.otherproducts.html' ),
-	props:[],
+	props:{
+		src: String,
+		title: String,
+		msg: {
+			type: Boolean,
+			default: false
+		},
+		checkbox: {
+			type: Boolean,
+			default: false
+		}
+		},
 	data(){
 		return app.model;
 	},
