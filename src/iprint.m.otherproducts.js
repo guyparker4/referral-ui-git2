@@ -10,6 +10,10 @@ mul.set( "iprint.m.otherproducts" , [] , {
 		checkbox: {
 			type: Boolean,
 			default: false
+		},
+		classObj: {
+			type: Object,
+			default: {}
 		}
 		},
 	data(){

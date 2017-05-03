@@ -178,6 +178,14 @@ var mappingModule = function(){
 		console.log('p.productdetails');
 		mul.get( 'iprint.p.productdetails' , resolve , this );
 	});
+	Vue.component( 'p.shoppingcart' , function( resolve , reject ){
+		console.log('p.shoppingcart');
+		mul.get( 'iprint.p.shoppingcart' , resolve , this );
+	});
+	Vue.component( 'm.summary' , function( resolve , reject ){
+		console.log('m.summary');
+		mul.get( 'iprint.m.summary' , resolve , this );
+	});
 }
 
 module.exports = mappingModule;
