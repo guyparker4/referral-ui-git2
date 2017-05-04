@@ -1,0 +1,39 @@
+<div>
+    <m.header step="ORDER CHECKS"></m.header>
+    <div class="header-spacer"></div>
+    <a.row style="padding-top: 1em;">
+        <a.col sp="1" s="5">
+            <a href="#" style="font-size: .9em;color: #000000;">< Back</a>
+            <m.carousel style="padding: 1em 0;" src="../../assets/png/demo-carousel.png">
+                <div slot="header">
+                    <h5 style="display: inline;">Tropical Eyes</h5>
+                    <a href="#" style="font-size: .9em;float: right;">Change Design</a>
+                </div>
+            </m.carousel>
+            <m.description></m.description>
+            <m.otherproducts src="../../assets/png/demo-products.png" title="GOES WELL WITH" msg=true checkbox= "true"></m.otherproducts>
+        </a.col>
+        <a.col sl="1" s="4">
+            <m.checkoutbtn></m.checkoutbtn>
+            <div style="height: 8em;"></div>
+            <m.stepindicator></m.stepindicator>
+            <div style="padding: 0 1em;">
+                <div v-if="step == 'CHECK OPTIONS'">
+                    <m.addressblock></m.addressblock>
+                    <m.checknumber></m.checknumber>
+                    <m.checkstyle></m.checkstyle>
+                    <m.quantity></m.quantity>
+                    <m.fraudrecovery></m.fraudrecovery>
+                </div>
+                <m.customfont v-if="step == 'PERSONALIZE'"></m.customfont>
+                <m.leftaccent v-if="step == 'PERSONALIZE' || step == 'Change Left Accent'"></m.leftaccent>
+                <div v-if="step == 'PERSONALIZE'">
+                    <m.centeraccent></m.centeraccent>
+                    <m.oneliners></m.oneliners>
+                </div>
+                <m.orderchecksbtns v-if="step != 'Change Left Accent'"></m.orderchecksbtns>
+            </div>
+        </a.col>
+    </a.row>
+    <m.footer></m.footer>
+</div>

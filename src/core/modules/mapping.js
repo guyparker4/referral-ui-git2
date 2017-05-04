@@ -60,9 +60,17 @@ var mappingModule = function(){
         console.log('a.row');
         mul.get( 'iprint.a.row' , resolve , this );
     });
+<<<<<<< HEAD
     Vue.component( 'a.test' , function( resolve , reject ){
 		console.log('a.test');
 		mul.get( 'iprint.a.test' , resolve , this );
+=======
+
+
+	Vue.component( 'm.header' , function( resolve , reject ){
+		console.log('m.header');
+		mul.get( 'iprint.m.header' , resolve , this );
+>>>>>>> 45ccdbb49ef9280680d729ca0610bc835e025f31
 	});
 
 
@@ -71,6 +79,7 @@ var mappingModule = function(){
 		console.log('o.promoheader');
 		mul.get( 'iprint.o.promoheader' , resolve , this );
 	});
+<<<<<<< HEAD
 
     Vue.component( 'o.toolbar' , function( resolve , reject ){
         console.log('o.toolbar');
@@ -80,6 +89,119 @@ var mappingModule = function(){
     Vue.component( 'o.cart' , function( resolve , reject ){
 		console.log('o.cart');
 		mul.get( 'iprint.o.cart' , resolve , this );
+=======
+	Vue.component( 'm.stepbar' , function( resolve , reject ){
+		console.log('m.stepbar');
+		mul.get( 'iprint.m.stepbar' , resolve , this );
+	});
+	Vue.component( 'm.footer' , function( resolve , reject ){
+		console.log('m.footer');
+		mul.get( 'iprint.m.footer' , resolve , this );
+	});
+	Vue.component( 'p.welcome' , function( resolve , reject ){
+		console.log('p.welcome');
+		mul.get( 'iprint.p.welcome' , resolve , this );
+	});
+	Vue.component( 'p.orderchecks' , function( resolve , reject ){
+		console.log('p.orderchecks');
+		mul.get( 'iprint.p.orderchecks' , resolve , this );
+	});
+	Vue.component( 'm.addressblock' , function( resolve , reject ){
+		console.log('m.addressblock');
+		mul.get( 'iprint.m.addressblock' , resolve , this );
+	});
+	Vue.component( 'm.checknumber' , function( resolve , reject ){
+		console.log('m.checknumber');
+		mul.get( 'iprint.m.checknumber' , resolve , this );
+	});
+	Vue.component( 'm.checkoutbtn' , function( resolve , reject ){
+		console.log('m.checkoutbtn');
+		mul.get( 'iprint.m.checkoutbtn' , resolve , this );
+	});
+	Vue.component( 'm.checkstyle' , function( resolve , reject ){
+		console.log('m.checkstyle');
+		mul.get( 'iprint.m.checkstyle' , resolve , this );
+	});
+	Vue.component( 'm.description' , function( resolve , reject ){
+		console.log('m.description');
+		mul.get( 'iprint.m.description' , resolve , this );
+	});
+	Vue.component( 'm.fraudrecovery' , function( resolve , reject ){
+		console.log('m.fraudrecovery');
+		mul.get( 'iprint.m.fraudrecovery' , resolve , this );
+	});
+	Vue.component( 'm.orderchecksbtns' , function( resolve , reject ){
+		console.log('m.orderchecksbtns');
+		mul.get( 'iprint.m.orderchecksbtns' , resolve , this );
+	});
+	Vue.component( 'm.otherproducts' , function( resolve , reject ){
+		console.log('m.otherproducts');
+		mul.get( 'iprint.m.otherproducts' , resolve , this );
+	});
+	Vue.component( 'm.quantity' , function( resolve , reject ){
+		console.log('m.quantity');
+		mul.get( 'iprint.m.quantity' , resolve , this );
+	});
+	Vue.component( 'm.stepindicator' , function( resolve , reject ){
+		console.log('m.stepindicator');
+		mul.get( 'iprint.m.stepindicator' , resolve , this );
+	});
+	Vue.component( 'm.carousel' , function( resolve , reject ){
+		console.log('m.carousel');
+		mul.get( 'iprint.m.carousel' , resolve , this );
+	});
+	Vue.component( 'a.card' , function( resolve , reject ){
+		console.log('a.card');
+		mul.get( 'iprint.a.card' , resolve , this );
+	});
+	Vue.component( 'm.centeraccent' , function( resolve , reject ){
+		console.log('m.centeraccent');
+		mul.get( 'iprint.m.centeraccent' , resolve , this );
+	});
+	Vue.component( 'm.customfont' , function( resolve , reject ){
+		console.log('m.customfont');
+		mul.get( 'iprint.m.customfont' , resolve , this );
+	});
+	Vue.component( 'm.leftaccent' , function( resolve , reject ){
+		console.log('m.leftaccent');
+		mul.get( 'iprint.m.leftaccent' , resolve , this );
+	});
+	Vue.component( 'm.oneliners' , function( resolve , reject ){
+		console.log('m.oneliners');
+		mul.get( 'iprint.m.oneliners' , resolve , this );
+	});
+	Vue.component( 'a.modal' , function( resolve , reject ){
+		console.log('a.modal');
+		mul.get( 'iprint.a.modal' , resolve , this );
+	});
+	Vue.component( 'm.newproduct' , function( resolve , reject ){
+		console.log('m.newproduct');
+		mul.get( 'iprint.m.newproduct' , resolve , this );
+	});
+	Vue.component( 'p.catalog' , function( resolve , reject ){
+		console.log('p.catalog');
+		mul.get( 'iprint.p.catalog' , resolve , this );
+	});
+	Vue.component( 'm.pagination' , function( resolve , reject ){
+		console.log('m.pagination');
+		mul.get( 'iprint.m.pagination' , resolve , this );
+	});
+	Vue.component( 'p.checkdetails' , function( resolve , reject ){
+		console.log('p.checkdetails');
+		mul.get( 'iprint.p.checkdetails' , resolve , this );
+	});
+	Vue.component( 'p.productdetails' , function( resolve , reject ){
+		console.log('p.productdetails');
+		mul.get( 'iprint.p.productdetails' , resolve , this );
+	});
+	Vue.component( 'p.shoppingcart' , function( resolve , reject ){
+		console.log('p.shoppingcart');
+		mul.get( 'iprint.p.shoppingcart' , resolve , this );
+	});
+	Vue.component( 'm.summary' , function( resolve , reject ){
+		console.log('m.summary');
+		mul.get( 'iprint.m.summary' , resolve , this );
+>>>>>>> 45ccdbb49ef9280680d729ca0610bc835e025f31
 	});
 
 

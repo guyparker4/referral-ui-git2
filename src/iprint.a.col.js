@@ -99,31 +99,31 @@ mul.set( "iprint.a.col" , [] , {
                 d[ 'large-' + this.l ] = true;
             }
             if( this.so ){
-                d[ 'small-offset' + this.so ] = true;
+                d[ 'small-offset-' + this.so ] = true;
             }
             if( this.mo ){
-                d[ 'medium-offset' + this.mo ] = true;
+                d[ 'medium-offset-' + this.mo ] = true;
             }
             if( this.lo ){
-                d[ 'large-offset' + this.lo ] = true;
+                d[ 'large-offset-' + this.lo ] = true;
             }
             if( this.sp ){
-                d[ 'small-push' + this.so ] = true;
+                d[ 'small-push-' + this.sp ] = true;
             }
             if( this.mp ){
-                d[ 'medium-push' + this.mo ] = true;
+                d[ 'medium-push-' + this.mp ] = true;
             }
             if( this.lp ){
-                d[ 'large-push' + this.lo ] = true;
+                d[ 'large-push-' + this.lp ] = true;
             }
             if( this.sl ){
-                d[ 'small-pull' + this.so ] = true;
+                d[ 'small-pull-' + this.sl ] = true;
             }
             if( this.ml ){
-                d[ 'medium-pull' + this.mo ] = true;
+                d[ 'medium-pull-' + this.ml ] = true;
             }
             if( this.ll ){
-                d[ 'large-pull' + this.lo ] = true;
+                d[ 'large-pull-' + this.ll ] = true;
             }
             if( this.sc ){
                 d[ 'small-centered' ] = true;
