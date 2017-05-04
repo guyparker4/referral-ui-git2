@@ -8,10 +8,6 @@ var mappingModule = function(){
         console.log('a.buttongroup');
         mul.get( 'iprint.a.buttongroup' , resolve , this );
     });
-    Vue.component( 'o.promoheader' , function( resolve , reject ){
-        console.log('a.promoheader');
-        mul.get( 'iprint.o.promoheader' , resolve , this );
-    });
     Vue.component( 'a.switch' , function( resolve , reject ){
         console.log('a.switch');
         mul.get( 'iprint.a.switch' , resolve , this );
@@ -64,20 +60,31 @@ var mappingModule = function(){
         console.log('a.row');
         mul.get( 'iprint.a.row' , resolve , this );
     });
+    Vue.component( 'a.test' , function( resolve , reject ){
+		console.log('a.test');
+		mul.get( 'iprint.a.test' , resolve , this );
+	});
 
-    
-	Vue.component( 'm.header' , function( resolve , reject ){
-		console.log('m.header');
-		mul.get( 'iprint.m.header' , resolve , this );
+
+
+    Vue.component( 'o.promoheader' , function( resolve , reject ){
+		console.log('o.promoheader');
+		mul.get( 'iprint.o.promoheader' , resolve , this );
 	});
-	Vue.component( 'p.home' , function( resolve , reject ){
-		console.log('p.home');
-		mul.get( 'iprint.p.home' , resolve , this );
+
+    Vue.component( 'o.toolbar' , function( resolve , reject ){
+        console.log('o.toolbar');
+        mul.get( 'iprint.o.toolbar' , resolve , this );
+    });
+
+    Vue.component( 'o.cart' , function( resolve , reject ){
+		console.log('o.cart');
+		mul.get( 'iprint.o.cart' , resolve , this );
 	});
-	Vue.component( 'a.stepbar' , function( resolve , reject ){
-		console.log('a.stepbar');
-		mul.get( 'iprint.a.stepbar' , resolve , this );
-	});
+
+
+
+
 }
 
 module.exports = mappingModule;
