@@ -13,80 +13,13 @@
 
 <body>
     <div id="app">
-        <o.promoheader></o.promoheader>
-        <o.toolbar></o.toolbar>
-        <o.productmenu></o.productmenu>
-        <component :is="item.type" :data="item" :key="index" v-for="(item, index) in current"></component>
         <o.footer></o.footer>
     </div>
 </body>
 
 </html>
 <script id="app_version" type="text/template">001</script>
-<script id="app_basepage" type="text/template">[
-    {
-        "type": "o.cart",
-        "order": {
-            "state": "INCOMPLETE",
-            "commerceItems": [
-                {
-                    "productDisplayName": "Premier Three-to-a-Page Binder - Burgundy",
-                    "state": "INITIAL",
-                    "productId": "prod1620002_prd",
-                    "id": "ci8525000001",
-                    "priceInfo": {
-                        "currencyCode": "USD",
-                        "amount": 24.99
-                    },
-                    "quantity": 100,
-                    "catalogRefId": "sku1590001_sk"
-                },
-                {
-                    "productDisplayName": "S-5115 VOID Convenience Stamp",
-                    "state": "INITIAL",
-                    "productId": "prod1570128_prd",
-                    "id": "ci8525000003",
-                    "priceInfo": {
-                        "currencyCode": "USD",
-                        "amount": 19.99
-                    },
-                    "quantity": 100,
-                    "catalogRefId": "sku1570007_sk"
-                }
-            ],
-            "priceInfo": {
-                "total": 44.98,
-                "subtotal": 44.98,
-                "discountAmount": 0,
-                "shipping": 0,
-                "tax": 0
-            },
-            "totalCommerceItemCount": 2
-        },
-        "recommended":[
-            { 
-                "name":"The Big Chill Cooler",
-                "price":4.07,
-                "image":"http://www.iprint.com/images/shared/catalog200x200/BAGS1470174028/800_009fff_p1-200x200.jpg"
-            },
-            { 
-                "name":"Zipper Sports Pack",
-                "price":2.63,
-                "image":"http://www.iprint.com/images/shared/catalog200x200/BAGS1470253990/800_5583be_p1-200x200.jpg"
-            },
-            { 
-                "name":"Icy Bright Cooler Tote",
-                "price":11.29,
-                "image":"http://www.iprint.com/images/shared/catalog200x200/BAGS1470174013/800_373133_p1-200x200.jpg"
-            },
-            { 
-                "name":"Economic Force Briefcase",
-                "price":6.81,
-                "image":"http://www.iprint.com/images/shared/catalog200x200/BAGS1470173892/800_b42e30_p1-200x200.jpg"
-            }
-        ]
-    }
-]</script>
+<script id="app_basepage" type="text/template">[]</script>
 <script id="app_catalog" type="text/template">{
   "catalogData": [
     {
@@ -121,7 +54,7 @@
         }
       ],
       "sortOrder": 10,
-      "name": "Checks",
+      "name": "Test Document",
       "success": true,
       "url": "/estore/Checks/catalog450002_ctlg.ct"
     },

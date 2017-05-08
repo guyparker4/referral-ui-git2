@@ -39,9 +39,16 @@ app.model.scroll = {};
 app.model.history = [];
 
 //global variable
-app.model.step = "CHECK OPTIONS";
 
-app.model.current = JSON.parse( document.getElementById( 'app_basepage' ).text );
+app.model.current = null
+if( document.getElementById( 'app_basepage' ) ){
+    app.model.current = JSON.parse( document.getElementById( 'app_basepage' ).text );
+}
+
+app.model.catalog = null
+if( document.getElementById( 'app_catalog' ) ){
+    app.model.catalog = JSON.parse( document.getElementById( 'app_catalog' ).text );
+}
 //}catch(e){
 //    app.model.current = [];
 //}

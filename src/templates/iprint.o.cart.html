@@ -143,36 +143,12 @@
         <div class="cart-crossSell-container">
             <h4>Recommended Products</h4>
             <ul class="cart-matching-products row small-up-1 medium-up-2 large-up-3 xlarge-up-4 xxlarge-up-4">
-                <li class="row">
-                    <a href="/estore/PROMOTIONAL+PRODUCTS/Bags/The+Big+Chill+Cooler/prod3130055_prd.p?navAction=jump&amp;networkId=store" class="grid_16 alpha omega">
-                        <img src="/images/shared/catalog200x200/BAGS1470174028/800_009fff_p1-200x200.jpg" alt="The Big Chill Cooler" height="120"
+                <li v-for="recom in data.recommended" class="row">
+                    <a :href="recom.url" class="grid_16 alpha omega">
+                        <img :src="recom.image" :alt="recom.name" height="120"
                             width="120" data-pin-nopin="true">
-                        <h5>The Big Chill Cooler</h5>
-                        <span class="pd-price">as low as <strong>$4.07</strong></span>
-                    </a>
-                </li>
-                <li class="row">
-                    <a href="/estore/PROMOTIONAL+PRODUCTS/Bags/Zipper+Sport+Pack/prod3130045_prd.p?navAction=jump&amp;networkId=store" class="grid_16 alpha omega">
-                        <img src="/images/shared/catalog200x200/BAGS1470253990/800_5583be_p1-200x200.jpg" alt="Zipper Sport Pack" height="120" width="120">
-                        <h5>Zipper Sport Pack</h5>
-                        <span class="pd-price">as low as <strong>$2.63</strong></span>
-                    </a>
-                </li>
-                <li class="row">
-                    <a href="/estore/PROMOTIONAL+PRODUCTS/Bags/Icy+Bright+Cooler+Tote/prod3130054_prd.p?navAction=jump&amp;networkId=store" class="grid_16 alpha omega">
-                        <img src="/images/shared/catalog200x200/BAGS1470174013/800_373133_p1-200x200.jpg" alt="Icy Bright Cooler Tote" height="120"
-                            width="120">
-                        <h5>Icy Bright Cooler Tote</h5>
-                        <span class="pd-price">as low as <strong>$11.29</strong></span>
-                    </a>
-                </li>
-                <li class="row">
-                    <a href="/estore/PROMOTIONAL+PRODUCTS/Bags/Economic+Force+Briefcase/prod3130047_prd.p?navAction=jump&amp;networkId=store"
-                        class="grid_16 alpha omega">
-                        <img src="/images/shared/catalog200x200/BAGS1470173892/800_b42e30_p1-200x200.jpg" alt="Economic Force Briefcase" height="120"
-                            width="120">
-                        <h5>Economic Force Briefcase</h5>
-                        <span class="pd-price">as low as <strong>$6.81</strong></span>
+                        <h5>{{recom.name}}</h5>
+                        <span class="pd-price">as low as <strong>${{recom.price}}</strong></span>
                     </a>
                 </li>
             </ul>
