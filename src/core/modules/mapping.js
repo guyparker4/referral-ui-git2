@@ -62,10 +62,7 @@ var mappingModule = function(){
         console.log('a.row');
         mul.get( 'iprint.a.row' , resolve , this );
     });
-    Vue.component( 'a.test' , function( resolve , reject ){
-		console.log('a.test');
-		mul.get( 'iprint.a.test' , resolve , this );
-	});
+    
 
     Vue.component( 'o.promoheader' , function( resolve , reject ){
 		console.log('o.promoheader');
