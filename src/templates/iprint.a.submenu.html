@@ -7,7 +7,7 @@
     @mouseleave="visible=false"
     :aria-label="title">
         <a :href="href">{{title}}</a>
-        <ul class="menu submenu is-dropdown-submenu first-sub vertical" :class="{'js-dropdown-active':visible}" role="menu">
+        <ul class="menu submenu is-dropdown-submenu first-sub vertical animated100 fadeIn" :class="{'js-dropdown-active':visible}" role="menu">
             <slot></slot>
         </ul>
 </li>

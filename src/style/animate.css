@@ -13,6 +13,28 @@
   animation-fill-mode: both;
 }
 
+.animated100 {
+  animation-duration: 0.1s;
+  animation-fill-mode: both;
+}
+.animated200 {
+  animation-duration: 0.2s;
+  animation-fill-mode: both;
+}
+.animated300 {
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+}
+.animated400 {
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+}
+.animated500 {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+
+
 .animated.infinite {
   animation-iteration-count: infinite;
 }
