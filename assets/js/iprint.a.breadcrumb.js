@@ -1,0 +1,1 @@
+"use strict";mul.set("iprint.a.breadcrumb",[],{template:'<li>\n    <strong v-if="active"><a :href="href">{{title}}</a></strong>\n    <a v-else :href="href">{{title}}</a>\n</li>',props:["active","href","title"]});

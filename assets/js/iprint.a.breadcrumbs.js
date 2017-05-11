@@ -1,1 +1,1 @@
-"use strict";mul.set("iprint.a.breadcrumbs",[],{template:'<nav aria-label="You are here:" role="navigation">\n  <ul class="breadcrumbs">\n    <li><strong><a href="#">SIGN IN</a></strong></li>\n    <li><a href="#">SHIPPING</a></li>\n    <li><a href="#">BILLING</a></li>\n    <li><a href="#">PAYMENT & PLACE ORDER</a></li>\n  </ul>\n</nav>'});
+"use strict";mul.set("iprint.a.breadcrumbs",[],{template:'<nav aria-label="You are here:" role="navigation">\n  <ul class="breadcrumbs">\n    <slot></slot>\n  </ul>\n</nav>'});

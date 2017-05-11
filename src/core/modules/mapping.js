@@ -81,6 +81,11 @@ var mappingModule = function(){
         console.log('a.breadcrumbs');
         mul.get( 'iprint.a.breadcrumbs' , resolve , this );
     });
+
+    Vue.component( 'a.breadcrumb' , function( resolve , reject ){
+        console.log('a.breadcrumb');
+        mul.get( 'iprint.a.breadcrumb' , resolve , this );
+    });
     
     Vue.component( 'o.promoheader' , function( resolve , reject ){
 		console.log('o.promoheader');
