@@ -1,12 +1,12 @@
 <li 
     role="menuitem"
-    class="is-accordion-submenu-parent"
+    class="is-drilldown-submenu-parent"
     :class="{'is-active':active}"
     aria-haspopup="true"
     :aria-label="title">
-    <a @click="visible=!visible">{{title}}</a>
-    <ul v-if="visible" class="menu submenu is-drilldown-submenu drilldown-submenu-cover-previous" :class="{'is-active':visible}" role="menu" :aria-hidden="!visible">
-        <li @click="visible=!visible" class="js-drilldown-back"><a>Back</a></li>
+    <a @click="show()">{{title}}</a>
+    <ul class="menu submenu is-drilldown-submenu drilldown-submenu-cover-previous" :class="{ 'is-active':isactive, 'invisible':!visible, 'is-closing':closing }" role="menu" :aria-hidden="!visible">
+        <li @click="close()" class="js-drilldown-back"><a>Back</a></li>
         <slot></slot>
     </ul>
 </li>
