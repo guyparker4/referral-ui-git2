@@ -1,6 +1,14 @@
 var gulp = require('gulp');
 var shell = require('gulp-shell');
 var babel = require('gulp-babel');
+var cssnano = require('gulp-cssnano');
+var postcss = require('gulp-postcss');
+var rename = require("gulp-rename");
+var postcssImport = require('postcss-import');
+var autoprefixer = require('autoprefixer');
+var customProperties = require("postcss-custom-properties");
+var calc = require("postcss-calc")
+var processors = [ postcssImport(), customProperties(), calc() , autoprefixer({browsers: ['> 1% in US, not op_mini all']}) ];
 var gulpIgnore = require('gulp-ignore');
 var del = require('del');
 var runSequence = require('run-sequence');
@@ -53,4 +61,12 @@ gulp.task( 'build' , function( cb ){
     
 gulp.task( 'prod' , function( callback ){
     runSequence( 'clean' , 'libs' , 'core' , 'build' , callback );
+});
+
+gulp.task( 'css' , function(){
+    return gulp.src( [ './src/style/App.css' ] )
+    .pipe( postcss( processors ) )
+    .pipe( cssnano() )
+    .pipe( rename( "style.css" ) )
+    .pipe( gulp.dest( 'assets/css/' ) );
 });
