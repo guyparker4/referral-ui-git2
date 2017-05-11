@@ -1,1 +1,0 @@
-"use strict";mul.set("iprint.a.test",[],{template:'<div\n    :class="classes"\n    @click="log"\n    ><slot></slot></div>',data:function(){return{classes:{}}},props:{"ted-prop":String},methods:{log:function(){console.log(this)}}});
