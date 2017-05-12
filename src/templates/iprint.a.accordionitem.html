@@ -1,6 +1,6 @@
 <li class="accordion-item" :class="{ 'is-active':active }">
     <a @click="activate()" class="accordion-title">{{title}}</a>
-    <div v-if="active" class="accordion-content" style="display:block">
+    <div v-if="active" class="accordion-content animated300 fadeIn" style="display:block">
         <slot></slot>
     </div>
 </li>
