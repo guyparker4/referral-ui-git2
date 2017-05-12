@@ -101,6 +101,21 @@ var mappingModule = function(){
         console.log('a.callout');
         mul.get( 'iprint.a.callout' , resolve , this );
     });
+
+    Vue.component( 'a.card' , function( resolve , reject ){
+        console.log('a.card');
+        mul.get( 'iprint.a.card' , resolve , this );
+    });
+
+    Vue.component( 'a.cardheader' , function( resolve , reject ){
+        console.log('a.cardheader');
+        mul.get( 'iprint.a.cardheader' , resolve , this );
+    });
+
+    Vue.component( 'a.cardsection' , function( resolve , reject ){
+        console.log('a.cardsection');
+        mul.get( 'iprint.a.cardsection' , resolve , this );
+    });
     
     Vue.component( 'o.promoheader' , function( resolve , reject ){
 		console.log('o.promoheader');

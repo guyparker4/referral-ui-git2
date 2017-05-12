@@ -1,0 +1,1 @@
+"use strict";mul.set("iprint.a.cardheader",[],{template:' <div class="card-divider">\n    <slot></slot>\n </div>\n'});
