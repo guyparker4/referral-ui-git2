@@ -96,6 +96,11 @@ var mappingModule = function(){
         console.log('a.accordionitem');
         mul.get( 'iprint.a.accordionitem' , resolve , this );
     });
+
+    Vue.component( 'a.callout' , function( resolve , reject ){
+        console.log('a.callout');
+        mul.get( 'iprint.a.callout' , resolve , this );
+    });
     
     Vue.component( 'o.promoheader' , function( resolve , reject ){
 		console.log('o.promoheader');
