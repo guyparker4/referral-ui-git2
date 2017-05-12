@@ -116,6 +116,21 @@ var mappingModule = function(){
         console.log('a.cardsection');
         mul.get( 'iprint.a.cardsection' , resolve , this );
     });
+
+    Vue.component( 'a.media' , function( resolve , reject ){
+        console.log('a.media');
+        mul.get( 'iprint.a.media' , resolve , this );
+    });
+
+    Vue.component( 'a.mediasection' , function( resolve , reject ){
+        console.log('a.mediasection');
+        mul.get( 'iprint.a.mediasection' , resolve , this );
+    });
+
+    Vue.component( 'a.thumbnail' , function( resolve , reject ){
+        console.log('a.thumbnail');
+        mul.get( 'iprint.a.thumbnail' , resolve , this );
+    });
     
     Vue.component( 'o.promoheader' , function( resolve , reject ){
 		console.log('o.promoheader');
