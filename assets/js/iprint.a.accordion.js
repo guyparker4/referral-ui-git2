@@ -1,0 +1,1 @@
+"use strict";mul.set("iprint.a.accordion",[],{template:'<ul class="accordion">\n  <slot></slot>\n</ul>'});

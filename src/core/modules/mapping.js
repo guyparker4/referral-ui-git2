@@ -86,6 +86,16 @@ var mappingModule = function(){
         console.log('a.breadcrumb');
         mul.get( 'iprint.a.breadcrumb' , resolve , this );
     });
+
+    Vue.component( 'a.accordion' , function( resolve , reject ){
+        console.log('a.accordion');
+        mul.get( 'iprint.a.accordion' , resolve , this );
+    });
+
+    Vue.component( 'a.accordionitem' , function( resolve , reject ){
+        console.log('a.accordionitem');
+        mul.get( 'iprint.a.accordionitem' , resolve , this );
+    });
     
     Vue.component( 'o.promoheader' , function( resolve , reject ){
 		console.log('o.promoheader');

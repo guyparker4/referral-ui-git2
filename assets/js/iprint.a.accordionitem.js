@@ -1,0 +1,1 @@
+"use strict";mul.set("iprint.a.accordionitem",[],{template:'<li class="accordion-item" :class="{ \'is-active\':active }">\n    <a @click="active=!active" class="accordion-title">{{title}}</a>\n    <div v-if="active" class="accordion-content" style="display:block">\n        <slot></slot>\n    </div>\n</li>',props:["active","title"]});
