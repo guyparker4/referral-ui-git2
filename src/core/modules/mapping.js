@@ -131,6 +131,11 @@ var mappingModule = function(){
         console.log('a.thumbnail');
         mul.get( 'iprint.a.thumbnail' , resolve , this );
     });
+
+    Vue.component( 'a.dropdown' , function( resolve , reject ){
+        console.log('a.dropdown');
+        mul.get( 'iprint.a.dropdown' , resolve , this );
+    });
     
     Vue.component( 'o.promoheader' , function( resolve , reject ){
 		console.log('o.promoheader');

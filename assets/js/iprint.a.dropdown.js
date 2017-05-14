@@ -1,0 +1,1 @@
+"use strict";mul.set("iprint.a.dropdown",[],{template:'<div class="dropdown-pane" :class="{ \'is-open\':active }">\n  <slot></slot>\n</div>',props:["top","right","left","bottom"],data:function(){return{active:!1}}});
