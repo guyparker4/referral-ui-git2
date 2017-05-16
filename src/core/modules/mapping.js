@@ -162,6 +162,25 @@ var mappingModule = function(){
 		mul.get( 'iprint.o.footer' , resolve , this );
 	});
 
+	Vue.component( 'o.certificate' , function( resolve , reject ){
+		console.log('o.certificate');
+		mul.get( 'iprint.o.certificate' , resolve , this );
+	});
+
+	Vue.component( 'o.checkoutwithlogin' , function( resolve , reject ){
+		console.log('o.checkoutwithlogin');
+		mul.get( 'iprint.o.checkoutwithlogin' , resolve , this );
+	});
+
+	Vue.component( 'o.checkoutwithoutlogin' , function( resolve , reject ){
+		console.log('o.checkoutwithoutlogin');
+		mul.get( 'iprint.o.checkoutwithoutlogin' , resolve , this );
+	});
+
+	Vue.component( 'p.login' , function( resolve , reject ){
+		console.log('p.login');
+		mul.get( 'iprint.p.login' , resolve , this );
+	});
 
 };
 
