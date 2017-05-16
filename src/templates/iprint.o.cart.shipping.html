@@ -1,0 +1,219 @@
+<div class="row columns">
+    <div class="row columns">
+        <h1>Shipping Address</h1>
+        <p>Please provide your shipping address (US States, Territories and APO/FPO). All fields required except where marked optional.</p>
+    </div>
+    <div class="row">
+        <div class="large-3 columns">
+            <div>
+                <div class="default-address-header"><strong>Your default address</strong></div>
+                <div class="default-address-content">
+                    <div>Grant Pimpler</div>
+                    <div>ABCD Corp,</div>
+                    <div>Suite 2005</div>
+                    <div></div>
+                    <div>San Antonio, TX 78260</div>
+                    <div>United States</div>
+                    <div>(210)324-4808</div>
+                </div>
+                <div class="useThisAddress">
+                    <a.button @click.native="selectShippingAddress(0);" title="Use this address"></a.button>
+                </div>
+                <div class="links-to-default-box">
+                    <a @click="editShippingAddress(0)">edit</a> | <a @click="deleteShippingAddress(0)">delete</a>
+                </div>
+            </div>
+        </div>
+        <div class="large-9 columns">
+            <form>
+                <div style="margin-bottom:1em;">Only domestic shipping available at this time.</div>
+                <div class="row">
+                    <div class="large-2 columns">
+                        First name*
+                    </div>
+                    <div class="large-10 columns">
+                        <input type="text" placeholder="First Name (required)">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-2 columns">
+                        Last name*
+                    </div>
+                    <div class="large-10 columns">
+                        <input type="text" placeholder="Last Name (required)">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-2 columns">
+                        Company
+                    </div>
+                    <div class="large-10 columns">
+                        <input type="text" placeholder="Company">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-2 columns">
+                        Address*
+                    </div>
+                    <div class="large-10 columns">
+                        <input type="text" placeholder="Address (required)">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-2 columns"> </div>
+                    <div class="large-10 columns">
+                        <input type="text" placeholder="Address">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-2 columns">
+                        Company
+                    </div>
+                    <div class="large-10 columns">
+                        <input type="text" placeholder="Company">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-2 columns">
+                        City*
+                    </div>
+                    <div class="large-10 columns">
+                        <input type="text" placeholder="City">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-2 columns">
+                        State*
+                    </div>
+                    <div class="large-4 columns">
+                        <select class="required-field" size="1">
+                            <option value="">Select a State/Territory</option>
+                            <optgroup label="US States">
+                                <option value="AL">AL-Alabama</option>
+                                <option value="AK">AK-Alaska</option>
+                                <option value="AZ">AZ-Arizona</option>
+                                <option value="AR">AR-Arkansas</option>
+                                <option value="CA">CA-California</option>
+                                <option value="CO">CO-Colorado</option>
+                                <option value="CT">CT-Connecticut</option>
+                                <option value="DE">DE-Delaware</option>
+                                <option value="DC">DC-District of Columbia</option>
+                                <option value="FL">FL-Florida</option>
+                                <option value="GA">GA-Georgia</option>
+                                <option value="HI">HI-Hawaii</option>
+                                <option value="ID">ID-Idaho</option>
+                                <option value="IL">IL-Illinois</option>
+                                <option value="IN">IN-Indiana</option>
+                                <option value="IA">IA-Iowa</option>
+                                <option value="KS">KS-Kansas</option>
+                                <option value="KY">KY-Kentucky</option>
+                                <option value="LA">LA-Louisiana</option>
+                                <option value="ME">ME-Maine</option>
+                                <option value="MD">MD-Maryland</option>
+                                <option value="MA">MA-Massachusetts</option>
+                                <option value="MI">MI-Michigan</option>
+                                <option value="MN">MN-Minnesota</option>
+                                <option value="MS">MS-Mississippi</option>
+                                <option value="MO">MO-Missouri</option>
+                                <option value="MT">MT-Montana</option>
+                                <option value="NE">NE-Nebraska</option>
+                                <option value="NV">NV-Nevada</option>
+                                <option value="NH">NH-New Hampshire</option>
+                                <option value="NJ">NJ-New Jersey</option>
+                                <option value="NM">NM-New Mexico</option>
+                                <option value="NY">NY-New York</option>
+                                <option value="NC">NC-North Carolina</option>
+                                <option value="ND">ND-North Dakota</option>
+                                <option value="OH">OH-Ohio</option>
+                                <option value="OK">OK-Oklahoma</option>
+                                <option value="OR">OR-Oregon</option>
+                                <option value="PA">PA-Pennsylvania</option>
+                                <option value="RI">RI-Rhode Island</option>
+                                <option value="SC">SC-South Carolina</option>
+                                <option value="SD">SD-South Dakota</option>
+                                <option value="TN">TN-Tennessee</option>
+                                <option value="TX">TX-Texas</option>
+                                <option value="UT">UT-Utah</option>
+                                <option value="VT">VT-Vermont</option>
+                                <option value="VA">VA-Virginia</option>
+                                <option value="WA">WA-Washington</option>
+                                <option value="WV">WV-West Virginia</option>
+                                <option value="WI">WI-Wisconsin</option>
+                                <option value="WY">WY-Wyoming</option>
+                            </optgroup>
+                            <optgroup label="Armed Forces">
+                                <option value="AE">AE-Armed Forces Africa</option>
+                                <option value="AA">AA-Armed Forces Americas</option>
+                                <option value="AE">AE-Armed Forces Canada</option>
+                                <option value="AE">AE-Armed Forces Europe</option>
+                                <option value="AE">AE-Armed Forces Middle East</option>
+                                <option value="AP">AP-Armed Forces Pacific</option>
+                            </optgroup>
+                            <optgroup label="U. S. Associated Territories">
+                                <option value="AS">AS-American Samoa</option>
+                                <option value="FM">FM-Fed. States of Micronesia</option>
+                                <option value="GU">GU-Guam</option>
+                                <option value="MH">MH-Marshall Islands</option>
+                                <option value="MP">MP-Northern Mariana Islands</option>
+                                <option value="PW">PW-Palau</option>
+                                <option value="PR">PR-Puerto Rico</option>
+                                <option value="VI">VI-Virgin Islands</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="large-2 columns">
+                        Zip*
+                    </div>
+                    <div class="large-4 columns">
+                        <input type="text" placeholder="Zip">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-2 columns">
+                        Phone Number*
+                    </div>
+                    <div class="large-10 columns">
+                        <input type="text" placeholder="Phone Number (required)">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-2 columns"> </div>
+                    <div class="large-10 columns">
+                        <input id="add-addr-book" name="add-addr-book" value="true" type="checkbox" checked="checked">
+                        <label for="add-addr-book">Add this address to my address book</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-2 columns"> </div>
+                    <div class="large-10 columns">
+                        <h2>Billing Address?</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-2 columns"> </div>
+                    <div class="large-10 columns">
+                        <input id="bill-addr-same-yes" name="bill-addr-same" value="same" type="radio" checked="checked">
+                        <label for="bill-addr-same-yes">Yes, the billing address is the same</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-2 columns"> </div>
+                    <div class="large-10 columns">
+                        <input id="bill-addr-same-no" name="bill-addr-same" value="different" type="radio">
+                        <label for="bill-addr-same-no">No, the billing address is different</label>
+                    </div>
+                </div>
+            </form>
+            <div class="row">
+                <div class="large-2 columns"> </div>
+                <div class="large-10 columns">
+                    <a.button class="button ajaxForm cta disabled" @click.native="onShipToAddress()" title="Ship to this Address"></a.button>
+                    <a.button class="button ajaxForm hollow" @click.native="onSelectAltAddress()" title="Ship to a different Address"></a.button>
+                    <!--
+                    <a class="button ajaxForm cta disabled" @click="onShipToAddress()">Ship to this Address</a>
+                    <a class="button ajaxForm hollow" @click="onSelectAltAddress()">Ship to a different Address</a>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
