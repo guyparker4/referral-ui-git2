@@ -162,6 +162,11 @@ var mappingModule = function(){
         mul.get( 'iprint.o.cart.shipping' , resolve , this );
     });
 
+    Vue.component( 'o.cart.billing' , function( resolve , reject ){
+        console.log('o.cart.billing');
+        mul.get( 'iprint.o.cart.billing' , resolve , this );
+    });
+
 	Vue.component( 'o.footer' , function( resolve , reject ){
 		console.log('o.footer');
 		mul.get( 'iprint.o.footer' , resolve , this );
