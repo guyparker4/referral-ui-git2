@@ -1,6 +1,6 @@
 mul.set( "iprint.a.button" , [] , {
     template: embed( './templates/iprint.a.button.html' ),
-    props:["dropdownclick","dropdownhover","title","href","style","hollow", "tiny","small","large","expanded","primary","secondary","success","warning","alert"],
+    props:["dropdownclick","dropdownhover","title","href","style","hollow","tiny","small","large","expanded","primary","secondary","success","warning","alert"],
     created(){
         console.log( this );
         console.log( this.$parent );
