@@ -137,6 +137,11 @@ var mappingModule = function(){
         mul.get( 'iprint.a.dropdown' , resolve , this );
     });
 
+	Vue.component( 'a.modal' , function( resolve , reject ){
+		console.log('a.modal');
+		mul.get( 'iprint.a.modal' , resolve , this );
+	});
+
     Vue.component( 'o.promoheader' , function( resolve , reject ){
 		console.log('o.promoheader');
 		mul.get( 'iprint.o.promoheader' , resolve , this );
@@ -180,6 +185,11 @@ var mappingModule = function(){
 	Vue.component( 'o.checkoutwithoutlogin' , function( resolve , reject ){
 		console.log('o.checkoutwithoutlogin');
 		mul.get( 'iprint.o.checkoutwithoutlogin' , resolve , this );
+	});
+
+	Vue.component( 'o.signinorup' , function( resolve , reject ){
+		console.log('o.signinorup');
+		mul.get( 'iprint.o.signinorup' , resolve , this );
 	});
 
 	Vue.component( 'p.login' , function( resolve , reject ){
