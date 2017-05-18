@@ -197,6 +197,11 @@ var mappingModule = function(){
 		mul.get( 'iprint.o.forgotpw' , resolve , this );
 	});
 
+	Vue.component( 'o.addressbook' , function( resolve , reject ){
+		console.log('o.addressbook');
+		mul.get( 'iprint.o.addressbook' , resolve , this );
+	});
+
 	Vue.component( 'p.login' , function( resolve , reject ){
 		console.log('p.login');
 		mul.get( 'iprint.p.login' , resolve , this );
