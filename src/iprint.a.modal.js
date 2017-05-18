@@ -1,4 +1,10 @@
 mul.set( "iprint.a.modal" , [] , {
 	template: embed( './templates/iprint.a.modal.html' ),
-	props:[]
+	props:["size"],
+	data(){
+		return {
+			active:false,
+			close:true
+		}
+	}
 });

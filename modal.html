@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Referral</title>
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <script type="application/javascript" src="/assets/js/vue.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        
+        <a.modal size="tiny" ref="modal1"><h1>TINY MODAL</h1></a.modal>
+        <a.modal size="small" ref="modal2"><h1>SMALL MODAL</h1></a.modal>
+        <a.modal size="large" ref="modal3"><h1>LARGE MODAL</h1></a.modal>
+        <a.modal size="full" ref="modal4"><h1>FULL MODAL</h1></a.modal>
+
+        <a.button title="Open TINY Modal" @click.native="$refs.modal1.active=true"></a.button>
+        <a.button title="Open SMALL Modal" @click.native="$refs.modal2.active=true"></a.button>
+        <a.button title="Open LARGE Modal" @click.native="$refs.modal3.active=true"></a.button>
+        <a.button title="Open FULL Modal" @click.native="$refs.modal4.active=true"></a.button>
+
+    </div>
+</body>
+
+</html>
+<script id="app_version" type="text/template">001</script>
+<script id="app_basepage" type="text/template">[]</script>
+<script type="application/javascript" src="/assets/js/main.js"></script>

@@ -1,20 +1,8 @@
-<transition name="modal">
-    <div class="modal-mask">
-        <div class="modal-wrapper">
-            <div class="modal-container">
-
-                <div class="modal-header">
-                    <slot name="header">
-
-                    </slot>
-                </div>
-
-                <div class="modal-body">
-                    <slot name="body">
-
-                    </slot>
-                </div>
-            </div>
-        </div>
+<div class="reveal-overlay" style="display:block" @click="active=false" v-show="active">
+    <div class="reveal" :class="{'tiny':size=='tiny', 'small':size=='small' , 'large':size=='large' , 'full':size=='full' }" style="display:block" >
+        <button v-if="close" class="close-button" @click="active=false" aria-label="Close modal" type="button">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <slot></slot>
     </div>
-</transition>
+</div>
