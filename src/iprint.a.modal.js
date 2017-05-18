@@ -3,7 +3,7 @@ mul.set( "iprint.a.modal" , [] , {
 	props:["size"],
 	data(){
 		return {
-			active:false,
+			active:true,
 			close:true
 		}
 	}

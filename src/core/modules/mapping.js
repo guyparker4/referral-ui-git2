@@ -192,6 +192,11 @@ var mappingModule = function(){
 		mul.get( 'iprint.o.signinorup' , resolve , this );
 	});
 
+	Vue.component( 'o.forgotpw' , function( resolve , reject ){
+		console.log('o.forgotpw');
+		mul.get( 'iprint.o.forgotpw' , resolve , this );
+	});
+
 	Vue.component( 'p.login' , function( resolve , reject ){
 		console.log('p.login');
 		mul.get( 'iprint.p.login' , resolve , this );

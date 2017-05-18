@@ -61,12 +61,149 @@
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
 }
-
-.signin-modal{
-    position: absolute;
-    top: 100px;
-    z-index: 1;
+#recaptcha_area, #recaptcha_table {
+    width: 318px!important;
 }
-.signin-modal .modal-container{
-    width: 1000px;
+
+.recaptchatable {
+    line-height: 1!important;
+}
+
+.recaptchatable, #recaptcha_area tr, #recaptcha_area td, #recaptcha_area th {
+    margin: 0!important;
+    border: 0!important;
+    padding: 0!important;
+    border-collapse: collapse!important;
+    vertical-align: middle!important;
+}
+
+.recaptchatable .recaptcha_r1_c1 {
+    background: url(https://www.google.com/recaptcha/api/img/white/sprite.png) 0 -63px no-repeat;
+    width: 318px;
+    height: 9px;
+}
+
+.recaptchatable * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: helvetica,sans-serif;
+    font-size: 8pt;
+    color: black;
+    position: static;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+}
+
+.recaptchatable .recaptcha_r2_c1 {
+    background: url(https://www.google.com/recaptcha/api/img/white/sprite.png) -18px 0 no-repeat;
+    width: 9px;
+    height: 57px;
+}
+
+.recaptchatable .recaptcha_image_cell {
+    background-color: white;
+    height: 57px;
+}
+
+.recaptchatable .recaptcha_r2_c2 {
+    background: url(https://www.google.com/recaptcha/api/img/white/sprite.png) -27px 0 no-repeat;
+    width: 9px;
+    height: 57px;
+}
+
+.recaptchatable #recaptcha_image {
+    position: relative;
+    margin: auto;
+}
+
+.recaptchatable #recaptcha_image #recaptcha_challenge_image {
+    display: block;
+}
+
+.recaptchatable .recaptcha_image_cell center img {
+    height: 57px;
+}
+
+.recaptchatable td img {
+    display: block;
+}
+.recaptchatable img {
+    border: 0!important;
+    margin: 0!important;
+    padding: 0!important;
+}
+
+.recaptchatable .recaptcha_r3_c1 {
+    background: url(https://www.google.com/recaptcha/api/img/white/sprite.png) 0 0 no-repeat;
+    width: 9px;
+    height: 63px;
+}
+
+.recaptchatable .recaptcha_r3_c2 {
+    background: url(https://www.google.com/recaptcha/api/img/white/sprite.png) -18px -57px no-repeat;
+    width: 300px;
+    height: 6px;
+}
+
+.recaptchatable .recaptcha_r3_c3 {
+    background: url(https://www.google.com/recaptcha/api/img/white/sprite.png) -9px 0 no-repeat;
+    width: 9px;
+    height: 63px;
+}
+
+.recaptchatable .recaptcha_r4_c1 {
+    background: url(https://www.google.com/recaptcha/api/img/white/sprite.png) -43px 0 no-repeat;
+    width: 171px;
+    height: 49px;
+}
+
+.recaptcha_input_area {
+    position: relative!important;
+    width: 153px!important;
+    height: 45px!important;
+    margin-left: 7px!important;
+    margin-right: 7px!important;
+    background: none!important;
+}
+
+.recaptchatable .recaptcha_r4_c2 {
+    background: url(https://www.google.com/recaptcha/api/img/white/sprite.png) -36px 0 no-repeat;
+    width: 7px;
+    height: 57px;
+}
+
+.recaptchatable .recaptcha_r4_c4 {
+    background: url(https://www.google.com/recaptcha/api/img/white/sprite.png) -214px 0 no-repeat;
+    width: 97px;
+    height: 57px;
+}
+
+.recaptcha_is_showing_audio .recaptcha_only_if_image, .recaptcha_isnot_showing_audio .recaptcha_only_if_audio, .recaptcha_had_incorrect_sol .recaptcha_only_if_no_incorrect_sol, .recaptcha_nothad_incorrect_sol .recaptcha_only_if_incorrect_sol {
+    display: none !important;
+}
+
+.recaptchatable a, .recaptchatable a:hover {
+    cursor: pointer;
+    outline: none;
+    border: 0!important;
+    padding: 0!important;
+    text-decoration: none;
+    color: blue;
+    background: none!important;
+    font-weight: normal;
+}
+
+.recaptchatable .recaptcha_r7_c1 {
+    background: url(https://www.google.com/recaptcha/api/img/white/sprite.png) -43px -49px no-repeat;
+    width: 171px;
+    height: 8px;
+}
+
+.recaptchatable .recaptcha_r8_c1 {
+    background: url(https://www.google.com/recaptcha/api/img/white/sprite.png) -43px -49px no-repeat;
+    width: 25px;
+    height: 8px;
 }

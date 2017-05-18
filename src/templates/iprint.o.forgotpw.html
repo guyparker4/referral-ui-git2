@@ -1,0 +1,136 @@
+<a.modal>
+    <div>
+        <div id="forgotPasswordBody" style="display: block;">
+
+            <!-- Wrapping the Recaptcha create method in a javascript function -->
+            <script type="text/javascript">
+			    var pubKey = '6Ld0VggUAAAAANct2u6Uoow04Ccz8FfJJJMNpXWA';
+			    function showRecaptcha(divId) {
+				    console.log("RUN: showRecaptcha: " + divId)
+				    Recaptcha.create(pubKey, divId, {
+					    theme: "white",
+					    callback: Recaptcha.focus_response_field});
+			    }
+            </script>
+
+            <script>
+			    function sendEmailReset(formName, contentID, refresh,emailID)
+			    {
+				    if(document.getElementById("recaptcha_response_field")!=null && document.getElementById("recaptcha_challenge_field")!=null) {
+					    if(document.getElementById("recaptcha_response_field").value!=null && document.getElementById("recaptcha_challenge_field").value!=null) {
+						    document.getElementById("recaptcha_response_field1").value=document.getElementById("recaptcha_response_field").value;
+						    document.getElementById("recaptcha_challenge_field1").value=document.getElementById("recaptcha_challenge_field").value;
+					    }
+				    }
+				    document.getElementById("forgotpasswordemail").value = document.getElementById(emailID).value;
+				    postAjaxStyle(formName,contentID,refresh);
+			    }
+            </script>
+            <form id="forgotPasswordEmailForm" name="forgotPasswordEmailForm" action="#"><input name="_dyncharset" value="ISO-8859-1" type="hidden"><input name="_dynSessConf" value="7261635036432240954" type="hidden"><div class="grid_16 margin-bottom-10px" style="display:none">
+                <div class="grid_6 text-right">
+                    <div id="recaptcha_div1" style="margin-left: 21%;padding-bottom: 5%;"></div>
+                </div>
+            </div>
+                <input id="forgotpasswordemail" name="forgotpasswordemail" value="" type="hidden"><input name="_D:forgotpasswordemail" value=" " type="hidden"><input name="/atg/userprofiling/RCForgotPasswordFormHandler.errorURL" value="/estore/responsive/en/usr/component/forgotPasswordBody.jsp" type="hidden"><input name="_D:/atg/userprofiling/RCForgotPasswordFormHandler.errorURL" value=" " type="hidden"><input name="/atg/userprofiling/RCForgotPasswordFormHandler.successURL" value="/estore/responsive/en/usr/component/forgotPasswordSuccessBody.jsp" type="hidden"><input name="_D:/atg/userprofiling/RCForgotPasswordFormHandler.successURL" value=" " type="hidden"><input name="/atg/userprofiling/RCForgotPasswordFormHandler.captchaIpAddr" value="10.211.142.12" type="hidden"><input name="_D:/atg/userprofiling/RCForgotPasswordFormHandler.captchaIpAddr" value=" " type="hidden">
+                <input id="recaptcha_response_field1" name="recaptcha_response_field1" type="hidden" value="">
+                <input id="recaptcha_challenge_field1" name="recaptcha_challenge_field1" type="hidden" value="">
+                <input name="/atg/userprofiling/RCForgotPasswordFormHandler.forgotPassword" value="Forgot Password" type="hidden"><input name="_D:/atg/userprofiling/RCForgotPasswordFormHandler.forgotPassword" value=" " type="hidden"><input name="_DARGS" value="/estore/responsive/en/usr/component/forgotpasswordform.jsp.forgotPasswordEmailForm" type="hidden"></form><!-- ==== Body Content ==== -->
+            <div class="clearfix">
+                <div id="fb-modal-outer">
+                    <div class="replica_h1">Forgot your password ?</div>
+                    <form id="forgotPasswordForm" name="forgotPasswordForm" action="#"><input name="_dyncharset" value="ISO-8859-1" type="hidden"><input name="_dynSessConf" value="7261635036432240954" type="hidden"><input name="/atg/userprofiling/RCForgotPasswordFormHandler.errorURL" value="/estore/responsive/en/usr/component/forgotPasswordBody.jsp" type="hidden"><input name="_D:/atg/userprofiling/RCForgotPasswordFormHandler.errorURL" value=" " type="hidden"><input name="/atg/userprofiling/RCForgotPasswordFormHandler.successURL" value="/estore/responsive/en/usr/component/forgotpasswordsecurityquestion.jsp" type="hidden"><input name="_D:/atg/userprofiling/RCForgotPasswordFormHandler.successURL" value=" " type="hidden"><div class="content">
+                        <div class="row">
+
+
+                            No problem, enter your email address below and either answer your security question, or we can email you a link to reset your password.
+                        </div>
+                        <div class="content-form-padding row columns clearfix">
+                            <div class="content-labels">
+
+
+                                <label for="email">Email address<sup>*</sup></label>
+                            </div>
+                            <div class="modalRequired content-form">
+                                <input id="forgotPasswordFormEmail" maxlength="100" name="email" value="" onkeyup="" onkeydown="javascript:callKey(event,'sec_question1');" type="text"><input name="_D:email" value=" " type="hidden"></div>
+                            <div class="row columns margin-bottom-10px">
+                                <div class="grid_6 columns text-right">
+                                    <div id="recaptcha_div" style="margin-left: 21%;padding-bottom: 5%;" class=" recaptcha_nothad_incorrect_sol recaptcha_isnot_showing_audio"><div id="recaptcha_area"><table id="recaptcha_table" class="recaptchatable recaptcha_theme_white"> <tbody><tr> <td colspan="6" class="recaptcha_r1_c1"></td> </tr> <tr> <td class="recaptcha_r2_c1"></td> <td colspan="4" class="recaptcha_image_cell"><center><div id="recaptcha_image" style="width: 300px; height: 57px;"><img id="recaptcha_challenge_image" alt="reCAPTCHA challenge image" height="57" width="300" src="https://www.google.com/recaptcha/api/image?c=03AIezHSY6FYlgPFutX5fvzw2SlS3AimGdxhqrxRAkvN79Ravq-voWhjAwvVTGR0BLWCoLhHQqdy_hj1sTYcpxQ9qGHzG8aCcT0MqnPhcQtNbmScwnATobJzP-bGa5kYk4WBzOZeD5aEV96rfJqWkW_dU0MPa1uUQBDdEc_cuxnZrWw3N7XP7kl3y0xB0NZnhAxIHsT1GHt4ZUlqK6ZjY9-XRmdQzHKhV-CQ&amp;th=,fYxXjK2wn2ldM_OIJma2GNC5GIISgUzwAAAAOaAAAAK1awNlWMU7WRryn7K95rjhtlbxSSOuCPeOk5u_T9e38raW1ulkpsKD7aDamGAFeiUTXruuhyOO57XMDPGBLnZPgOvYfMqHIjFfNHNpjuIEDmeomvRZco7XcL_EQ4AGs3YjQEr877LLdxnP9QUwUSQQNIhC_yFJz9rDm4zF0Qid7tdAslj6QaRa8K18k8a2Y-UqJhZZIiorRXDBmUPge6EyOy7zPwcFuu6x9Z2aT7p0b-A5XSBFIp65pDWoNBiYZxM1_s4QnD9y0qz5hPimY5RMeE3UpDbsddlWjhfrFvHg0nlZ4CDwxm8OZFtkrTjL-tZTzh7UZFeiJVXvP8yhtTEyyIXTuxouBt9xZXaXmcjmy9ND4tmAY-vyNFe5nfVt1LGPC_j5jj-Dul5s1cRqlTCvWzlYp8QVvmfsK9lh6LIRIaHhsz-eNnPkXgPp-_b-v3-G1pD3FolsP_6cpoyCBHArxXZXuTO4PrTuSuwXI8k9gDeFyRru15N1rIAWZgVdMp_EcazxNaycYrFF_uS89AcEP9-OgPKjCFuVA8JZnWTAALjmGoRjPCFRjfwXCuRIeBgdmqufSrYYMtOJ59tOMnhO87QDRpMKzOsWo5f8Spk5FDvrBOnLHU6lKofNvHxsnajYTG0NyYR3mKRl24eplEIeKu73ZlZIquZ9Yg7WmVIGW7iHaOnaM3yLSNzMZKTSc6ecBQ6_56lDWa8ssSduGx1fA30jaQ7c-UuEztqWnnAGO3WF-Xg8eKtpaLozW7cqW9eyDAfs6baAT2UDb9ctWPFiHro9WPRlD-DfzjrtxymI4K55iUHQLuI6tjQdaY7p8DsskL4ISetYhh_zUTbKnAM8EbO6Pt6ADE5JM7rnYxkg9Vf5mJSWHUEq7oNl5fO2wUP2C8fcWgcP8yyeBaGSBGj229nRrL2EXlr7c-_BqUBTfkgE61yI-uHBDtGLAwdTX4TZinxBBU1IGEMMt9-hqpnvaqqNeGnQx4BfxeAZcj137PNl7nOOORXwDnIMwUJJu0LxJ64ETp7Dx_tRTa3Dqpl8ie4M7NrytsjYgvKEYkU7CTtMtdnxPlSXmLLvbiKkFC-1z1YD2nWO7oUM884NctbrELCoPEHFNGpr8doxsgEZgYzWze-BnEjfiahtf-yAOwzCsThPT1eXXEY"></div></center></td> <td class="recaptcha_r2_c2"></td> </tr> <tr> <td rowspan="6" class="recaptcha_r3_c1"></td> <td colspan="4" class="recaptcha_r3_c2"></td> <td rowspan="6" class="recaptcha_r3_c3"></td> </tr> <tr> <td rowspan="3" class="recaptcha_r4_c1" height="49"> <div class="recaptcha_input_area"> <span id="recaptcha_challenge_field_holder" style="display: none;"><input type="hidden" name="recaptcha_challenge_field" id="recaptcha_challenge_field" value="03AIezHSY6FYlgPFutX5fvzw2SlS3AimGdxhqrxRAkvN79Ravq-voWhjAwvVTGR0BLWCoLhHQqdy_hj1sTYcpxQ9qGHzG8aCcT0MqnPhcQtNbmScwnATobJzP-bGa5kYk4WBzOZeD5aEV96rfJqWkW_dU0MPa1uUQBDdEc_cuxnZrWw3N7XP7kl3y0xB0NZnhAxIHsT1GHt4ZUlqK6ZjY9-XRmdQzHKhV-CQ"></span><input name="recaptcha_response_field" id="recaptcha_response_field" type="text" autocorrect="off" autocapitalize="off" placeholder="Type the text" autocomplete="off"> <span id="recaptcha_privacy" class="recaptcha_only_if_privacy"><a href="http://www.google.com/intl/en/policies/" target="_blank">Privacy &amp; Terms</a></span> </div> </td> <td rowspan="4" class="recaptcha_r4_c2"></td> <td><a id="recaptcha_reload_btn" title="Get a new challenge"><img id="recaptcha_reload" width="25" height="17" src="https://www.google.com/recaptcha/api/img/white/refresh.gif" alt="Get a new challenge"></a></td> <td rowspan="4" class="recaptcha_r4_c4"></td> </tr> <tr> <td><a id="recaptcha_switch_audio_btn" class="recaptcha_only_if_image" title="Get an audio challenge"><img id="recaptcha_switch_audio" width="25" height="16" alt="Get an audio challenge" src="https://www.google.com/recaptcha/api/img/white/audio.gif"></a><a id="recaptcha_switch_img_btn" class="recaptcha_only_if_audio" title="Get a visual challenge"><img id="recaptcha_switch_img" width="25" height="16" alt="Get a visual challenge" src="https://www.google.com/recaptcha/api/img/white/text.gif"></a></td> </tr> <tr> <td><a id="recaptcha_whatsthis_btn" title="Help"><img id="recaptcha_whatsthis" width="25" height="16" src="https://www.google.com/recaptcha/api/img/white/help.gif" alt="Help"></a></td> </tr> <tr> <td class="recaptcha_r7_c1"></td> <td class="recaptcha_r8_c1"></td> </tr> </tbody></table> </div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="buttons text-right">
+                            <a href="#" class="button cta ajaxForm disabled" id="sec_question1">security question</a>
+                            &nbsp;&nbsp;or&nbsp;&nbsp;
+                            <a href="javascript:sendEmailReset('forgotPasswordEmailForm','forgotPasswordBody',1,'forgotPasswordFormEmail');" class="button">email me a password reset</a>
+                        </div>
+                        <input name="/atg/userprofiling/RCForgotPasswordFormHandler.captchaIpAddr" value="10.211.142.12" type="hidden"><input name="_D:/atg/userprofiling/RCForgotPasswordFormHandler.captchaIpAddr" value=" " type="hidden">
+                        <input name="/atg/userprofiling/RCForgotPasswordFormHandler.cQFORLogin" value="Forgot Password" type="hidden"><input name="_D:/atg/userprofiling/RCForgotPasswordFormHandler.cQFORLogin" value=" " type="hidden"><input name="_DARGS" value="/estore/responsive/en/usr/component/forgotPasswordBody.jsp.forgotPasswordForm" type="hidden"></form></div>
+            </div>
+            <!-- ==== End Body Content ==== -->
+            <!--END prepend-1 -->
+            <script>
+			    function get_browser(){
+				    var ua=navigator.userAgent,tem,M=ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
+				    if(/trident/i.test(M[1])){
+					    tem=/\brv[ :]+(\d+)/g.exec(ua) || [];
+					    return 'IE '+(tem[1]||'');
+				    }
+				    if(M[1]==='Chrome'){
+					    tem=ua.match(/\bOPR\/(\d+)/)
+					    if(tem!=null)   {return 'Opera '+tem[1];}
+				    }
+				    M=M[2]? [M[1], M[2]]: [navigator.appName, navigator.appVersion, '-?'];
+				    if((tem=ua.match(/version\/(\d+)/i))!=null) {M.splice(1,1,tem[1]);}
+				    return M[0];
+			    }
+			    function get_browser_version(){
+				    var ua=navigator.userAgent,tem,M=ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
+				    if(/trident/i.test(M[1])){
+					    tem=/\brv[ :]+(\d+)/g.exec(ua) || [];
+					    return 'IE '+(tem[1]||'');
+				    }
+				    if(M[1]==='Chrome'){
+					    tem=ua.match(/\bOPR\/(\d+)/)
+					    if(tem!=null)   {return 'Opera '+tem[1];}
+				    }
+				    M=M[2]? [M[1], M[2]]: [navigator.appName, navigator.appVersion, '-?'];
+				    if((tem=ua.match(/version\/(\d+)/i))!=null) {M.splice(1,1,tem[1]);}
+				    return M[1];
+			    }
+			    function callKey(event,continueId){
+				    event= event || window.event;
+				    if ( event.keyCode == 13 ) {
+					    if(window.event)
+						    window.event.returnValue = false;
+					    else
+						    event.preventDefault();
+					    if(get_browser() == "MSIE" && get_browser_version() == "8"){
+						    window.event.returnValue = false;
+					    }
+					    else{
+						    event.preventDefault();
+					    }
+					    document.getElementById(continueId).click();
+				    }
+			    }
+			    function loadReCaptcha() {
+				    url = "https://www.google.com/recaptcha/api/js/recaptcha_ajax.js";
+				    console.log("RUN: loadReCaptcha:" + url)
+				    console.log("RUN: loadReCaptcha status of app_settings.components.recaptcha.ready: " + app_settings.components.recaptcha.ready)
+				    if (app_settings.components.recaptcha.ready == false) {
+					    $script(url, function() {
+						    console.log("RUN: loadReCaptcha loaded");
+						    app_settings.components.recaptcha.ready = true;
+						    showRecaptcha('recaptcha_div');
+					    })
+				    } else {
+					    console.log("RUN: loadReCaptcha previously loaded.");
+					    showRecaptcha('recaptcha_div');
+				    }
+			    }
+			    loadReCaptcha();
+            </script>
+        </div>
+    </div>
+</a.modal>
