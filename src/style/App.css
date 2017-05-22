@@ -12,6 +12,10 @@
     width: 700px;
 }
 
+.addedtocart-modal .reveal{
+    width: 815px;
+}
+
 #recaptcha_area, #recaptcha_table {
     width: 318px!important;
 }
@@ -157,4 +161,15 @@
     background: url(https://www.google.com/recaptcha/api/img/white/sprite.png) -43px -49px no-repeat;
     width: 25px;
     height: 8px;
+}
+
+/*quanitty selection*/
+.quantity__msg, .quantity__msg2 {
+    width: 100%;
+    clear: both;
+    background-color: #ffdfd1;
+    border: 1px solid rgba(51, 51, 51, 0.25);
+    border-radius: 4px;
+    padding: 5px;
+    display: none;
 }

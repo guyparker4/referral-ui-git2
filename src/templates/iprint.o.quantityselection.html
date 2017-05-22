@@ -1,0 +1,54 @@
+<div class="hide-for-small">
+
+    <div class="row columns pdp-sidebar-section pdp-availability">
+        <h5 class="small">Choose Quantity: <div class="pdp-size-min-order">minimum order - {{model.pdp.product.minimumQty}} items</div></h5>
+        <div class="pdp-size-form"  :class="{'pdp__size-scroll': model.viewport == 0}" >
+            <div class="row columns collapse shown">
+                <div class="small-12">
+                    <table class="unstriped pricing-table">
+                        <thead>
+                        <tr>
+                            <th class="size-column text-center">Size</th>
+                            <th class="text-center">Quantity</th>
+                            <th class="text-center">Stock</th>
+                        </tr>
+                        </thead>
+                        <tfoot>
+                        <tr>
+                            <td colspan="3" class="text-center">
+                                <a href="#" class="size-show-all link button [ fabutton fa-plus-square ]" data-toggler="b5omv7-toggler" aria-expanded="true">Show more sizes</a>
+                            </td>
+                        </tr>
+                        </tfoot>
+                        <tbody>
+
+                        <tr v-for="sizeTarget in sizeArray" :class="{'more_sizes' : isAdvancedSize(sizeTarget)}" data-animate="slide-in-down">
+                            <td class="text-center"><span class="size">{{sizeTarget.size}}</span><br><span class="size_price">${{(parseFloat(sizeTarget.upcharge) + parseFloat(currentPrice)).toFixed(2)}} /ea</span></td>
+                            <td>
+                                <div class="input-group input-group-number">
+                                    <span  @click="minus(sizeTarget.size)" class="input-group-label input-group-number-down" :class="{'input-group-number-disabled': sizeTarget.stockStatus == 'Out of Stock'}"></span>
+                                    <input v-model="quantity[sizeTarget.size]" @change="updateTotal(sizeTarget, $event)" @keyup="updateTotal(sizeTarget, $event)" class="input-group-field" :class="{'input-group-number-disabled': sizeTarget.stockStatus == 'Out of Stock'}" type="text" pattern="\d*" numeric-only="" min="0" max="999999" size="3" placeholder="0">
+                                    <span  @click="plus(sizeTarget.size)" class="input-group-label input-group-number-up" :class="{'input-group-number-disabled': sizeTarget.stockStatus == 'Out of Stock'}"></span>
+                                </div>
+                            </td>
+                            <td class="text-center">
+                                    <span :class="{'stock': sizeTarget.stockStatus == 'In Stock',
+                                                  'oos': sizeTarget.stockStatus == 'Out of Stock',
+                                                  'low': sizeTarget.stockStatus == 'Limited (<200)'}">
+                                    {{sizeTarget.statusMessage}}</span>
+                            </td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="quantity__msg"><span>Minimum order is {{model.pdp.product.minimumQty}} items.</span></div>
+        <div class="quantity__msg2"><span>Order quantity has been adjusted due to stock levels.</span></div>
+        <div class="row columns collapse pdp-total-items shown">
+            <div class="small-8 columns"><h5 class="small text-left">Total Quantity:</h5></div>
+            <div class="small-4 columns text-center quant-total">{{totalQuantity}}</div>
+        </div>
+    </div>
+</div>

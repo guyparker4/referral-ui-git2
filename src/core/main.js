@@ -49,6 +49,17 @@ app.model.catalog = null
 if( document.getElementById( 'app_catalog' ) ){
     app.model.catalog = JSON.parse( document.getElementById( 'app_catalog' ).text );
 }
+
+//apparel quantity selection
+if( document.getElementById( 'cart_qty_model' )) {
+	app.model.apparel = {};
+	app.model.apparel.model={};
+	app.model.apparel.model = JSON.parse(document.getElementById('cart_qty_model').text);
+	app.model.apparel.model.apparel = [];
+	app.model.apparel.model.total = 0;
+	app.model.apparel.model.saleTotal = 0;
+}
+
 //}catch(e){
 //    app.model.current = [];
 //}

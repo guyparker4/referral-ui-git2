@@ -202,6 +202,21 @@ var mappingModule = function(){
 		mul.get( 'iprint.o.addressbook' , resolve , this );
 	});
 
+	Vue.component( 'o.addedtocart' , function( resolve , reject ){
+		console.log('o.addedtocart');
+		mul.get( 'iprint.o.addedtocart' , resolve , this );
+	});
+
+	Vue.component( 'o.quantityselection' , function( resolve , reject ){
+		console.log('o.quantityselection');
+		mul.get( 'iprint.o.quantityselection' , resolve , this );
+	});
+
+	Vue.component( 'o.apparelquantity' , function( resolve , reject ){
+		console.log('o.apparelquantity');
+		mul.get( 'iprint.o.apparelquantity' , resolve , this );
+	});
+
 	Vue.component( 'p.login' , function( resolve , reject ){
 		console.log('p.login');
 		mul.get( 'iprint.p.login' , resolve , this );
