@@ -1,1 +1,0 @@
-"use strict";mul.set("iprint.a.thumbnail",[],{template:' <div class="thumbnail">\n    <img :src="src">\n </div>\n',props:["src"]});

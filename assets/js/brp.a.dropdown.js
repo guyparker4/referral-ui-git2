@@ -1,0 +1,1 @@
+"use strict";mul.set("brp.a.dropdown",[],{template:'<div class="dropdown-pane" :class="{ \'is-open\':active }">\n  <slot></slot>\n</div>',props:["top","right","left","bottom"],data:function(){return{active:!1}}});

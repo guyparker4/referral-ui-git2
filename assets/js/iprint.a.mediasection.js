@@ -1,1 +1,0 @@
-"use strict";mul.set("iprint.a.mediasection",[],{template:"<div class=\"media-object-section\" :class=\"{'main-section':main, 'bottom':bottom , 'middle':middle}\">\n   <slot></slot>\n</div>",props:["main","bottom","middle"]});

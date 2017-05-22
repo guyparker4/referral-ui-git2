@@ -1,1 +1,0 @@
-"use strict";mul.set("iprint.a.accmenu",[],{template:'<ul class="vertical menu" :class="{ \'align-right\':alignRight, \'align-left\':alignLeft, expanded:expanded, \'align-centered\':alignCenter, simple:simple }" role="menu" aria-multiselectable="true">\n    <slot></slot>\n</ul>',props:["alignRight","alignLeft","alignCenter","expanded","simple"]});
