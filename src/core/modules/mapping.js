@@ -169,7 +169,7 @@ var mappingModule = function(){
 
     Vue.component( 'o.cart.billing' , function( resolve , reject ){
         console.log('o.cart.billing');
-        mul.get( 'iprint.o.cart.billing' , resolve , this );
+        mul.get( 'brp.o.cart.billing' , resolve , this );
     });
 
 	Vue.component( 'o.footer' , function( resolve , reject ){
