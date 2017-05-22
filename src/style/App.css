@@ -16,6 +16,14 @@
     width: 815px;
 }
 
+.edit-address-modal .reveal {
+    width: 635px;
+}
+
+.address-verification-modal .reveal {
+    width: 635px;
+}
+
 #recaptcha_area, #recaptcha_table {
     width: 318px!important;
 }

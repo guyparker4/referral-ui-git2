@@ -1,0 +1,17 @@
+<a.modal>
+    <div id="deleteAddressItem" style="display: block;">
+
+        <h1>Delete Shipping Address</h1>
+
+        Are you sure you want to remove this address from your address book?<div class="modalFormContainer">
+        <div class="modalBtnRowRt">
+            <a title="Yes" class="button ajaxForm" href="javascript:postAjaxStyle('removeAddressForm', 'deleteAddressItem',1);"><span>Yes</span></a>
+            <a title="No" class="btn-secondary" href="javascript:closeDialog('deleteAddressItem');"><span>No</span></a>
+            <form id="removeAddressForm" name="removeAddressForm" action="/estore/en/usr/addressbook/addressBookHome.jsp?frompage=removeContact&amp;_DARGS=/estore/responsive/en/usr/addressbook/component/deleteAddressItem.jsp.removeAddressForm" method="post"><input name="_dyncharset" value="ISO-8859-1" type="hidden"><input name="_dynSessConf" value="9063055781282006794" type="hidden">
+                <input name="/com/hcrc/store/addressmanagement/StoreAddressManagementFormHandler.removeContactSuccessURL" value="/estore/responsive/en/usr/addressbook/component/dialogDelAddrSuccess.jsp" type="hidden"><input name="_D:/com/hcrc/store/addressmanagement/StoreAddressManagementFormHandler.removeContactSuccessURL" value=" " type="hidden">
+                <input name="/com/hcrc/store/addressmanagement/StoreAddressManagementFormHandler.removeContactErrorURL" value="/estore/en/usr/addressbook/addressBookHome.jsp" type="hidden"><input name="_D:/com/hcrc/store/addressmanagement/StoreAddressManagementFormHandler.removeContactErrorURL" value=" " type="hidden">
+                <input type="hidden" id="removalContactId" name="removalContactId" value="143510">
+                <input id="removeContactFromAddressBook" name="removeContactFromAddressBook" value="" type="hidden"><input name="_D:removeContactFromAddressBook" value=" " type="hidden"><input name="_DARGS" value="/estore/responsive/en/usr/addressbook/component/deleteAddressItem.jsp.removeAddressForm" type="hidden"></form></div>
+        </div><!-- closes modalForm -->
+    </div>
+</a.modal>

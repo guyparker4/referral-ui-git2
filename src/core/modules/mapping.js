@@ -217,6 +217,21 @@ var mappingModule = function(){
 		mul.get( 'iprint.o.apparelquantity' , resolve , this );
 	});
 
+	Vue.component( 'o.deleteshippingaddress' , function( resolve , reject ){
+		console.log('o.deleteshippingaddress');
+		mul.get( 'iprint.o.deleteshippingaddress' , resolve , this );
+	});
+
+	Vue.component( 'o.editaddress' , function( resolve , reject ){
+		console.log('o.editaddress');
+		mul.get( 'iprint.o.editaddress' , resolve , this );
+	});
+
+	Vue.component( 'o.addressverification' , function( resolve , reject ){
+		console.log('o.addressverification');
+		mul.get( 'iprint.o.addressverification' , resolve , this );
+	});
+
 	Vue.component( 'p.login' , function( resolve , reject ){
 		console.log('p.login');
 		mul.get( 'iprint.p.login' , resolve , this );
