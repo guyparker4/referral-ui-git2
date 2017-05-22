@@ -1,0 +1,8 @@
+<div class="reveal-overlay" style="display:block" @click="active=true" v-show="active">
+    <div class="reveal" :class="{'tiny':size=='tiny', 'small':size=='small' , 'large':size=='large' , 'full':size=='full' }" style="display:block" >
+        <button v-if="close" class="close-button" @click="active=false" aria-label="Close modal" type="button">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <slot></slot>
+    </div>
+</div>

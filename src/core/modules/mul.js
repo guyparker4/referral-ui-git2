@@ -34,7 +34,7 @@ mul.get = function( name , callback ){
             console.log( " SCRIPT LOADED >>> " + name );
         }
     }
-    tag.setAttribute( "src" , mul.root + name.split( mul.folder ).join( "/" ) + '.js?version=' + app.version );
+    tag.setAttribute( "src" , mul.root + name.split( mul.folder ).join( "/" ) + '.js?version=' + brp.version );
     document.getElementsByTagName( "head" )[0].appendChild( tag );
     //console.log( " < mul.get" );
 };

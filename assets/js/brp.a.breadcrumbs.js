@@ -1,0 +1,1 @@
+"use strict";mul.set("brp.a.breadcrumbs",[],{template:'<nav aria-label="You are here:" role="navigation">\n  <ul class="breadcrumbs">\n    <slot></slot>\n  </ul>\n</nav>'});

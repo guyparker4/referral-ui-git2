@@ -1,0 +1,179 @@
+<a.modal class="edit-address-modal">
+    <div id="editAddressItem" class="fb-my-account" style="width: 575px; display: block;">
+        <link href="//cdn-uat.hc-retail.com/resources/store/css/iprint_pilot/my-account.css" rel="stylesheet" type="text/css" media="screen">
+        <link href="//cdn-uat.hc-retail.com/resources/store/css/iprint_pilot/address-book.css" rel="stylesheet" type="text/css" media="screen">
+        <link href="//cdn-uat.hc-retail.com/resources/store/css/iprint_pilot/fb-modal.css" rel="stylesheet" type="text/css" media="screen">
+        <div id="body-content" class="container_16 clearfix">
+            <div id="fb-modal-outer">
+                <h1>Edit Contact Address</h1>
+
+                <div class="content-form">
+
+
+                    <form id="editContactForm2" name="editContactForm2" action="/estore/responsive/en/usr/addressbook/component/dialogEditAddrSuccess.jsp?frompage=editContact&amp;_DARGS=/estore/responsive/en/usr/addressbook/component/editContactBody.jsp.editContactForm2" method="POST"><input name="_dyncharset" value="ISO-8859-1" type="hidden"><input name="_dynSessConf" value="9063055781282006794" type="hidden">
+                        <div class="content">
+
+                            <input name="/com/hcrc/store/addressmanagement/StoreAddressManagementFormHandler.successURL" value="/estore/responsive/en/usr/addressbook/component/dialogEditAddrSuccess.jsp" type="hidden"><input name="_D:/com/hcrc/store/addressmanagement/StoreAddressManagementFormHandler.successURL" value=" " type="hidden">
+                            <input name="/com/hcrc/store/addressmanagement/StoreAddressManagementFormHandler.verifyAddressSuccessURL" value="/estore/en/usr/addressbook/verifyContact.jsp?frompage=editContact" type="hidden"><input name="_D:/com/hcrc/store/addressmanagement/StoreAddressManagementFormHandler.verifyAddressSuccessURL" value=" " type="hidden"><input name="/com/hcrc/store/addressmanagement/StoreAddressManagementFormHandler.verifyAddressErrorURL" value="/estore/responsive/en/usr/addressbook/component/editContactBody.jsp?cid=143510" type="hidden"><input name="_D:/com/hcrc/store/addressmanagement/StoreAddressManagementFormHandler.verifyAddressErrorURL" value=" " type="hidden">
+                            <input id="contactId1" name="/com/hcrc/store/addressmanagement/StoreAddressManagementFormHandler.contactVO.contactId" value="143510" type="hidden"><input name="_D:/com/hcrc/store/addressmanagement/StoreAddressManagementFormHandler.contactVO.contactId" value=" " type="hidden">
+                            <div class="content-form-padding clearfix">
+                                <div class="content-labels">
+                                    <label for="fname">first name<sup>*</sup></label>
+                                </div>
+                                <div class="content-form required">
+                                    <input id="firstName" maxlength="40" name="/com/hcrc/store/addressmanagement/StoreAddressManagementFormHandler.contactVO.firstName" value="Michael" onkeyup="validaterequiredFieldsForm('editContactForm2','editAddressItem',1);" type="text"><input name="_D:/com/hcrc/store/addressmanagement/StoreAddressManagementFormHandler.contactVO.firstName" value=" " type="hidden">
+                                </div>
+                                <div class="content-labels">
+                                    <label for="lname">last name<sup>*</sup></label>
+                                </div>
+                                <div class="content-form required">
+                                    <input id="lastName" maxlength="40" name="/com/hcrc/store/addressmanagement/StoreAddressManagementFormHandler.contactVO.lastName" value="Chen" onkeyup="validaterequiredFieldsForm('editContactForm2','editAddressItem',1);" type="text"><input name="_D:/com/hcrc/store/addressmanagement/StoreAddressManagementFormHandler.contactVO.lastName" value=" " type="hidden">
+                                </div>
+                                <div class="content-labels">
+                                    <label for="company">company</label>
+                                </div>
+                                <div class="content-form">
+                                    <input id="company" maxlength="50" name="/com/hcrc/store/addressmanagement/StoreAddressManagementFormHandler.contactVO.companyName" value="" onkeyup="validaterequiredFieldsForm('editContactForm2','editAddressItem',1);" type="text"><input name="_D:/com/hcrc/store/addressmanagement/StoreAddressManagementFormHandler.contactVO.companyName" value=" " type="hidden">
+                                </div>
+                                <div class="content-labels">
+                                    <label for="address1">address<sup>*</sup></label>
+                                </div>
+                                <div class="content-form required">
+                                    <input id="address1" maxlength="40" name="/com/hcrc/store/addressmanagement/StoreAddressManagementFormHandler.contactVO.street1" value="5207" onkeyup="validaterequiredFieldsForm('editContactForm2','editAddressItem',1);" type="text"><input name="_D:/com/hcrc/store/addressmanagement/StoreAddressManagementFormHandler.contactVO.street1" value=" " type="hidden">
+                                </div>
+                                <div class="content-labels">
+                                    &nbsp;
+                                </div>
+                                <div class="content-form">
+                                    <input id="address2" maxlength="40" name="/com/hcrc/store/addressmanagement/StoreAddressManagementFormHandler.contactVO.street2" value="" onkeyup="validaterequiredFieldsForm('editContactForm2','editAddressItem',1);" type="text"><input name="_D:/com/hcrc/store/addressmanagement/StoreAddressManagementFormHandler.contactVO.street2" value=" " type="hidden">
+                                </div>
+                                <div class="content-labels">
+                                    <label for="city">city<sup>*</sup></label>
+                                </div>
+                                <div class="content-form required">
+                                    <input id="city" maxlength="28" name="/com/hcrc/store/addressmanagement/StoreAddressManagementFormHandler.contactVO.city" value="San Antonio" class="cityInput" onkeyup="validaterequiredFieldsForm('editContactForm2','editAddressItem',1);" type="text"><input name="_D:/com/hcrc/store/addressmanagement/StoreAddressManagementFormHandler.contactVO.city" value=" " type="hidden">
+                                </div>
+                                <div class="content-labels">
+                                    <label for="state">state<sup>*</sup></label>
+                                </div>
+                                <div class="content-form required">
+                                    <div class="content-form-state-zip fb-modal">
+
+                                        <input name="_D:/com/hcrc/store/addressmanagement/StoreAddressManagementFormHandler.contactVO.state" value=" " type="hidden"><select id="state" style="font-size=12px" name="/com/hcrc/store/addressmanagement/StoreAddressManagementFormHandler.contactVO.state" class="required state" onchange="validaterequiredFieldsForm('editContactForm2','editAddressItem',1);" size="1">
+                                        <optgroup label="US States">
+                                            <option value="AL">AL-Alabama
+                                            </option><option value="AK">AK-Alaska
+                                        </option><option value="AZ">AZ-Arizona
+                                        </option><option value="AR">AR-Arkansas
+                                        </option><option value="CA">CA-California
+                                        </option><option value="CO">CO-Colorado
+                                        </option><option value="CT">CT-Connecticut
+                                        </option><option value="DE">DE-Delaware
+                                        </option><option value="DC">DC-District of Columbia
+                                        </option><option value="FL">FL-Florida
+                                        </option><option value="GA">GA-Georgia
+                                        </option><option value="HI">HI-Hawaii
+                                        </option><option value="ID">ID-Idaho
+                                        </option><option value="IL">IL-Illinois
+                                        </option><option value="IN">IN-Indiana
+                                        </option><option value="IA">IA-Iowa
+                                        </option><option value="KS">KS-Kansas
+                                        </option><option value="KY">KY-Kentucky
+                                        </option><option value="LA">LA-Louisiana
+                                        </option><option value="ME">ME-Maine
+                                        </option><option value="MD">MD-Maryland
+                                        </option><option value="MA">MA-Massachusetts
+                                        </option><option value="MI">MI-Michigan
+                                        </option><option value="MN">MN-Minnesota
+                                        </option><option value="MS">MS-Mississippi
+                                        </option><option value="MO">MO-Missouri
+                                        </option><option value="MT">MT-Montana
+                                        </option><option value="NE">NE-Nebraska
+                                        </option><option value="NV">NV-Nevada
+                                        </option><option value="NH">NH-New Hampshire
+                                        </option><option value="NJ">NJ-New Jersey
+                                        </option><option value="NM">NM-New Mexico
+                                        </option><option value="NY">NY-New York
+                                        </option><option value="NC">NC-North Carolina
+                                        </option><option value="ND">ND-North Dakota
+                                        </option><option value="OH">OH-Ohio
+                                        </option><option value="OK">OK-Oklahoma
+                                        </option><option value="OR">OR-Oregon
+                                        </option><option value="PA">PA-Pennsylvania
+                                        </option><option value="RI">RI-Rhode Island
+                                        </option><option value="SC">SC-South Carolina
+                                        </option><option value="SD">SD-South Dakota
+                                        </option><option value="TN">TN-Tennessee
+                                        </option><option selected="" value="TX">TX-Texas
+                                        </option><option value="UT">UT-Utah
+                                        </option><option value="VT">VT-Vermont
+                                        </option><option value="VA">VA-Virginia
+                                        </option><option value="WA">WA-Washington
+                                        </option><option value="WV">WV-West Virginia
+                                        </option><option value="WI">WI-Wisconsin
+                                        </option><option value="WY">WY-Wyoming
+                                        </option></optgroup>
+                                        <optgroup label="Armed Forces">
+                                            <option value="AE">AE-Armed Forces Africa
+                                            </option><option value="AA">AA-Armed Forces Americas
+                                        </option><option value="AE">AE-Armed Forces Canada
+                                        </option><option value="AE">AE-Armed Forces Europe
+                                        </option><option value="AE">AE-Armed Forces Middle East
+                                        </option><option value="AP">AP-Armed Forces Pacific
+                                        </option></optgroup>
+                                        <optgroup label="U. S. Associated Territories">
+                                            <option value="AS">AS-American Samoa
+                                            </option><option value="FM">FM-Fed. States of Micronesia
+                                        </option><option value="GU">GU-Guam
+                                        </option><option value="MH">MH-Marshall Islands
+                                        </option><option value="MP">MP-Northern Mariana Islands
+                                        </option><option value="PW">PW-Palau
+                                        </option><option value="PR">PR-Puerto Rico
+                                        </option><option value="VI">VI-Virgin Islands
+                                        </option></optgroup>
+                                    </select></div>
+                                </div>
+                                <div class="content-labels">
+                                    <label for="zip">zip<sup>*</sup></label>
+                                </div>
+                                <div class="content-form required">
+                                    <div class=" width-50pct">
+
+                                        <input id="zip" maxlength="10" name="/com/hcrc/store/addressmanagement/StoreAddressManagementFormHandler.contactVO.zipcode" value="78249" class="zipInput" onkeyup="validaterequiredFieldsForm('editContactForm2','editAddressItem',1);" onkeypress="return fnNumeric_only(event);" type="text"><input name="_D:/com/hcrc/store/addressmanagement/StoreAddressManagementFormHandler.contactVO.zipcode" value=" " type="hidden">
+
+                                        <input name="/com/hcrc/store/addressmanagement/StoreAddressManagementFormHandler.contactVO.country" value="US" type="hidden"><input name="_D:/com/hcrc/store/addressmanagement/StoreAddressManagementFormHandler.contactVO.country" value=" " type="hidden"></div>
+                                </div>
+                                <div class="content-labels">
+                                    <label for="phone">phone<sup>*</sup></label>
+                                </div>
+                                <div class="content-form required">
+                                    <div class=" width-50pct">
+                                        <input id="phone" maxlength="20" name="/com/hcrc/store/addressmanagement/StoreAddressManagementFormHandler.contactVO.phoneNumber" onblur="return formatPhone(this)" value="(222)222-2222" onkeyup="validaterequiredFieldsForm('editContactForm2','editAddressItem',1);" onkeypress="return fnNumeric_only(event)" type="text"><input name="_D:/com/hcrc/store/addressmanagement/StoreAddressManagementFormHandler.contactVO.phoneNumber" value=" " type="hidden">
+                                    </div>
+                                </div>
+                                <div class="content-labels">
+                                    &nbsp;
+                                </div>
+                                <div class="content-form">
+                                    <input name="/com/hcrc/store/addressmanagement/StoreAddressManagementFormHandler.contactVO.defaultAddress" value="true" class="checkBox" onclick="validaterequiredFieldsForm('editContactForm2','editAddressItem',1);" type="checkbox" checked=""><input name="_D:/com/hcrc/store/addressmanagement/StoreAddressManagementFormHandler.contactVO.defaultAddress" value=" " type="hidden">
+                                    <span class="rememberLabel">Make this address my default shipping address</span>
+                                </div>
+                                <div class="content-labels">
+                                    &nbsp;
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-labels">
+                            &nbsp;
+                        </div>
+                        <div class="content-form text-right">
+                            <a title="Save" class="button ajaxForm" href="javascript:postAjaxStyle('editContactForm2','editAddressItem',1,'undefined','undefined');"><span>Save</span></a>
+                            <a title="Cancel" class="btn-secondary" href="javascript:closeDialog();"><span>Cancel</span></a>
+                        </div>
+                        <input name="/com/hcrc/store/addressmanagement/StoreAddressManagementFormHandler.editContactInAddressbook" value="" type="hidden"><input name="_D:/com/hcrc/store/addressmanagement/StoreAddressManagementFormHandler.editContactInAddressbook" value=" " type="hidden"><input name="_DARGS" value="/estore/responsive/en/usr/addressbook/component/editContactBody.jsp.editContactForm2" type="hidden"></form>
+                </div>
+            </div>
+        </div>
+        <!-- ==== End Body Content ==== -->
+    </div>
+</a.modal>

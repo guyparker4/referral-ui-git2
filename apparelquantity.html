@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Referral</title>
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <script type="application/javascript" src="/assets/js/vue.min.js"></script>
+</head>
+
+<body>
+<div id="app">
+    <o.promoheader></o.promoheader>
+    <o.toolbar></o.toolbar>
+    <o.apparelquantity></o.apparelquantity>
+</div>
+</body>
+
+</html>
+<script type="text/javascript">
+	var configVars = {
+		uniqueItemId: "1530215032",
+		productID: "prod3370003_prd",
+		skuID:	"sku3300020_sk,sku3300021_sk",
+		giftBoxRedeemFlag: "false",
+		savedItem: false,
+		isCSR: false,
+		profileID: "176706264",
+		legacyProfileID: "null",
+		channelConfig: "https://uat.iprint.com/resources/rc/mbundle/channelConfig-uat-iprint_11_2.txt",
+		disableMessageAuthentication: "false",
+		atg_host: "uat.iprint.com",
+		atg_port: "443",
+		atg_port_secure: "true",
+		productCode: "APPAREL1485284947",
+		networkName: "100003",
+		isExistingUser :"false",
+		json_path: "",
+		image_path: "",
+		cartURL: "/estore/en/checkout/shoppingCart.jsp",
+		ugcPath: "2017/03/13/11/38/",
+		reOrder: "false",
+		quantity: "11,22",
+		subSkuIds: "",
+		designChanged: "false",
+		savedItem: "false",
+		registered: "false",
+		savedDesignName: "",
+		qtyUpdateService:"/rest/bean/atg/commerce/order/purchase/CartModifierFormHandler/editItemToOrder",
+		commerceItemId: "ci8366000028"
+	};
+</script>
+
+<script id="cart_qty_model" type="text/template">
+
+    {
+    "pdp": {
+    "product": {
+    "addMultipleSkus": true,
+    "minimumQty": 24,
+    "bulkPricing": true,
+    "price": [
+    {
+    "unitprice": "5.00",
+    "onsale": false,
+    "lowBoundQty": 1,
+    "highBoundQty": 20
+    },
+    {
+    "unitprice": "4.00",
+    "onsale": false,
+    "lowBoundQty": 21,
+    "highBoundQty": 50
+    },
+    {
+    "unitprice": "3.00",
+    "onsale": false,
+    "lowBoundQty": 51,
+    "highBoundQty": 999999
+    }
+    ],
+    "editQtyFromCart": true,
+    "childSkus": [
+    {
+    "upcharge": "0.0",
+    "productoption": {
+    "description": "S",
+    "label": "SKU_SIZE"
+    },
+    "selectedQty": 0,
+    "skuId": "sku3300015_sk",
+    "stockLevel": {
+    "stockThreshold": 0,
+    "availableStock": 17918,
+    "stockStatus": "In Stock",
+    "statusMessage": "In Stock"
+    }
+    },
+    {
+    "upcharge": "0.0",
+    "productoption": {
+    "description": "M",
+    "label": "SKU_SIZE"
+    },
+    "selectedQty": 0,
+    "skuId": "sku3300016_sk",
+    "stockLevel": {
+    "stockThreshold": 0,
+    "availableStock": 17918,
+    "stockStatus": "In Stock",
+    "statusMessage": "In Stock"
+    }
+    },
+    {
+    "upcharge": "0.0",
+    "productoption": {
+    "description": "L",
+    "label": "SKU_SIZE"
+    },
+    "selectedQty": 220,
+    "skuId": "sku3300017_sk",
+    "stockLevel": {
+    "stockThreshold": 0,
+    "availableStock": 300,
+    "stockStatus": "In Stock",
+    "statusMessage": "In Stock"
+    }
+    },
+    {
+    "upcharge": "0.0",
+    "productoption": {
+    "description": "XL",
+    "label": "SKU_SIZE"
+    },
+    "selectedQty": 0,
+    "skuId": "sku3300018_sk",
+    "stockLevel": {
+    "stockThreshold": 0,
+    "availableStock": 17918,
+    "stockStatus": "In Stock",
+    "statusMessage": "In Stock"
+    }
+    },
+    {
+    "upcharge": "0.0",
+    "productoption": {
+    "description": "XLT",
+    "label": "SKU_SIZE"
+    },
+    "selectedQty": 0,
+    "skuId": "sku33000181_sk",
+    "stockLevel": {
+    "stockThreshold": 0,
+    "availableStock": 17918,
+    "stockStatus": "In Stock",
+    "statusMessage": "In Stock"
+    }
+    },
+    {
+    "upcharge": "0.0",
+    "productoption": {
+    "description": "2XLT",
+    "label": "SKU_SIZE"
+    },
+    "selectedQty": 0,
+    "skuId": "sku33000182_sk",
+    "stockLevel": {
+    "stockThreshold": 0,
+    "availableStock": 17918,
+    "stockStatus": "In Stock",
+    "statusMessage": "In Stock"
+    }
+    },
+    {
+    "upcharge": "2.0",
+    "productoption": {
+    "description": "2XL",
+    "label": "SKU_SIZE"
+    },
+    "selectedQty": 0,
+    "skuId": "sku3300019_sk",
+    "stockLevel": {
+    "stockThreshold": 0,
+    "availableStock": 17918,
+    "stockStatus": "In Stock",
+    "statusMessage": "In Stock"
+    }
+    },
+    {
+    "upcharge": "3.0",
+    "productoption": {
+    "description": "3XL",
+    "label": "SKU_SIZE"
+    },
+    "selectedQty": 0,
+    "skuId": "sku3300020_sk",
+    "stockLevel": {
+    "stockThreshold": 0,
+    "availableStock": 17918,
+    "stockStatus": "In Stock",
+    "statusMessage": "In Stock"
+    }
+    },
+    {
+    "upcharge": "4.0",
+    "productoption": {
+    "description": "4XL",
+    "label": "SKU_SIZE"
+    },
+    "selectedQty": 0,
+    "skuId": "sku3300021_sk",
+    "stockLevel": {
+    "stockThreshold": 0,
+    "availableStock": 0,
+    "stockStatus": "Out of Stock",
+    "statusMessage": "Out of Stock"
+    }
+    }
+    ],
+    "productType": "PROMO_APPAREL",
+    "productId": "prod3370003_prd"
+    }
+    }
+    }
+</script>
+<script id="app_version" type="text/template">001</script>
+<script id="app_basepage" type="text/template">[
+{
+"type": "o.cart.shipping",
+"order": {
+"state": "INCOMPLETE",
+"commerceItems": [
+{
+"productDisplayName": "Premier Three-to-a-Page Binder - Burgundy",
+"state": "INITIAL",
+"productId": "prod1620002_prd",
+"id": "ci8525000001",
+"priceInfo": {
+"currencyCode": "USD",
+"amount": 24.99
+},
+"quantity": 100,
+"catalogRefId": "sku1590001_sk"
+},
+{
+"productDisplayName": "S-5115 VOID Convenience Stamp",
+"state": "INITIAL",
+"productId": "prod1570128_prd",
+"id": "ci8525000003",
+"priceInfo": {
+"currencyCode": "USD",
+"amount": 19.99
+},
+"quantity": 100,
+"catalogRefId": "sku1570007_sk"
+}
+],
+"priceInfo": {
+"total": 44.98,
+"subtotal": 44.98,
+"discountAmount": 0,
+"shipping": 0,
+"tax": 0
+},
+"totalCommerceItemCount": 2
+},
+"recommendedProducts": [
+{
+"onsale": false,
+"productUrl":"",
+"imageUrl": "/images/shared/checks-forms/spen3/spen3_01_200x200.jpg",
+"productId": "prod1740032_prd",
+"unitprice": "$12.99",
+"productName": "SPEN3 Security Pen 3 Pack",
+"unitsaleprice": null
+},
+{
+"onsale": false,
+"productUrl":"",
+"imageUrl": "/images/shared/checks-forms/dta-1/dta-1_01_200x200.jpg",
+"productId": "prod1610018_prd",
+"unitprice": "$0.05",
+"productName": "DTA Bookbound deposit tickets",
+"unitsaleprice": null
+},
+{
+"onsale": false,
+"productUrl":"",
+"imageUrl": "/images/shared/checks-forms/s-5160/s-5160_01_200x200.jpg",
+"productId": "prod1570154_prd",
+"unitprice": "$19.99",
+"productName": "S-5160 Address Stamp",
+"unitsaleprice": null
+}
+]
+}
+]</script>
+<script id="app_catalog" type="text/template">{
+"catalogData": [
+{
+"id": "catalog450002_ctlg",
+"subCategories": [
+{
+"id": "cat1110001_ctgy",
+"name": "Blank Laser Checks",
+"success": true,
+"url": "/estore/Checks/Blank Laser Checks/cat1110001_ctgy.c"
+},
+{
+"id": "cat860004_ctgy",
+"sortOrder": 1,
+"name": "Computer Checks",
+"success": true,
+"url": "/estore/Checks/Computer Checks/cat860004_ctgy.c"
+},
+{
+"id": "cat780046_ctgy",
+"sortOrder": 2,
+"name": "Manual Business Checks",
+"success": true,
+"url": "/estore/Checks/Manual Business Checks/cat780046_ctgy.c"
+},
+{
+"id": "cat780020_ctgy",
+"sortOrder": 3,
+"name": "Personal Checks",
+"success": true,
+"url": "/estore/Checks/Personal Checks/cat780020_ctgy.c"
+}
+],
+"sortOrder": 10,
+"name": "Checks",
+"success": true,
+"url": "/estore/Checks/catalog450002_ctlg.ct"
+},
+{
+"id": "catalog410007_ctlg",
+"subCategories": [
+{
+"id": "cat780012_ctgy",
+"sortOrder": 1,
+"name": "W-2s and W-3s",
+"success": true,
+"url": "/estore/Tax Forms/W-2s and W-3s/cat780012_ctgy.c"
+},
+{
+"id": "cat780013_ctgy",
+"sortOrder": 2,
+"name": "1099s and 1096s",
+"success": true,
+"url": "/estore/Tax Forms/1099s and 1096s/cat780013_ctgy.c"
+},
+{
+"id": "cat1840001_ctgy",
+"sortOrder": 3,
+"name": "Affordable Care Act",
+"success": true,
+"url": "/estore/Tax Forms/Affordable Care Act/cat1840001_ctgy.c"
+},
+{
+"id": "cat780031_ctgy",
+"sortOrder": 4,
+"name": "Tax Form Envelopes",
+"success": true,
+"url": "/estore/Tax Forms/Tax Form Envelopes/cat780031_ctgy.c"
+},
+{
+"id": "cat780016_ctgy",
+"sortOrder": 5,
+"name": "Tax Folders & Return Envelopes",
+"success": true,
+"url": "/estore/Tax Forms/Tax Folders & Return Envelopes/cat780016_ctgy.c"
+},
+{
+"id": "cat780018_ctgy",
+"sortOrder": 6,
+"name": "Redi-Tags",
+"success": true,
+"url": "/estore/Tax Forms/Redi-Tags/cat780018_ctgy.c"
+}
+],
+"sortOrder": 50,
+"name": "Tax Forms",
+"success": true,
+"url": "/estore/Tax Forms/catalog410007_ctlg.ct"
+},
+{
+"id": "catalog410010_ctlg",
+"subCategories": [
+{
+"id": "cat780034_ctgy",
+"sortOrder": 1,
+"name": "Double-Window Envelopes",
+"success": true,
+"url": "/estore/Envelopes/Double-Window Envelopes/cat780034_ctgy.c"
+},
+{
+"id": "cat780033_ctgy",
+"sortOrder": 2,
+"name": "Single-Window Envelopes",
+"success": true,
+"url": "/estore/Envelopes/Single-Window Envelopes/cat780033_ctgy.c"
+},
+{
+"id": "cat780032_ctgy",
+"sortOrder": 4,
+"name": "No Window Envelopes",
+"success": true,
+"url": "/estore/Envelopes/No Window Envelopes/cat780032_ctgy.c"
+},
+{
+"id": "cat780031_ctgy",
+"sortOrder": 4,
+"name": "Tax Form Envelopes",
+"success": true,
+"url": "/estore/Envelopes/Tax Form Envelopes/cat780031_ctgy.c"
+}
+],
+"sortOrder": 20,
+"name": "Envelopes",
+"success": true,
+"url": "/estore/Envelopes/catalog410010_ctlg.ct"
+},
+{
+"id": "catalog450004_ctlg",
+"subCategories": [
+{
+"id": "cat780027_ctgy",
+"sortOrder": 1,
+"name": "Compliance Poster Subscriptions",
+"success": true,
+"url": "/estore/Labor Law Posters/Compliance Poster Subscriptions/cat780027_ctgy.c"
+},
+{
+"id": "cat780028_ctgy",
+"sortOrder": 2,
+"name": "Compliance Posters",
+"success": true,
+"url": "/estore/Labor Law Posters/Compliance Posters/cat780028_ctgy.c"
+},
+{
+"id": "cat780026_ctgy",
+"sortOrder": 3,
+"name": "HR Forms",
+"success": true,
+"url": "/estore/Labor Law Posters/HR Forms/cat780026_ctgy.c"
+}
+],
+"sortOrder": 70,
+"name": "Labor Law Posters",
+"success": true,
+"url": "/estore/Labor Law Posters/catalog450004_ctlg.ct"
+},
+{
+"id": "catalog450003_ctlg",
+"subCategories": [
+{
+"id": "cat860007_ctgy",
+"sortOrder": 1,
+"name": "Manual Deposit Tickets",
+"success": true,
+"url": "/estore/Deposit Solutions/Manual Deposit Tickets/cat860007_ctgy.c"
+},
+{
+"id": "cat860008_ctgy",
+"sortOrder": 2,
+"name": "Printable Deposit Tickets",
+"success": true,
+"url": "/estore/Deposit Solutions/Printable Deposit Tickets/cat860008_ctgy.c"
+},
+{
+"id": "cat780057_ctgy",
+"sortOrder": 3,
+"name": "Deposit Bags",
+"success": true,
+"url": "/estore/Deposit Solutions/Deposit Bags/cat780057_ctgy.c"
+}
+],
+"sortOrder": 30,
+"name": "Deposit Solutions",
+"success": true,
+"url": "/estore/Deposit Solutions/catalog450003_ctlg.ct"
+},
+{
+"id": "catalog410013_ctlg",
+"subCategories": [
+{
+"id": "cat780042_ctgy",
+"sortOrder": 1,
+"name": "Invoices",
+"success": true,
+"url": "/estore/Business Forms/Invoices/cat780042_ctgy.c"
+},
+{
+"id": "cat780044_ctgy",
+"sortOrder": 2,
+"name": "Statements",
+"success": true,
+"url": "/estore/Business Forms/Statements/cat780044_ctgy.c"
+},
+{
+"id": "cat780045_ctgy",
+"sortOrder": 3,
+"name": "Purchase Orders",
+"success": true,
+"url": "/estore/Business Forms/Purchase Orders/cat780045_ctgy.c"
+},
+{
+"id": "cat860013_ctgy",
+"sortOrder": 4,
+"name": "Multi-Purpose",
+"success": true,
+"url": "/estore/Business Forms/Multi-Purpose/cat860013_ctgy.c"
+},
+{
+"id": "cat780043_ctgy",
+"sortOrder": 5,
+"name": "Sales Receipts, Sales Orders and Credit Memos",
+"success": true,
+"url": "/estore/Business Forms/Sales Receipts, Sales Orders and Credit Memos/cat780043_ctgy.c"
+}
+],
+"sortOrder": 60,
+"name": "Business Forms",
+"success": true,
+"url": "/estore/Business Forms/catalog410013_ctlg.ct"
+},
+{
+"id": "catalog570003_ctlg",
+"subCategories": [
+{
+"id": "cat1070003_ctgy",
+"sortOrder": 150,
+"name": "Home Page ThumbNail",
+"success": true,
+"url": "/estore/Home Page Catalog/Home Page ThumbNail/cat1070003_ctgy.c"
+}
+],
+"sortOrder": 150,
+"name": "Home Page Catalog",
+"success": true,
+"url": "/estore/Home Page Catalog/catalog570003_ctlg.ct"
+},
+{
+"id": "catalog410012_ctlg",
+"subCategories": [
+{
+"id": "cat780009_ctgy",
+"sortOrder": 1,
+"name": "Stamps",
+"success": true,
+"url": "/estore/Accessories/Stamps/cat780009_ctgy.c"
+},
+{
+"id": "cat780059_ctgy",
+"sortOrder": 2,
+"name": "Binders",
+"success": true,
+"url": "/estore/Accessories/Binders/cat780059_ctgy.c"
+},
+{
+"id": "cat780052_ctgy",
+"sortOrder": 3,
+"name": "Mailing Labels",
+"success": true,
+"url": "/estore/Accessories/Mailing Labels/cat780052_ctgy.c"
+},
+{
+"id": "cat780053_ctgy",
+"sortOrder": 6,
+"name": "MICR Toner Cartridges",
+"success": true,
+"url": "/estore/Accessories/MICR Toner Cartridges/cat780053_ctgy.c"
+},
+{
+"id": "cat780051_ctgy",
+"sortOrder": 7,
+"name": "Security Products",
+"success": true,
+"url": "/estore/Accessories/Security Products/cat780051_ctgy.c"
+}
+],
+"sortOrder": 40,
+"name": "Accessories",
+"success": true,
+"url": "/estore/Accessories/catalog410012_ctlg.ct"
+}
+],
+"siteId": "100012",
+"type": "catalogmenu"
+}</script>
+<script type="application/javascript" src="/assets/js/main.js"></script>
+<script type="application/javascript" src="https://uat.iprint.com/resources/store/scripts/promo_products/iprint/vendor.min.js"></script>

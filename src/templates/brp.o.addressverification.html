@@ -1,0 +1,58 @@
+<a.modal class="address-verification-modal">
+    <div id="chooseAddressItem" class="fb-my-account">
+
+        <!-- chooseAddress ERROR - LEAVE THIS COMMENT HERE -->
+
+        <script type="text/javascript">
+			function goback(){
+				window.history.back();
+			}
+			function submitVerificationForm(formId){
+				document.getElementById(formId).submit();
+			}
+        </script>
+        <!-- ==== Body Content ==== -->
+        <div id="body-content" class="container_16 clearfix">
+            <div id="fb-modal-outer">
+                <script type="text/javascript">
+					$(document).ready( function() {
+						setAnalytics('errorMessage',"ERR_EXT_001");
+					});
+                </script>
+                <form id="chooseAddressForm0" name="chooseAddressForm0" action="/estore/en/checkout/shippingInfo.jsp?_DARGS=/estore/responsive/en/checkout/component/chooseAddressBody.jsp.chooseAddressForm0" method="POST"><div style="display:none"><input name="_dyncharset" value="ISO-8859-1" type="hidden"> </div><div style="display:none"><input name="_dynSessConf" value="9063055781282006794" type="hidden"> </div>
+                    <input name="/atg/commerce/order/purchase/ShippingGroupFormHandler.editShipGroupId" value="" type="hidden" autocomplete="off"><input name="_D:/atg/commerce/order/purchase/ShippingGroupFormHandler.editShipGroupId" value=" " type="hidden"><h1>Address Verification</h1>
+                    <p>
+                        <strong>
+                            We are unable to verify the address you entered. Please verify and select the address you entered or click the link below to return to the previous screen and edit the address.
+                        </strong>
+                    </p>
+                    <div class="row">
+                        <div class="medium-6 columns global-margin-bottom">
+                            Michael&nbsp;Chen
+                            <br>
+                            5207<input name="/atg/commerce/order/purchase/ShippingGroupFormHandler.shipAddress.street1" value="5207" type="hidden" autocomplete="off"><input name="_D:/atg/commerce/order/purchase/ShippingGroupFormHandler.shipAddress.street1" value=" " type="hidden">
+                            <br>
+                            San Antonio,
+                            TX&nbsp;78249
+                            <input name="/atg/commerce/order/purchase/ShippingGroupFormHandler.shipAddress.city" value="San Antonio" type="hidden" autocomplete="off"><input name="_D:/atg/commerce/order/purchase/ShippingGroupFormHandler.shipAddress.city" value=" " type="hidden">
+                            <input name="/atg/commerce/order/purchase/ShippingGroupFormHandler.shipAddress.state" value="TX" type="hidden" autocomplete="off"><input name="_D:/atg/commerce/order/purchase/ShippingGroupFormHandler.shipAddress.state" value=" " type="hidden">
+                            <input name="/atg/commerce/order/purchase/ShippingGroupFormHandler.shipAddress.zipcode" value="78249" type="hidden" autocomplete="off"><input name="_D:/atg/commerce/order/purchase/ShippingGroupFormHandler.shipAddress.zipcode" value=" " type="hidden">
+                            <input name="/atg/commerce/order/purchase/ShippingGroupFormHandler.shipAddress.country" value="US" type="hidden" autocomplete="off"><input name="_D:/atg/commerce/order/purchase/ShippingGroupFormHandler.shipAddress.country" value=" " type="hidden">
+                            <input name="/atg/commerce/order/purchase/ShippingGroupFormHandler.shipAddress.firstName" value="Michael" type="hidden" autocomplete="off"><input name="_D:/atg/commerce/order/purchase/ShippingGroupFormHandler.shipAddress.firstName" value=" " type="hidden">
+                            <input name="/atg/commerce/order/purchase/ShippingGroupFormHandler.shipAddress.lastName" value="Chen" type="hidden" autocomplete="off"><input name="_D:/atg/commerce/order/purchase/ShippingGroupFormHandler.shipAddress.lastName" value=" " type="hidden">
+                            <!-- label for="inputCity"><span>Use the Address I Entered</span></label>-->
+                            <input name="/atg/commerce/order/purchase/ShippingGroupFormHandler.shipAddress.street2" value="" type="hidden"><input name="_D:/atg/commerce/order/purchase/ShippingGroupFormHandler.shipAddress.street2" value=" " type="hidden"><input name="/atg/commerce/order/purchase/ShippingGroupFormHandler.shipAddress.phoneNumber" value="(222)222-2222" type="hidden"><input name="_D:/atg/commerce/order/purchase/ShippingGroupFormHandler.shipAddress.phoneNumber" value=" " type="hidden"><input name="/atg/commerce/order/purchase/ShippingGroupFormHandler.shipAddress.companyName" value="" type="hidden"><input name="_D:/atg/commerce/order/purchase/ShippingGroupFormHandler.shipAddress.companyName" value=" " type="hidden"><input name="/atg/commerce/order/purchase/ShippingGroupFormHandler.sameAsShipping" value="different" type="hidden"><input name="_D:/atg/commerce/order/purchase/ShippingGroupFormHandler.sameAsShipping" value=" " type="hidden"><input name="/atg/commerce/order/purchase/ShippingGroupFormHandler.addAddressToAddressBook" value="" type="hidden"><input name="_D:/atg/commerce/order/purchase/ShippingGroupFormHandler.addAddressToAddressBook" value=" " type="hidden"><input name="/atg/commerce/order/purchase/ShippingGroupFormHandler.editShippingAddressSuccessURL" value="/estore/en/checkout/shippingMethod.jsp" type="hidden" autocomplete="off"><input name="_D:/atg/commerce/order/purchase/ShippingGroupFormHandler.editShippingAddressSuccessURL" value=" " type="hidden">
+                            <input name="/atg/commerce/order/purchase/ShippingGroupFormHandler.editShippingAddressErrorURL" value="/OriginatingRequest.requestURI" type="hidden" autocomplete="off"><input name="_D:/atg/commerce/order/purchase/ShippingGroupFormHandler.editShippingAddressErrorURL" value=" " type="hidden"><input name="standardAddress" value="original" type="hidden"><input name="_D:standardAddress" value=" " type="hidden"><input name="/atg/commerce/order/purchase/ShippingGroupFormHandler.selectCommItem" value="" type="hidden"><input name="_D:/atg/commerce/order/purchase/ShippingGroupFormHandler.selectCommItem" value=" " type="hidden"><input name="/atg/commerce/order/purchase/ShippingGroupFormHandler.updateShipAddress" value="" type="hidden"><input name="_D:/atg/commerce/order/purchase/ShippingGroupFormHandler.updateShipAddress" value=" " type="hidden"></div>
+                        <div class="medium-6 columns">
+                            <a href="javascript:submitVerificationForm('chooseAddressForm0');" class="button ajaxForm cta">
+                                Use the address I entered
+                            </a>
+                            <a id="editAddressLink" class="button hollow" onclick="closeDialog();" href="javascript:void(0);">Edit the address I entered
+                            </a></div>
+                    </div>
+                    <div style="display:none"><input name="_DARGS" value="/estore/responsive/en/checkout/component/chooseAddressBody.jsp.chooseAddressForm0" type="hidden"> </div></form></div>
+        </div>
+        <!-- ==== End Body Content ==== -->
+
+    </div>
+</a.modal>

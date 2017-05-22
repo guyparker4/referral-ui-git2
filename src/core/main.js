@@ -1,61 +1,61 @@
 //vue filters
 require( './modules/filters' )();
 
-var app = require( './modules/model' );
+var brp = require( './modules/model' );
 
 //output to global
-window.app = app;
+window.brp = brp;
 
-app.version = "001";
+brp.version = "001";
 
 //lodash
-app._ = {};
-//app._.find = require( 'lodash/find' );
+brp._ = {};
+//brp._.find = require( 'lodash/find' );
 
-app.Vue = Vue;
-app.Vue.config.debug = true;
+brp.Vue = Vue;
+brp.Vue.config.debug = true;
 Vue.config.devtools = true
 
 //async
-app.mul = require( './modules/mul' );
-app.mul.root = "/assets/js/";
+brp.mul = require( './modules/mul' );
+brp.mul.root = "/assets/js/";
 
 require( './modules/mapping' )();
 
-app.libs = require( './modules/libs' );
-app.methods = require( './modules/methods' );
-app.validation = require( './modules/validation' );
-app.services = require( './modules/services' );
-app.analytics = require( './modules/analytics' );
-app.router = require( './modules/router' );
+brp.libs = require( './modules/libs' );
+brp.methods = require( './modules/methods' );
+brp.validation = require( './modules/validation' );
+brp.services = require( './modules/services' );
+brp.analytics = require( './modules/analytics' );
+brp.router = require( './modules/router' );
 
 //load version from html
 
-
-//load model from html
-app.model = {};
-app.model.errors = [];
-app.model.scroll = {};
-app.model.history = [];
-
-//global variable
-
-app.model.current = null
 if( document.getElementById( 'app_basepage' ) ){
-    app.model.current = JSON.parse( document.getElementById( 'app_basepage' ).text );
+    brp.model.current = JSON.parse( document.getElementById( 'app_basepage' ).text );
 }
 
-app.model.catalog = null
 if( document.getElementById( 'app_catalog' ) ){
-    app.model.catalog = JSON.parse( document.getElementById( 'app_catalog' ).text );
+    brp.model.catalog = JSON.parse( document.getElementById( 'app_catalog' ).text );
 }
+
+//apparel quantity selection
+if( document.getElementById( 'cart_qty_model' )) {
+	brp.model.apparel = {};
+	brp.model.apparel.model={};
+	brp.model.apparel.model = JSON.parse(document.getElementById('cart_qty_model').text);
+	brp.model.apparel.model.apparel = [];
+	brp.model.apparel.model.total = 0;
+	brp.model.apparel.model.saleTotal = 0;
+}
+
 //}catch(e){
-//    app.model.current = [];
+//    brp.model.current = [];
 //}
 try{
-    app.model.version = 'v.' + app.version + '.' + document.getElementById( 'app_version' ).text;
+    brp.model.version = 'v.' + brp.version + '.' + document.getElementById( 'app_version' ).text;
 }catch(e){
-    app.model.version = 'v.' + app.version + '.???';
+    brp.model.version = 'v.' + brp.version + '.???';
 }
 
 Vue.mixin({
@@ -65,12 +65,12 @@ Vue.mixin({
 })
 
 
-app.methods.resize();
-window.addEventListener( 'resize' , app.methods.debounce( app.methods.resize , 50 ) );
+brp.methods.resize();
+window.addEventListener( 'resize' , brp.methods.debounce( brp.methods.resize , 50 ) );
 
-window.onerror = app.analytics.onerror;
+window.onerror = brp.analytics.onerror;
 
-app.app = new Vue({
+brp.app = new Vue({
   el: '#app',
-  data:app.model
+  data:brp.model
 });

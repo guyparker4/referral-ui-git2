@@ -39,22 +39,22 @@ methodsModule.resize = function(){
     console.log('< RESIZE cw,iw,ch,ih -------------')
     var w = document.body.clientWidth || window.innerWidth;
     var h = document.body.clientHeight || window.innerHeight;
-    var viewport = app.model.viewport;
+    var viewport = brp.model.viewport;
     if( w < 640 ){
         if( viewport !== 0 ){
-            app.model.viewport = 0;
+            brp.model.viewport = 0;
         }
     }else if( w < 1024 ){
         if( viewport !== 1 ){
-            app.model.viewport = 1;
+            brp.model.viewport = 1;
         }
     }else{
         if( viewport !== 2 ){
-            app.model.viewport = 2;
+            brp.model.viewport = 2;
         }
     }
-    app.model.width = w;
-    app.model.height = h;
+    brp.model.width = w;
+    brp.model.height = h;
 };
 
 
