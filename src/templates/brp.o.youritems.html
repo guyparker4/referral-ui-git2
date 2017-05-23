@@ -1,0 +1,104 @@
+<div>
+    <script type="text/javascript" src="/resources/store/scripts/wz_tooltip.js"></script>
+    <script>
+		registerDialog('removeproductlink','deleteCartItem','/estore/responsive/en/checkout/component/deleteCartItem.jsp');
+		registerDialog('legacyProductInfoLink','legacyProductInfo','/estore/responsive/en/usr/component/legacyProductInfoModal.jsp');
+		registerDialog('containAllShippingOptionLink','containAllShippingOptionDiv','/estore/responsive/en/checkout/displayShippingOption.jsp');
+		registerDialog('checkArmorInfo','checkarmorModal','/estore/responsive/en/checkout/component/checkArmor.jsp');
+		function openLegacyProductModal(){
+			var queryStr = "";
+			setAtrributeOnOpen('legacyProductInfoLink',queryStr);
+		}
+		function submitPersonalForm(){
+			document.getElementById('perCheckProdDetails').submit();
+		}
+		function submitBusinessForm(){
+			document.getElementById('busCheckProdDetails').submit();
+		}
+    </script>
+    <div class="grid_16 clearfix">
+        <div class="order-review-container">
+            <table class="order-review-table" cellpadding="0" cellspacing="0">
+                <tbody><tr>
+                    <th class="review-col-prod" colspan="2">Your Items</th>
+                    <th class="review-col-qty">Quantity</th>
+                    <th class="review-col-price">Price</th>
+                    <th class="review-col-dest">Shipping To</th>
+                </tr>
+
+                <tr>
+                    <td class="review-col-prod-img">
+                        <img src="https://www.iprint.com/services/UGCGetFileFromServer/2017/05/23/09/22/145518448/savedDesign/1722528053/TMBLR1470173533_layout1_3c401b18.png?HCAuthToken=utvEfsm5BF8xueOQTvL7%2BdnrHlm4Lm2WykA96TzQhEo1gT5f91CV7TpYOWimLHSOezriRPjM4kk1_--xhGjcHV4zw%3D%3D&amp;HCAuthKeyRef=URL:8&amp;noCache=1495550980818" alt="Thumbnail image" width="120" onmouseover="TagToTip('tooltipci1687007635', PADDING, 6, BGCOLOR, '#ffffff')" onmouseout="UnTip()">
+
+                        <div class="review-prod-options">
+
+                            <a href="/estore/PROMOTIONAL+PRODUCTS/Drinkware/Color+Grip+Tumbler/prod3130081_prd.p?commerceItemId=ci1687007635">edit</a> |
+
+                            <a href="javascript:setAtrributeOnOpen('removeproductlink','removalRelationShipId=r23754404&amp;productId=prod3130081_prd&amp;pageFromRequestType=paymentPage');">delete</a>
+                        </div>
+
+                    </td>
+                    <td class="review-col-prod-title">
+                    <span class="walmartOmnitureShippingProductInfo" style="display:none">
+                    prod3130081_prd-Color Grip Tumbler;1;272.4
+                    </span>
+                        <strong>Color Grip Tumbler </strong>
+                        <!-- Vendor Code Calculation. Just for internal reference and displayed as hidden in this page -->
+
+                        <!-- Complete Vendor Code For Color Grip Tumbler - 15 oz. - Green : EC.45926.SCR.1.STD.GREEN -->
+                        <!--  End Vendor Code Calculation. -->
+                        <!--  Start displaying upsell or product options descriptions.  -->
+                        <div class="cart-upsell upsell-item">
+                            <div class="cart-upsell-item">
+                                <strong> One-time setup fee </strong>
+                            </div>
+                        </div>
+                        <!--  End displaying upsells -->
+
+
+                        <div id="tooltipci1687007635" style="display:none" class="quickviewContainer">
+                            <div class="quickview">
+                                <img class="imgMain tooltip-img-hover" alt="Thumbnail image" src="https://www.iprint.com/services/UGCGetFileFromServer/2017/05/23/09/22/145518448/savedDesign/1722528053/TMBLR1470173533_layout1_3c401b18.png?HCAuthToken=utvEfsm5BF8xueOQTvL7%2BdnrHlm4Lm2WykA96TzQhEo1gT5f91CV7TpYOWimLHSOezriRPjM4kk1_--xhGjcHV4zw%3D%3D&amp;HCAuthKeyRef=URL:8&amp;noCache=1495550980818">
+                            </div>
+                        </div>
+                    </td>
+                    <td class="review-col-qty">
+                        24
+                        <!-- 24 -->
+
+                        <!-- 48 -->
+
+                        <!-- 72 -->
+
+                        <!-- 144 -->
+
+                        <!-- 288 -->
+
+                        <!-- 576 -->
+
+                        <!-- 1008 -->
+
+                    </td>
+                    <td class="review-col-price">
+                        <!-- Start Base price display -->
+
+                        $222.40
+                        <div class="cart-upsell upsell-price">
+                            <div class="cart-upsell-item">
+                                <span class="shopping-cart-item sub-price">$50.00</span>
+                            </div>
+                        </div>
+                        <!-- End Base price display -->
+                    </td>
+                    <td class="review-col-dest">
+                        Michael Chen<br>
+                        5555 King of Boxing<br>
+                        San Antonio,
+                        TX
+
+                        78249</td>
+                </tr>
+                </tbody></table>
+        </div>
+    </div>
+</div>

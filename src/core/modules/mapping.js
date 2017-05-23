@@ -237,6 +237,21 @@ var mappingModule = function(){
 		mul.get( 'brp.o.addressverification' , resolve , this );
 	});
 
+	Vue.component( 'o.paymentmethod' , function( resolve , reject ){
+		console.log('o.paymentmethod');
+		mul.get( 'brp.o.paymentmethod' , resolve , this );
+	});
+
+	Vue.component( 'o.youritems' , function( resolve , reject ){
+		console.log('o.youritems');
+		mul.get( 'brp.o.youritems' , resolve , this );
+	});
+
+	Vue.component( 'o.yourorder' , function( resolve , reject ){
+		console.log('o.yourorder');
+		mul.get( 'brp.o.yourorder' , resolve , this );
+	});
+
 	Vue.component( 'p.login' , function( resolve , reject ){
 		console.log('p.login');
 		mul.get( 'brp.p.login' , resolve , this );
