@@ -252,6 +252,11 @@ var mappingModule = function(){
 		mul.get( 'brp.o.yourorder' , resolve , this );
 	});
 
+	Vue.component( 'o.shippingmethod' , function( resolve , reject ){
+		console.log('o.shippingmethod');
+		mul.get( 'brp.o.shippingmethod' , resolve , this );
+	});
+
 	Vue.component( 'p.login' , function( resolve , reject ){
 		console.log('p.login');
 		mul.get( 'brp.p.login' , resolve , this );
