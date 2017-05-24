@@ -180,3 +180,13 @@
     padding: 5px;
     display: none;
 }
+
+.shopping-cart-item.item-name {
+    font-weight: 700;
+}
+
+.shipping-address-inline {
+    background-color: white;
+    border: 1px solid black;
+    margin-bottom: 6px;
+}
