@@ -256,6 +256,15 @@ var mappingModule = function(){
 		console.log('o.shippingmethod');
 		mul.get( 'brp.o.shippingmethod' , resolve , this );
 	});
+	Vue.component( 'o.shippingdetail' , function( resolve , reject ){
+		console.log('o.shippingdetail');
+		mul.get( 'brp.o.shippingdetail' , resolve , this );
+	});
+
+	Vue.component( 'o.youmayalsolike' , function( resolve , reject ){
+		console.log('o.youmayalsolike');
+		mul.get( 'brp.o.youmayalsolike' , resolve , this );
+	});
 
 	Vue.component( 'p.login' , function( resolve , reject ){
 		console.log('p.login');

@@ -190,3 +190,7 @@
     border: 1px solid black;
     margin-bottom: 6px;
 }
+
+.confrim-ship-to {
+    background: -webkit-gradient(linear,left top,left bottom,from(#f8f8f8),to(#e1e1e1));
+}
