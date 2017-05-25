@@ -1,5 +1,5 @@
 var methodsModule = {};
-var app = window.app;
+var brp = window.brp;
 
 //methodsModule.save = function( name ){
 //};

@@ -1,4 +1,4 @@
-var app = window.app;
+var brp = window.brp;
 
 var routerModule = {}
 

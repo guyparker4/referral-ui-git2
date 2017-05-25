@@ -1,4 +1,4 @@
 var analyticsModule = {};
-var app = window.app;
+var brp = window.brp;
 
 module.exports = analyticsModule;

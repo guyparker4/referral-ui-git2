@@ -28,15 +28,30 @@ brp.validation = require( './modules/validation' );
 brp.services = require( './modules/services' );
 brp.analytics = require( './modules/analytics' );
 brp.router = require( './modules/router' );
-
+brp.config = {
+    token:"TestAuthToken123",
+    servicesBasePath: "https://uat.iprint.com/services"
+}
 //load version from html
 
 if( document.getElementById( 'app_basepage' ) ){
     brp.model.current = JSON.parse( document.getElementById( 'app_basepage' ).text );
-}
-
-if( document.getElementById( 'app_catalog' ) ){
-    brp.model.catalog = JSON.parse( document.getElementById( 'app_catalog' ).text );
+    var len = brp.model.current.length;
+    for( var i = 0; i < len; i++ ){
+        if( brp.model.current[i].type == "cart" ){
+            brp.model.order = brp.model.current[i].order;
+            brp.model.recommendedProducts = brp.model.current[i].recommendedProducts;
+        }
+        if( brp.model.current[i].type == "catalogmenu" ){
+            brp.model.catalog = brp.model.current[i].catalogData;
+        }
+        if( brp.model.current[i].type == "savedDesign" ){
+            brp.model.savedDesign = brp.model.current[i].savedcards;
+        }
+        if( brp.model.current[i].type == "recommendedProducts" ){
+            brp.model.recommendedProducts = brp.model.current[i].recommendedProducts;
+        }
+    }
 }
 
 //apparel quantity selection

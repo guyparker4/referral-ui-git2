@@ -11,7 +11,11 @@ var modelModule = {
         height:document.body.clientHeight || window.innerHeight,
         width:document.body.clientWidth || window.innerWidth,
         current:null,
-        catalog:null
+        catalog:null,
+        order:null,
+        savedDesign:null,
+        recommendedProducts:null,
+        modalError:false
     },
     methods: {},
     storage:{}

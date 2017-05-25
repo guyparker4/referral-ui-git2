@@ -2,7 +2,7 @@
     <div class="top-bar">
         <div class="row column">
             <a.menu>
-                <template v-for="item in brp.model.catalog.catalogData">
+                <template v-for="item in brp.model.catalog">
                     <a.submenu v-if="item.subCategories" :href="item.url" :title="item.name">
                         <a.menuitem v-for="item1 in item.subCategories" :href="item1.url" :title="item1.name"></a.menuitem>
                     </a.submenu>
