@@ -2,6 +2,7 @@ var validationModule = {};
 var brp = window.brp;
 
 validationModule.applyPromoCode = function( data ){
+    console.log( "brp.validation.applyPromoCode" );
     try{
         var result = JSON.parse( data );
     }catch(e){
@@ -22,6 +23,7 @@ validationModule.applyPromoCode = function( data ){
 }
 
 validationModule.removePromoCode = function( data ){
+    console.log( "brp.validation.removePromoCode" );
     try{
         var result = JSON.parse( data );
     }catch(e){
@@ -42,6 +44,7 @@ validationModule.removePromoCode = function( data ){
 }
 
 validationModule.changeQuantity = function( data ){
+    console.log( "brp.validation.changeQuantity" );
     try{
         var result = JSON.parse( data );
     }catch(e){
@@ -62,6 +65,7 @@ validationModule.changeQuantity = function( data ){
 }
 
 validationModule.removeOrderItem = function( data ){
+    console.log( "brp.validation.removeOrderItem" );
     try{
         var result = JSON.parse( data );
     }catch(e){
@@ -82,6 +86,7 @@ validationModule.removeOrderItem = function( data ){
 }
 
 validationModule.getShoppingCart = function( data ){
+    console.log( "brp.validation.getShoppingCart" );
     try{
         var result = JSON.parse( data );
     }catch(e){
@@ -102,6 +107,7 @@ validationModule.getShoppingCart = function( data ){
 }
 
 validationModule.getCatalogSummary = function( data ){
+    console.log( "brp.validation.getCatalogSummary" );
     try{
         var result = JSON.parse( data );
     }catch(e){
@@ -122,6 +128,7 @@ validationModule.getCatalogSummary = function( data ){
 }
 
 validationModule.getRecommendedProducts = function( data ){
+    console.log( "brp.validation.getRecommendedProducts" );
     try{
         var result = JSON.parse( data );
     }catch(e){
@@ -142,6 +149,7 @@ validationModule.getRecommendedProducts = function( data ){
 }
 
 validationModule.savedDesigns = function( data ){
+    console.log( "brp.validation.savedDesigns" );
     try{
         var result = JSON.parse( data );
     }catch(e){

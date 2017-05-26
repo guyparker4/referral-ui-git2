@@ -7,18 +7,22 @@ mul.set( "brp.o.cart" , [] , {
         }
     },
     methods:{
-        applyPromoCode(){
+        applyPromoCode( event ){
             brp.services.applyPromoCode( this.promoCodeInput );
             this.promoCodeInput = "";
         },
-        removePromoCode(){
+        removePromoCode( event ){
             // need to change this, promocode not returning results accuratly
             // should just click X next to promocode on cart
             // hard to remove when you cant add
             brp.services.removePromoCode( this.promoCodeInput );
         },
-        removeOrderItem( itemId ){
-            brp.services.removeOrderItem( itemId );
+        removeOrderItem( event , item ){
+            console.log( event );
+            console.log( item );            
+            brp.services.removeOrderItem( item.relationshipId );
+        },
+        none(){
         },
         quantitySelected( event , item ){
             console.log( event );

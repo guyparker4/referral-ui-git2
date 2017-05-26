@@ -63,7 +63,7 @@
                                         alt="Thumbnail image" width="120"/>
                                     <span class="manage-cartitem-links">
                                         <a :href="item.editUrl">edit</a> |
-                                        <a class="pointer" @click="removeOrderItem(item)" >delete</a>
+                                        <a class="pointer" @click="removeOrderItem( event , item )" >delete</a>
                                     </span>
                                 </div>
                                 <div class="cart-pro-info-container">
@@ -79,8 +79,7 @@
                                 </div>
                             </td>
                             <td class="cart-quantity">
-                                <form id="quantityForm" name="quantityForm" action="/estore/en/checkout/shoppingCart.jsp?_DARGS=/estore/responsive/en/checkout/component/shoppingCartBodyFrag.jsp.quantityForm"
-                                    method="post">
+                                <form @submit.prevent="none">
                                     <select @input="quantitySelected( event , item )">
                                         <option v-for="qty in item.quantitySkus" :value="qty.skuqty" :selected="(qty.skuqty==item.quantity)">{{qty.skuqty}} - {{qty.unitprice}}</option>
                                     </select>
@@ -108,12 +107,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="promo-subtotal">
+                <div class="promo-subtotal" v-if="brp.model.order.priceInfo">
                     <span class="cart-subTotal orderTotal">Product Subtotal: <span>${{brp.model.order.priceInfo.subtotal}}</span></span>
                     <span class="cart-subTotal subtotal">Order Total Before Shipping and Tax: <span>${{brp.model.order.priceInfo.total}}</span></span>
                 </div>
-                <div class="contShop-checkout">
-                    <a href="/estore/index.jsp?lightbox=false" class="button ajaxForm margin-right-10px">Continue Shopping</a>
+                <div class="contShop-checkout" v-if="brp.model.order">
+                    <a href="/estore/index.jsp?lightbox=false" class="button ajaxForm margin-right-10px">Continue Shopping</a>&nbsp;
                     <a href="/estore/en/checkout/shippingInfo.jsp" class="cta button ajaxForm checkout" onclick="setAnalytics('proceedToCheckout','')">Checkout</a>
                 </div>
             </div>

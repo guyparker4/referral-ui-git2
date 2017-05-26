@@ -2,6 +2,7 @@ var servicesModule = {};
 var brp = window.brp;
 
 servicesModule.applyPromoCode = function( promotionCode ){
+    console.log( "brp.services.applyPromoCode" );
 
     brp.libs.agent.post( brp.config.servicesBasePath + '/applyPromoCode' )
     .type( 'form' )
@@ -20,6 +21,7 @@ servicesModule.applyPromoCode = function( promotionCode ){
 }
 
 servicesModule.removePromoCode = function( promotionCode ){
+    console.log( "brp.services.removePromoCode" );
     brp.libs.agent.post( brp.config.servicesBasePath + '/removePromoCode' )
     .type( 'form' )
     .query({'HCAuthToken': brp.config.token })
@@ -36,6 +38,7 @@ servicesModule.removePromoCode = function( promotionCode ){
 }
 
 servicesModule.changeQuantity = function( relationshipId , quantity ){
+    console.log( "brp.services.changeQuantity" );
     brp.libs.agent.post( brp.config.servicesBasePath + '/changeQuantity' )
     .type( 'form' )
     .query({'HCAuthToken': brp.config.token })
@@ -52,6 +55,7 @@ servicesModule.changeQuantity = function( relationshipId , quantity ){
 }
 
 servicesModule.removeOrderItem = function( relationshipId ){
+    console.log( "brp.services.removeOrderItem" );
     brp.libs.agent.post( brp.config.servicesBasePath + '/removeOrderItem' )
     .type( 'form' )
     .query({'HCAuthToken': brp.config.token })
@@ -68,6 +72,7 @@ servicesModule.removeOrderItem = function( relationshipId ){
 }
 
 servicesModule.getShoppingCart = function(){
+    console.log( "brp.services.getShoppingCart" );
     brp.libs.agent.get( brp.config.servicesBasePath + '/getShoppingCart' )
     .query({'HCAuthToken': brp.config.token })
     .send()
@@ -83,6 +88,7 @@ servicesModule.getShoppingCart = function(){
 }
 
 servicesModule.getCatalogSummary = function(){
+    console.log( "brp.services.getCatalogSummary" );
     brp.libs.agent.get( brp.config.servicesBasePath + '/getCatalogSummary' )
     .query({'HCAuthToken': brp.config.token })
     .send()
@@ -98,6 +104,7 @@ servicesModule.getCatalogSummary = function(){
 }
 
 servicesModule.getRecommendedProducts = function(){
+    console.log( "brp.services.getRecommendedProducts" );
     brp.libs.agent.get( brp.config.servicesBasePath + '/getRecommendedProducts' )
     .query({'HCAuthToken': brp.config.token })
     .send()
@@ -113,6 +120,7 @@ servicesModule.getRecommendedProducts = function(){
 }
 
 servicesModule.savedDesigns = function(){
+    console.log( "brp.services.savedDesigns" );
     brp.libs.agent.get( brp.config.servicesBasePath + '/savedDesigns' )
     .query({'HCAuthToken': brp.config.token })
     .send()
