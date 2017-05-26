@@ -34,6 +34,10 @@ brp.config = {
 }
 //load version from html
 
+if( document.getElementById( 'app_catalog' ) ){
+    brp.model.catalog = JSON.parse( document.getElementById( 'app_catalog' ).text );
+}
+
 if( document.getElementById( 'app_basepage' ) ){
     brp.model.current = JSON.parse( document.getElementById( 'app_basepage' ).text );
     var len = brp.model.current.length;
