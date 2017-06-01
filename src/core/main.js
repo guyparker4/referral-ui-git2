@@ -14,14 +14,18 @@ brp._ = {};
 
 brp.Vue = Vue;
 brp.Vue.config.debug = true;
-Vue.config.devtools = true
+brp.Vue.config.devtools = true
+
+brp.VueRouter = VueRouter;
+brp.Vue.use( brp.VueRouter );
+
+
 
 //async
 brp.mul = require( './modules/mul' );
 brp.mul.root = "/assets/js/";
 
-require( './modules/mapping' )();
-
+brp.mapping = require( './modules/mapping' );
 brp.libs = require( './modules/libs' );
 brp.methods = require( './modules/methods' );
 brp.validation = require( './modules/validation' );
@@ -33,6 +37,18 @@ brp.config = {
     servicesBasePath: "https://uat.iprint.com/services"
 }
 //load version from html
+
+brp.router = new brp.VueRouter({
+    routes: [
+  { path: '/0', component: brp.mapping['o.cart'] },
+  { path: '/1', component: brp.mapping['o.login'] },
+  { path: '/2', component: brp.mapping['o.shipping'] },
+  { path: '/3', component: brp.mapping['o.billing'] },
+  { path: '/4', component: brp.mapping['o.paymentmethod'] },
+  { path: '/5', component: brp.mapping['o.youritems'] },
+  { path: '/6', component: brp.mapping['o.shippingmethod'] },
+  { path: '/7', component: brp.mapping['o.shippingdetail'] },
+]})
 
 if( document.getElementById( 'app_catalog' ) ){
     brp.model.catalog = JSON.parse( document.getElementById( 'app_catalog' ).text );
@@ -91,5 +107,6 @@ window.onerror = brp.analytics.onerror;
 
 brp.app = new Vue({
   el: '#app',
+  router:brp.router,
   data:brp.model
 });
