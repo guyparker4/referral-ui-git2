@@ -8,8 +8,6 @@ var modelModule = {
         scroll:{},
         history:[],
         addressBook:[],
-        toolbarState:0,
-        showProductMenu:true,
         showPromo:true,
         viewport:0,
         height:document.body.clientHeight || window.innerHeight,

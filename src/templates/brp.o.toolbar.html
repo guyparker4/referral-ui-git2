@@ -2,7 +2,7 @@
     <div class="row columns">
         <div class="large-12 columns"></div>
     </div>
-    <div class="row columns nav-medium valign-middle show-for-medium site-nav">
+    <div v-if="toolbarState==0" class="row columns nav-medium valign-middle show-for-medium site-nav">
         <div class="nav_logo columns valign-middle">
             <span class="site_logo"><a href="http://www.iprint.com/estore" alt="to home page">to home page</a></span>
         </div>
@@ -47,6 +47,66 @@
                 </a.submenu>
                 <a.menuitem href="" title="Login / Register"></a.menuitem>
             </a.menu>
+        </div>
+    </div>
+    <div v-if="toolbarState==1" class="row columns nav-medium valign-middle show-for-medium site-nav">
+        <div class="nav_logo columns valign-middle">
+            <span class="site_logo"><a href="http://www.iprint.com/estore" alt="to home page">to home page</a></span>
+        </div>
+        <div class="nav_search columns valign-middle">
+
+            <div class="atg_store_search_underlay"></div>
+            <div id="atg_store_search" class="site-search">
+
+                <form action="/estore/en/search/searchResultsLanding.jsp" id="searchForm" requiressessionconfirmation="false">
+                    <input type="hidden" name="Dy" value="1">
+                    <input type="hidden" name="Nty" value="1">
+                    <input type="hidden" value="ok" name="siteScope">
+
+                    <input class="text atg_store_searchInput site-search-field" value="" type="text" id="searchText" autocomplete="off" placeholder="Search">
+                    <input type="hidden" name="Ntt" id="Ntt">
+
+                    <div id="searchBar"></div>
+                    <div class="dimSearchSuggContainer"></div>
+                    <div id="atg_store_searchStoreSelect"></div>
+                    <input class="site-search-submit" type="submit" name="search" id="atg_store_searchSubmit" value="">
+                </form>
+            </div>
+        </div>
+        <div class="nav_account columns valign-middle">
+            <ul class="nav-cart">
+                <li>
+                    <a class="cart cart-items" href="/estore/en/checkout/shoppingCart.jsp">
+                        <span class="cart-count-container">0</span>
+                        <span class="cart-text hidden-sm hidden-xs">Products cart</span>
+                    </a>
+                </li>
+            </ul>
+            <a.menu>
+                <a.submenu href="" title="Account">
+                    <a.menuitem href="" title="Order Status"></a.menuitem>
+                    <a.menuitem href="" title="My Account"></a.menuitem>
+                    <a.menuitem href="" title="View Favorites"></a.menuitem>
+                </a.submenu>
+                <a.submenu href="" title="Help">
+                    <a.menuitem href="" title="Customer Service"></a.menuitem>
+                    <a.menuitem href="" title="Order Status"></a.menuitem>
+                </a.submenu>
+                <a.menuitem href="" title="Login / Register"></a.menuitem>
+            </a.menu>
+        </div>
+    </div>
+    <div v-if="toolbarState==2" class="row columns nav-medium valign-middle show-for-medium site-nav">
+        <div class="nav_logo columns valign-middle">
+            <span class="site_logo"><a href="http://www.iprint.com/estore" alt="to home page">to home page</a></span>
+            <a.breadcrumbs style="width:500px">
+                <a.breadcrumb :active="$route.path=='/cart/login'" href="#/cart/login" title="SIGN IN"></a.breadcrumb>
+                <a.breadcrumb :active="$route.path=='/cart/shipping'" href="#/cart/shipping" title="SHIPPING"></a.breadcrumb>
+                <a.breadcrumb :active="$route.path=='/cart/billing'" href="#/cart/billing" title="BILLING"></a.breadcrumb>
+                <a.breadcrumb :active="$route.path=='/cart/payment'" href="#/cart/payment" title="PAYMENT &amp; PLACE ORDER"></a.breadcrumb>
+            </a.breadcrumbs>
+        </div>
+        <div class="nav_account columns valign-middle">
         </div>
     </div>
 </section>

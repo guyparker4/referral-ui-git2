@@ -31,7 +31,7 @@ brp.methods = require( './modules/methods' );
 brp.validation = require( './modules/validation' );
 brp.services = require( './modules/services' );
 brp.analytics = require( './modules/analytics' );
-brp.router = require( './modules/router' );
+
 brp.config = {
     token:"TestAuthToken123",
     servicesBasePath: "https://uat.iprint.com/services"
@@ -40,14 +40,14 @@ brp.config = {
 
 brp.router = new brp.VueRouter({
     routes: [
-  { path: '/cart', component: brp.mapping['o.cart'] },
-  { path: '/cart/login', component: brp.mapping['o.login'] },
-  { path: '/cart/shipping', component: brp.mapping['o.shipping'] },
-  { path: '/cart/billing', component: brp.mapping['o.billing'] },
-  { path: '/cart/payment', component: brp.mapping['o.paymentmethod'] },
-  { path: '/cart/items', component: brp.mapping['o.youritems'] },
-  { path: '/cart/shippingmethod', component: brp.mapping['o.shippingmethod'] },
-  { path: '/cart/confirmation', component: brp.mapping['o.shippingdetail'] },
+  { path: '/cart', component: brp.mapping['o.cart'] , props: { toolbarState: 1 } },
+  { path: '/cart/login', component: brp.mapping['o.login'] , props: { toolbarState: 2 } },
+  { path: '/cart/shipping', component: brp.mapping['o.shipping'] , props: { toolbarState: 2 } },
+  { path: '/cart/billing', component: brp.mapping['o.billing'] , props: { toolbarState: 2 } },
+  { path: '/cart/payment', component: brp.mapping['o.paymentmethod'] , props: { toolbarState: 2 } },
+  { path: '/cart/items', component: brp.mapping['o.youritems'] , props: { toolbarState: 2 } },
+  { path: '/cart/shippingmethod', component: brp.mapping['o.shippingmethod'] , props: { toolbarState: 1 } },
+  { path: '/cart/confirmation', component: brp.mapping['o.shippingdetail'] , props: { toolbarState: 1 } },
 ]})
 
 if( document.getElementById( 'app_catalog' ) ){
