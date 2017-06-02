@@ -110,6 +110,10 @@ brp.app = new Vue({
   router:brp.router,
   data:brp.model,
   methods:{
+    setRoute( path ){
+        this.cartPath = "#" + path;
+        window.location = this.cartPath;
+    },
     setLocation( event ){
         setTimeout(function(){
             window.location = "#" + brp.model.cartPath;
