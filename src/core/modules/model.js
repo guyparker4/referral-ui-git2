@@ -12,6 +12,7 @@ var modelModule = {
         width:document.body.clientWidth || window.innerWidth,
         current:null,
         catalog:null,
+        cartPath:"",
         order:null,
         savedDesign:null,
         recommendedProducts:null,

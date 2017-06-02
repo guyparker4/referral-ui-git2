@@ -40,14 +40,14 @@ brp.config = {
 
 brp.router = new brp.VueRouter({
     routes: [
-  { path: '/0', component: brp.mapping['o.cart'] },
-  { path: '/1', component: brp.mapping['o.login'] },
-  { path: '/2', component: brp.mapping['o.shipping'] },
-  { path: '/3', component: brp.mapping['o.billing'] },
-  { path: '/4', component: brp.mapping['o.paymentmethod'] },
-  { path: '/5', component: brp.mapping['o.youritems'] },
-  { path: '/6', component: brp.mapping['o.shippingmethod'] },
-  { path: '/7', component: brp.mapping['o.shippingdetail'] },
+  { path: '/cart', component: brp.mapping['o.cart'] },
+  { path: '/cart/login', component: brp.mapping['o.login'] },
+  { path: '/cart/shipping', component: brp.mapping['o.shipping'] },
+  { path: '/cart/billing', component: brp.mapping['o.billing'] },
+  { path: '/cart/payment', component: brp.mapping['o.paymentmethod'] },
+  { path: '/cart/items', component: brp.mapping['o.youritems'] },
+  { path: '/cart/shippingmethod', component: brp.mapping['o.shippingmethod'] },
+  { path: '/cart/confirmation', component: brp.mapping['o.shippingdetail'] },
 ]})
 
 if( document.getElementById( 'app_catalog' ) ){
@@ -108,5 +108,12 @@ window.onerror = brp.analytics.onerror;
 brp.app = new Vue({
   el: '#app',
   router:brp.router,
-  data:brp.model
+  data:brp.model,
+  methods:{
+    setLocation( event ){
+        setTimeout(function(){
+            window.location = "#" + brp.model.cartPath;
+        }, 50)
+    }
+  }
 });
