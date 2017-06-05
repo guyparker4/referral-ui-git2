@@ -135,4 +135,55 @@ servicesModule.savedDesigns = function(){
     });
 }
 
+servicesModule.signin = function( login , password ){
+    console.log( "brp.services.signin" );
+    brp.libs.agent.post( brp.config.servicesBasePath + '/signin' )
+    .type( 'form' )
+    .query({'HCAuthToken': brp.config.token })
+    .send( { login:login , password:password } )
+    .end( function( err , res ){
+        if( err || !res.ok ){
+            //error handling
+            brp.model.errors.push( {'code':'SSI001', 'message':'Error in call to signin'} );
+            brp.model.modalError = true;
+        }else{
+            brp.validation.signin( res );
+        }
+    });
+}
+
+servicesModule.create = function( login , password , question , answer , optin ){
+    console.log( "brp.services.create" );
+    brp.libs.agent.post( brp.config.servicesBasePath + '/create' )
+    .type( 'form' )
+    .query({'HCAuthToken': brp.config.token })
+    .send( { login:login , password:password , question:question , answer:answer , optin:optin } )
+    .end( function( err , res ){
+        if( err || !res.ok ){
+            //error handling
+            brp.model.errors.push( {'code':'SCR001', 'message':'Error in call to create'} );
+            brp.model.modalError = true;
+        }else{
+            brp.validation.create( res );
+        }
+    });
+}
+
+servicesModule.guest = function( login , optin ){
+    console.log( "brp.services.guest" );
+    brp.libs.agent.post( brp.config.servicesBasePath + '/guest' )
+    .type( 'form' )
+    .query({'HCAuthToken': brp.config.token })
+    .send( { login:login , optin:optin } )
+    .end( function( err , res ){
+        if( err || !res.ok ){
+            //error handling
+            brp.model.errors.push( {'code':'SGU001', 'message':'Error in call to guest'} );
+            brp.model.modalError = true;
+        }else{
+            brp.validation.guest( res );
+        }
+    });
+}
+
 module.exports = servicesModule;

@@ -169,4 +169,67 @@ validationModule.savedDesigns = function( data ){
     }
 }
 
+validationModule.signin = function( data ){
+    console.log( "brp.validation.signin" );
+    try{
+        var result = JSON.parse( data );
+    }catch(e){
+        brp.model.errors.push( {'code':'VSI001', 'message':'Invalid JSON in signin( validation )'} );
+        brp.model.modalError = true;
+        return;
+    }
+    if( result.error ){
+        brp.model.errors.push( {'code':result.error.code, 'message': result.error.message } );
+        brp.model.modalError = true;
+        return;
+    }
+    //SUCCESS
+    if( result.status == "Success" ){
+        brp.model.order = result.order;
+        return;
+    }
+}
+
+validationModule.create = function( data ){
+    console.log( "brp.validation.create" );
+    try{
+        var result = JSON.parse( data );
+    }catch(e){
+        brp.model.errors.push( {'code':'VCR001', 'message':'Invalid JSON in create( validation )'} );
+        brp.model.modalError = true;
+        return;
+    }
+    if( result.error ){
+        brp.model.errors.push( {'code':result.error.code, 'message': result.error.message } );
+        brp.model.modalError = true;
+        return;
+    }
+    //SUCCESS
+    if( result.status == "Success" ){
+        brp.model.order = result.order;
+        return;
+    }
+}
+
+validationModule.guest = function( data ){
+    console.log( "brp.validation.guest" );
+    try{
+        var result = JSON.parse( data );
+    }catch(e){
+        brp.model.errors.push( {'code':'VGU001', 'message':'Invalid JSON in guest( validation )'} );
+        brp.model.modalError = true;
+        return;
+    }
+    if( result.error ){
+        brp.model.errors.push( {'code':result.error.code, 'message': result.error.message } );
+        brp.model.modalError = true;
+        return;
+    }
+    //SUCCESS
+    if( result.status == "Success" ){
+        brp.model.order = result.order;
+        return;
+    }
+}
+
 module.exports = validationModule;
