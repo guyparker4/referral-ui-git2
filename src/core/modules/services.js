@@ -186,4 +186,38 @@ servicesModule.guest = function( login , optin ){
     });
 }
 
+servicesModule.setShippingAddress = function( data ){
+    console.log( "brp.services.setShippingAddress" );
+    brp.libs.agent.post( brp.config.servicesBasePath + '/setShippingAddress' )
+    .type( 'form' )
+    .query({'HCAuthToken': brp.config.token })
+    .send( data )
+    .end( function( err , res ){
+        if( err || !res.ok ){
+            //error handling
+            brp.model.errors.push( {'code':'SSSA001', 'message':'Error in call to setShippingAddress'} );
+            brp.model.modalError = true;
+        }else{
+            brp.validation.setShippingAddress( res );
+        }
+    });
+}
+
+servicesModule.setBillingAddress = function( data ){
+    console.log( "brp.services.setBillingAddress" );
+    brp.libs.agent.post( brp.config.servicesBasePath + '/setBillingAddress' )
+    .type( 'form' )
+    .query({'HCAuthToken': brp.config.token })
+    .send( data )
+    .end( function( err , res ){
+        if( err || !res.ok ){
+            //error handling
+            brp.model.errors.push( {'code':'SSBA001', 'message':'Error in call to setBillingAddress'} );
+            brp.model.modalError = true;
+        }else{
+            brp.validation.setBillingAddress( res );
+        }
+    });
+}
+
 module.exports = servicesModule;

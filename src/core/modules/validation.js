@@ -232,4 +232,46 @@ validationModule.guest = function( data ){
     }
 }
 
+validationModule.setShippingAddress = function( data ){
+    console.log( "brp.validation.setShippingAddress" );
+    try{
+        var result = JSON.parse( data );
+    }catch(e){
+        brp.model.errors.push( {'code':'VSSA001', 'message':'Invalid JSON in setShippingAddress( validation )'} );
+        brp.model.modalError = true;
+        return;
+    }
+    if( result.error ){
+        brp.model.errors.push( {'code':result.error.code, 'message': result.error.message } );
+        brp.model.modalError = true;
+        return;
+    }
+    //SUCCESS
+    if( result.status == "Success" ){
+        brp.model.order = result.order;
+        return;
+    }
+}
+
+validationModule.setBillingAddress = function( data ){
+    console.log( "brp.validation.setBillingAddress" );
+    try{
+        var result = JSON.parse( data );
+    }catch(e){
+        brp.model.errors.push( {'code':'VSBßA001', 'message':'Invalid JSON in setBillingAddress( validation )'} );
+        brp.model.modalError = true;
+        return;
+    }
+    if( result.error ){
+        brp.model.errors.push( {'code':result.error.code, 'message': result.error.message } );
+        brp.model.modalError = true;
+        return;
+    }
+    //SUCCESS
+    if( result.status == "Success" ){
+        brp.model.order = result.order;
+        return;
+    }
+}
+
 module.exports = validationModule;
