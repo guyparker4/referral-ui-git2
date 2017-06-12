@@ -1,0 +1,22 @@
+{
+  "name": "referral-api",
+  "version": "1.0.0",
+  "description": "HC Referral API for O-ATG Checkout",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "npm install",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "swagger"
+  ],
+  "license": "Apache-2.0",
+  "private": true,
+  "dependencies": {
+    "connect": "^3.2.0",
+    "js-yaml": "^3.3.0",
+    "serve-static": "1.12.3",
+    "superagent": "3.5.2",
+    "swagger-tools": "0.10.1"
+  }
+}

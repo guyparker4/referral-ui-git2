@@ -5,7 +5,7 @@ servicesModule.applyPromoCode = function( promotionCode ){
     console.log( "brp.services.applyPromoCode" );
 
     brp.libs.agent.post( brp.config.servicesBasePath + '/applyPromoCode' )
-    .type( 'form' )
+    .type( 'json' )
     .query({'HCAuthToken': brp.config.token })
     .send( { promotionCode: promotionCode } )
     .end( function( err , res ){
@@ -23,7 +23,7 @@ servicesModule.applyPromoCode = function( promotionCode ){
 servicesModule.removePromoCode = function( promotionCode ){
     console.log( "brp.services.removePromoCode" );
     brp.libs.agent.post( brp.config.servicesBasePath + '/removePromoCode' )
-    .type( 'form' )
+    .type( 'json' )
     .query({'HCAuthToken': brp.config.token })
     .send( { promotionCode: promotionCode } )
     .end( function( err , res ){
@@ -40,7 +40,7 @@ servicesModule.removePromoCode = function( promotionCode ){
 servicesModule.changeQuantity = function( relationshipId , quantity ){
     console.log( "brp.services.changeQuantity" );
     brp.libs.agent.post( brp.config.servicesBasePath + '/changeQuantity' )
-    .type( 'form' )
+    .type( 'json' )
     .query({'HCAuthToken': brp.config.token })
     .send( { relationshipId:relationshipId , quantity:quantity } )
     .end( function( err , res ){
@@ -57,7 +57,7 @@ servicesModule.changeQuantity = function( relationshipId , quantity ){
 servicesModule.removeOrderItem = function( relationshipId ){
     console.log( "brp.services.removeOrderItem" );
     brp.libs.agent.post( brp.config.servicesBasePath + '/removeOrderItem' )
-    .type( 'form' )
+    .type( 'json' )
     .query({'HCAuthToken': brp.config.token })
     .send( { relationshipId:relationshipId } )
     .end( function( err , res ){
@@ -138,7 +138,7 @@ servicesModule.savedDesigns = function(){
 servicesModule.signin = function( login , password ){
     console.log( "brp.services.signin" );
     brp.libs.agent.post( brp.config.servicesBasePath + '/signin' )
-    .type( 'form' )
+    .type( 'json' )
     .query({'HCAuthToken': brp.config.token })
     .send( { login:login , password:password } )
     .end( function( err , res ){
@@ -155,7 +155,7 @@ servicesModule.signin = function( login , password ){
 servicesModule.create = function( login , password , question , answer , optin ){
     console.log( "brp.services.create" );
     brp.libs.agent.post( brp.config.servicesBasePath + '/create' )
-    .type( 'form' )
+    .type( 'json' )
     .query({'HCAuthToken': brp.config.token })
     .send( { login:login , password:password , question:question , answer:answer , optin:optin } )
     .end( function( err , res ){
@@ -172,7 +172,7 @@ servicesModule.create = function( login , password , question , answer , optin )
 servicesModule.guest = function( login , optin ){
     console.log( "brp.services.guest" );
     brp.libs.agent.post( brp.config.servicesBasePath + '/guest' )
-    .type( 'form' )
+    .type( 'json' )
     .query({'HCAuthToken': brp.config.token })
     .send( { login:login , optin:optin } )
     .end( function( err , res ){
@@ -189,7 +189,7 @@ servicesModule.guest = function( login , optin ){
 servicesModule.setShippingAddress = function( data ){
     console.log( "brp.services.setShippingAddress" );
     brp.libs.agent.post( brp.config.servicesBasePath + '/setShippingAddress' )
-    .type( 'form' )
+    .type( 'json' )
     .query({'HCAuthToken': brp.config.token })
     .send( data )
     .end( function( err , res ){
@@ -206,7 +206,7 @@ servicesModule.setShippingAddress = function( data ){
 servicesModule.setBillingAddress = function( data ){
     console.log( "brp.services.setBillingAddress" );
     brp.libs.agent.post( brp.config.servicesBasePath + '/setBillingAddress' )
-    .type( 'form' )
+    .type( 'json' )
     .query({'HCAuthToken': brp.config.token })
     .send( data )
     .end( function( err , res ){

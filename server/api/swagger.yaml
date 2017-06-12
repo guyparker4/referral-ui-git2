@@ -1,0 +1,1038 @@
+---
+swagger: "2.0"
+info:
+  description: "HC Referral API for O-ATG Checkout"
+  version: "1.0.0"
+  title: "Referral API"
+host: "uat.iprint.com"
+basePath: "/services"
+schemes:
+- "https"
+security:
+- APISecurity: []
+paths:
+  /applyPromoCode:
+    post:
+      summary: "Add Promo Code --> Return Cart JSON"
+      operationId: "applyPromoCodePOST"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Apply promotioncode payload"
+        required: true
+        schema:
+          $ref: "#/definitions/PostPromoCode"
+      responses:
+        200:
+          description: "Success - Return Cart JSON"
+          schema:
+            $ref: "#/definitions/Cart"
+      x-swagger-router-controller: "Default"
+  /removePromoCode:
+    post:
+      summary: "Remove Promo Code --> Return Cart JSON"
+      operationId: "removePromoCodePOST"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Remove promotioncode payload"
+        required: true
+        schema:
+          $ref: "#/definitions/PostPromoCode"
+      responses:
+        200:
+          description: "Success - Return Cart JSON"
+          schema:
+            $ref: "#/definitions/Cart"
+      x-swagger-router-controller: "Default"
+  /changeQuantity:
+    post:
+      summary: "Remove Promo Code --> Return Cart JSON"
+      operationId: "changeQuantityPOST"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Change quantity playload"
+        required: true
+        schema:
+          $ref: "#/definitions/PostChangeQuantity"
+      responses:
+        200:
+          description: "Success - Return Cart JSON"
+          schema:
+            $ref: "#/definitions/Cart"
+      x-swagger-router-controller: "Default"
+  /removeOrderItem:
+    post:
+      summary: "Remove Order Item --> Return Cart JSON"
+      operationId: "removeOrderItemPOST"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Remove order item payload"
+        required: true
+        schema:
+          $ref: "#/definitions/PostRelationshipId"
+      responses:
+        200:
+          description: "Success - Return Cart JSON"
+          schema:
+            $ref: "#/definitions/Cart"
+      x-swagger-router-controller: "Default"
+  /getShoppingCart:
+    get:
+      summary: "Get Cart JSON"
+      operationId: "getShoppingCartGET"
+      produces:
+      - "application/json"
+      parameters: []
+      responses:
+        200:
+          description: "Success - Return Cart JSON"
+          schema:
+            $ref: "#/definitions/Cart"
+      x-swagger-router-controller: "Default"
+  /getHeaderInfo:
+    get:
+      summary: "Get Category Data as JSON"
+      operationId: "getHeaderInfoGET"
+      produces:
+      - "application/json"
+      parameters: []
+      responses:
+        200:
+          description: "Success - Category Data JSON"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/CatalogData"
+      x-swagger-router-controller: "Default"
+  /getCartRecommendedProducts:
+    get:
+      summary: "Get Recommended Products JSON"
+      operationId: "getCartRecommendedProductsGET"
+      produces:
+      - "application/json"
+      parameters: []
+      responses:
+        200:
+          description: "Success - Recommended Products JSON"
+          schema:
+            $ref: "#/definitions/RecommendedProducts"
+      x-swagger-router-controller: "Default"
+  /savedDesigns:
+    get:
+      summary: "Get Saved Designs JSON"
+      operationId: "savedDesignsGET"
+      produces:
+      - "application/json"
+      parameters: []
+      responses:
+        200:
+          description: "Success - Saved Designs JSON"
+          schema:
+            $ref: "#/definitions/SavedDesigns"
+      x-swagger-router-controller: "Default"
+  /signin:
+    post:
+      summary: "Account Signin --> Return Cart JSON"
+      operationId: "signinPOST"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Signin playload"
+        required: true
+        schema:
+          $ref: "#/definitions/PostSignIn"
+      responses:
+        200:
+          description: "Success - Return Cart JSON"
+          schema:
+            $ref: "#/definitions/Cart"
+      x-swagger-router-controller: "Default"
+  /create:
+    post:
+      summary: "Account Create --> Return Cart JSON"
+      operationId: "createPOST"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Create account playload"
+        required: true
+        schema:
+          $ref: "#/definitions/PostCreate"
+      responses:
+        200:
+          description: "Success - Return Cart JSON"
+          schema:
+            $ref: "#/definitions/Cart"
+      x-swagger-router-controller: "Default"
+  /guest:
+    post:
+      summary: "Account Guest --> Return Cart JSON"
+      operationId: "guestPOST"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Guest playload"
+        required: true
+        schema:
+          $ref: "#/definitions/PostGuest"
+      responses:
+        200:
+          description: "Success - Return Cart JSON"
+          schema:
+            $ref: "#/definitions/Cart"
+      x-swagger-router-controller: "Default"
+  /setShippingAddress:
+    post:
+      summary: "Set Shipping Address --> Return Cart JSON"
+      operationId: "setShippingAddressPOST"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Set Shipping payload"
+        required: true
+        schema:
+          $ref: "#/definitions/PostSetShippingAddress"
+      responses:
+        200:
+          description: "Success - Return Cart JSON"
+          schema:
+            $ref: "#/definitions/Cart"
+      x-swagger-router-controller: "Default"
+  /validateShippingAddress:
+    post:
+      summary: "Validate Shipping Address --> Return Address JSON"
+      operationId: "validateShippingAddressPOST"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Validate Shipping payload"
+        required: true
+        schema:
+          $ref: "#/definitions/PostShippingAddress"
+      responses:
+        200:
+          description: "Success - Return Cart JSON"
+          schema:
+            $ref: "#/definitions/ShippingAddressValidation"
+      x-swagger-router-controller: "Default"
+  /setBillingAddress:
+    post:
+      summary: "Set Billing Address --> Return Cart JSON"
+      operationId: "setBillingAddressPOST"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Set Billing payload"
+        required: true
+        schema:
+          $ref: "#/definitions/PostShippingAddress"
+      responses:
+        200:
+          description: "Success - Return Cart JSON"
+          schema:
+            $ref: "#/definitions/Cart"
+      x-swagger-router-controller: "Default"
+  /services-below-are-undefined:
+    delete:
+      operationId: "services_below_are_undefinedDELETE"
+      consumes:
+      - "application/x-www-form-urlencoded"
+      produces:
+      - "application/json"
+      parameters: []
+      responses:
+        200:
+          description: "Success - Return Cart JSON"
+          schema:
+            $ref: "#/definitions/Cart"
+      x-swagger-router-controller: "Default"
+  /api/ShippingAddressItem:
+    post:
+      summary: "Set Shipping Address for Item --> Return Cart JSON"
+      operationId: "apiShippingAddressItemPOST"
+      consumes:
+      - "application/x-www-form-urlencoded"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "commerceItemId"
+        in: "formData"
+        description: "commerce item id"
+        required: true
+        type: "string"
+      - name: "firstName"
+        in: "formData"
+        description: "first name"
+        required: true
+        type: "string"
+      - name: "lastName"
+        in: "formData"
+        description: "last name"
+        required: true
+        type: "string"
+      - name: "companyName"
+        in: "formData"
+        description: "company name"
+        required: false
+        type: "string"
+      - name: "street1"
+        in: "formData"
+        description: "street1"
+        required: true
+        type: "string"
+      - name: "street2"
+        in: "formData"
+        description: "street2"
+        required: false
+        type: "string"
+      - name: "city"
+        in: "formData"
+        description: "city"
+        required: true
+        type: "string"
+      - name: "state"
+        in: "formData"
+        description: "state"
+        required: true
+        type: "string"
+      - name: "zipcode"
+        in: "formData"
+        description: "zip"
+        required: true
+        type: "string"
+      - name: "phoneNumber"
+        in: "formData"
+        description: "phone number"
+        required: true
+        type: "string"
+      - name: "country"
+        in: "formData"
+        description: "country"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "Success - Return Cart JSON"
+          schema:
+            $ref: "#/definitions/Cart"
+      x-swagger-router-controller: "Default"
+  /api/ShippingMethod:
+    post:
+      summary: "Set Shipping Method --> Return Cart JSON"
+      operationId: "apiShippingMethodPOST"
+      consumes:
+      - "application/x-www-form-urlencoded"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "commerceitem"
+        description: "commerce item where shipping method is set"
+        required: true
+        schema:
+          $ref: "#/definitions/CommerceItem"
+      responses:
+        200:
+          description: "Success - Return Cart JSON"
+          schema:
+            $ref: "#/definitions/Cart"
+      x-swagger-router-controller: "Default"
+  /AddressBook:
+    get:
+      summary: "Get Addresses as JSON"
+      operationId: "addressBookGET"
+      produces:
+      - "application/json"
+      parameters: []
+      responses:
+        200:
+          description: "Header API"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/ShippingAddress"
+      x-swagger-router-controller: "Default"
+  /AddressBook/add:
+    post:
+      summary: "Add Address --> Addresses as JSON"
+      operationId: "addressBookAddPOST"
+      consumes:
+      - "application/x-www-form-urlencoded"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "firstName"
+        in: "formData"
+        description: "first name"
+        required: true
+        type: "string"
+      - name: "lastName"
+        in: "formData"
+        description: "last name"
+        required: true
+        type: "string"
+      - name: "companyName"
+        in: "formData"
+        description: "company name"
+        required: false
+        type: "string"
+      - name: "street1"
+        in: "formData"
+        description: "street1"
+        required: true
+        type: "string"
+      - name: "street2"
+        in: "formData"
+        description: "street2"
+        required: false
+        type: "string"
+      - name: "city"
+        in: "formData"
+        description: "city"
+        required: true
+        type: "string"
+      - name: "state"
+        in: "formData"
+        description: "state"
+        required: true
+        type: "string"
+      - name: "zipcode"
+        in: "formData"
+        description: "zip"
+        required: true
+        type: "string"
+      - name: "phoneNumber"
+        in: "formData"
+        description: "phone number"
+        required: true
+        type: "string"
+      - name: "country"
+        in: "formData"
+        description: "country"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "Header API"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/ShippingAddress"
+      x-swagger-router-controller: "Default"
+  /AddressBook/edit:
+    post:
+      summary: "Edit Address --> Addresses as JSON"
+      operationId: "addressBookEditPOST"
+      consumes:
+      - "application/x-www-form-urlencoded"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "relationshipId"
+        in: "formData"
+        description: "RelationshipId of address to update"
+        required: true
+        type: "string"
+      - name: "lastName"
+        in: "formData"
+        description: "last name"
+        required: true
+        type: "string"
+      - name: "companyName"
+        in: "formData"
+        description: "company name"
+        required: false
+        type: "string"
+      - name: "street1"
+        in: "formData"
+        description: "street1"
+        required: true
+        type: "string"
+      - name: "street2"
+        in: "formData"
+        description: "street2"
+        required: false
+        type: "string"
+      - name: "city"
+        in: "formData"
+        description: "city"
+        required: true
+        type: "string"
+      - name: "state"
+        in: "formData"
+        description: "state"
+        required: true
+        type: "string"
+      - name: "zipcode"
+        in: "formData"
+        description: "zip"
+        required: true
+        type: "string"
+      - name: "phoneNumber"
+        in: "formData"
+        description: "phone number"
+        required: true
+        type: "string"
+      - name: "country"
+        in: "formData"
+        description: "country"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "Header API"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/ShippingAddress"
+      x-swagger-router-controller: "Default"
+  /AddressBook/remove:
+    post:
+      summary: "Remove Address --> Addresses as JSON"
+      operationId: "addressBookRemovePOST"
+      consumes:
+      - "application/x-www-form-urlencoded"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "relationshipId"
+        in: "formData"
+        description: "RelationshipId of address to remove"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "Header API"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/ShippingAddress"
+      x-swagger-router-controller: "Default"
+securityDefinitions:
+  APISecurity:
+    type: "apiKey"
+    name: "HCAuthToken"
+    in: "query"
+definitions:
+  Error:
+    type: "object"
+    properties:
+      code:
+        type: "string"
+        example: "DDA001"
+      message:
+        type: "string"
+        example: "An error occurred!"
+  PostPromoCode:
+    type: "object"
+    properties:
+      promotionCode:
+        type: "string"
+        example: "SAVE247"
+  PostChangeQuantity:
+    type: "object"
+    properties:
+      quantity:
+        type: "number"
+        example: 3
+      relationshipId:
+        type: "string"
+        example: "ID34234234"
+  PostRelationshipId:
+    type: "object"
+    properties:
+      relationshipId:
+        type: "string"
+        example: "ID34234234"
+  PostSignIn:
+    type: "object"
+    properties:
+      login:
+        type: "string"
+        example: "diverted"
+      password:
+        type: "string"
+        example: "password123"
+  PostCreate:
+    type: "object"
+    properties:
+      login:
+        type: "string"
+        example: "diverted"
+      email:
+        type: "string"
+        example: "ted@light.ly"
+      accountConfirmEmail:
+        type: "string"
+        example: "ted@light.ly"
+      password:
+        type: "string"
+        example: "password123"
+      confirmPassword:
+        type: "string"
+        example: "password123"
+      userAccountName:
+        type: "string"
+        example: "Lightly LLC"
+      question:
+        type: "string"
+        example: "What is your favorite color?"
+      answer:
+        type: "string"
+        example: "red no blue"
+      sendEmailPromotions:
+        type: "boolean"
+        example: false
+  PostGuest:
+    type: "object"
+    properties:
+      login:
+        type: "string"
+        example: "diverted"
+      optin:
+        type: "boolean"
+        example: false
+  PostSetShippingAddress:
+    type: "object"
+    properties:
+      firstName:
+        type: "string"
+        example: "Ravindernath"
+      lastName:
+        type: "string"
+        example: "Vishwanath"
+      companyName:
+        type: "string"
+        example: "HC"
+      street1:
+        type: "string"
+        example: "15955 La Cantera Pkwy"
+      street2:
+        type: "string"
+        example: ""
+      city:
+        type: "string"
+        example: "San Antonio"
+      state:
+        type: "string"
+        example: "TX"
+      zipcode:
+        type: "string"
+        example: "78256"
+      phoneNumber:
+        type: "string"
+        example: "210123456"
+      country:
+        type: "string"
+        example: "US"
+      sameAsShipping:
+        type: "boolean"
+        example: false
+      isDomestic:
+        type: "boolean"
+        example: false
+  PostShippingAddress:
+    type: "object"
+    properties:
+      firstName:
+        type: "string"
+        example: "Ravindernath"
+      lastName:
+        type: "string"
+        example: "Vishwanath"
+      companyName:
+        type: "string"
+        example: "HC"
+      street1:
+        type: "string"
+        example: "15955 La Cantera Pkwy"
+      street2:
+        type: "string"
+        example: ""
+      city:
+        type: "string"
+        example: "San Antonio"
+      state:
+        type: "string"
+        example: "TX"
+      zipcode:
+        type: "string"
+        example: "78256"
+      phoneNumber:
+        type: "string"
+        example: "210123456"
+      country:
+        type: "string"
+        example: "US"
+      isDomestic:
+        type: "boolean"
+        example: true
+  CatalogData:
+    type: "object"
+    properties:
+      id:
+        type: "string"
+        example: "catalog450002_ctlg"
+      subCategories:
+        type: "array"
+        items:
+          $ref: "#/definitions/CatalogData"
+      sortOrder:
+        type: "integer"
+        example: 10
+      name:
+        type: "string"
+        example: "Checks"
+      success:
+        type: "boolean"
+        example: true
+      url:
+        type: "string"
+        example: "/estore/Checks/catalog450002_ctlg.ct"
+  Cart:
+    type: "object"
+    properties:
+      type:
+        type: "string"
+        example: "cart"
+      order:
+        $ref: "#/definitions/Order"
+      recommendedProducts:
+        type: "array"
+        items:
+          $ref: "#/definitions/RecommendedProduct"
+      userProfile:
+        $ref: "#/definitions/UserProfile"
+      error:
+        $ref: "#/definitions/Error"
+  Order:
+    type: "object"
+    properties:
+      state:
+        type: "string"
+        example: "INCOMPLETE"
+      promotionCode:
+        type: "array"
+        items:
+          type: "string"
+          example: "onsale234"
+      commerceItems:
+        type: "array"
+        items:
+          $ref: "#/definitions/CommerceItem"
+      priceInfo:
+        $ref: "#/definitions/OrderPriceInfo"
+      totalCommerceItemCount:
+        type: "integer"
+        example: 2
+      shippingGroups:
+        type: "array"
+        items:
+          $ref: "#/definitions/ShippingGroup"
+  UserProfile:
+    type: "object"
+    properties:
+      profileId:
+        type: "string"
+        example: "185640000"
+      isLogin:
+        type: "boolean"
+        example: true
+      sendEmailPromotions:
+        type: "boolean"
+        example: true
+      firstName:
+        type: "string"
+        example: "Ravindernath"
+      lastName:
+        type: "string"
+        example: "Vishwanath"
+      companyName:
+        type: "string"
+        example: "HC"
+      street1:
+        type: "string"
+        example: "15955 La Cantera Pkwy"
+      street2:
+        type: "string"
+        example: ""
+      city:
+        type: "string"
+        example: "San Antonio"
+      state:
+        type: "string"
+        example: "TX"
+      zipcode:
+        type: "string"
+        example: "78256"
+      phoneNumber:
+        type: "string"
+        example: "210123456"
+      country:
+        type: "string"
+        example: "US"
+  CommerceItemPriceInfo:
+    type: "object"
+    properties:
+      currencyCode:
+        type: "string"
+        example: "USD"
+      amount:
+        type: "number"
+        example: 75.900000000000005684341886080801486968994140625
+  OrderPriceInfo:
+    type: "object"
+    properties:
+      total:
+        type: "number"
+        example: 75.900000000000005684341886080801486968994140625
+      subtotal:
+        type: "number"
+        example: 75.900000000000005684341886080801486968994140625
+      discount:
+        type: "number"
+        example: 0
+      shipping:
+        type: "number"
+        example: 0
+      tax:
+        type: "number"
+        example: 0
+  QuantitySkus:
+    type: "object"
+    properties:
+      unitprice:
+        type: "string"
+        example: "$0.08"
+      totalprice:
+        type: "string"
+        example: "$11.99"
+      skuqty:
+        type: "number"
+        example: 150
+      success:
+        type: "boolean"
+        example: true
+  CommerceItem:
+    type: "object"
+    properties:
+      quantitySkus:
+        type: "array"
+        items:
+          $ref: "#/definitions/QuantitySkus"
+      productDisplayName:
+        type: "string"
+        example: "LB-CBR Business Checkbook Organizer"
+      state:
+        type: "string"
+        example: "INITIAL"
+      productId:
+        type: "string"
+        example: "prod1740015_prd"
+      id:
+        type: "string"
+        example: "ci8506000001"
+      priceInfo:
+        $ref: "#/definitions/CommerceItemPriceInfo"
+      quantity:
+        type: "integer"
+        example: 1
+      relationshipId:
+        type: "string"
+        example: "r85950001"
+      editUrl:
+        type: "string"
+        example: "/34234234/edit"
+      catalogRefId:
+        type: "string"
+        example: "sku1760742_sk"
+  SavedDesigns:
+    type: "object"
+    properties:
+      type:
+        type: "string"
+        example: "savedDesign"
+      savedcards:
+        type: "array"
+        items:
+          $ref: "#/definitions/SavedDesign"
+  SavedDesign:
+    type: "object"
+    properties:
+      autoSave:
+        type: "boolean"
+        example: false
+      productConfigId:
+        type: "string"
+        example: "654600031"
+      productId:
+        type: "string"
+        example: "prod560003_prd"
+      id:
+        type: "string"
+        example: "1590209240"
+      creationDate:
+        type: "string"
+        example: "2017-05-10 13:36:04.9"
+      categoryName:
+        type: "string"
+      cardName:
+        type: "string"
+        example: "dev"
+      price:
+        type: "string"
+        example: "44.991"
+      description:
+        type: "string"
+        example: "Black banners make your business look sharp and professional."
+      numberOfDaysToExpire:
+        type: "number"
+        example: 25
+      lastModifiedDate:
+        $ref: "#/definitions/TimeStamp"
+      quantity:
+        type: "string"
+        example: "1"
+      displayName:
+        type: "string"
+        example: "Black Banner"
+      savedItemURL:
+        type: "string"
+        example: "https://uat.iprint.com/services/UGCGetFileFromServer/2016/08/24/ssdfsdf"
+  TimeStamp:
+    type: "object"
+    properties:
+      time:
+        type: "number"
+        example: 1494441364899
+  RecommendedProducts:
+    type: "object"
+    properties:
+      type:
+        type: "string"
+        example: "recommendedProducts"
+      recommendedProducts:
+        type: "array"
+        items:
+          $ref: "#/definitions/RecommendedProduct"
+  RecommendedProduct:
+    type: "object"
+    properties:
+      onsale:
+        type: "boolean"
+        example: false
+      imageUrl:
+        type: "string"
+        example: "/images/shared/checks-forms/spen3/spen3_01_200x200.jpg"
+      productUrl:
+        type: "string"
+        example: "/estore/PROMOTIONAL+PRODUCTS/Bags/Zipper+Sport+Pack/prod3130045_prd.p"
+      productId:
+        type: "string"
+        example: "prod1740032_prd"
+      unitprice:
+        type: "string"
+        example: "$12.99"
+      productName:
+        type: "string"
+        example: "SPEN3 Security Pen 3 Pack"
+      unitsaleprice:
+        type: "string"
+        example: "On Sale for $10.87"
+  ShippingGroup:
+    type: "object"
+    properties:
+      id:
+        type: "string"
+        example: "sg100360001"
+      relationshipId:
+        type: "string"
+        example: "r86510047"
+      shippingMethod:
+        type: "string"
+        example: "02"
+      shippingAddress:
+        $ref: "#/definitions/ShippingAddress"
+  ShippingAddressValidation:
+    type: "object"
+    properties:
+      posted:
+        $ref: "#/definitions/ShippingAddress"
+      suggested:
+        $ref: "#/definitions/ShippingAddress"
+  ShippingAddress:
+    type: "object"
+    properties:
+      firstName:
+        type: "string"
+        example: "Ravindernath"
+      lastName:
+        type: "string"
+        example: "Vishwanath"
+      companyName:
+        type: "string"
+        example: "HC"
+      street1:
+        type: "string"
+        example: "15955 La Cantera Pkwy"
+      street2:
+        type: "string"
+        example: ""
+      city:
+        type: "string"
+        example: "San Antonio"
+      state:
+        type: "string"
+        example: "TX"
+      zipcode:
+        type: "string"
+        example: "78256"
+      phoneNumber:
+        type: "string"
+        example: "210123456"
+      country:
+        type: "string"
+        example: "US"
