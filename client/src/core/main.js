@@ -34,7 +34,7 @@ brp.analytics = require( './modules/analytics' );
 
 brp.config = {
     token:"TestAuthToken123",
-    servicesBasePath: "https://uat.iprint.com/services"
+    servicesBasePath: "/services"
 }
 //load version from html
 

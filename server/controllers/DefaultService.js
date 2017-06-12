@@ -12,7 +12,7 @@ const config = {
     servicesBasePath: "https://uat.iprint.com/services"
 }
 
-exports.callGet = function( path, args, res, next ){
+const callGet = function( path, args, res, next ){
     agent.get( config.servicesBasePath + '/' + path )
     .query( {'HCAuthToken': config.token } )
     .send()
@@ -26,7 +26,7 @@ exports.callGet = function( path, args, res, next ){
     });
 }
 
-exports.callPost = function( path, args, res, next ){
+const callPost = function( path, args, res, next ){
     agent.post( config.servicesBasePath + '/' + path )
     .query( {'HCAuthToken': config.token } )
     .send( args )

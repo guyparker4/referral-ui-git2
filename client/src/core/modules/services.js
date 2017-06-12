@@ -82,7 +82,7 @@ servicesModule.getShoppingCart = function(){
             brp.model.errors.push( {'code':'SGSC001', 'message':'Error in call to getShoppingCart'} );
             brp.model.modalError = true;
         }else{
-            brp.validation.getShoppingCart( res );
+            brp.validation.getShoppingCart( res.text );
         }
     });
 }

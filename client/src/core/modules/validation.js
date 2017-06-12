@@ -90,15 +90,19 @@ validationModule.getShoppingCart = function( data ){
     try{
         var result = JSON.parse( data );
     }catch(e){
+        console.log( "INVALID JSON" );
         brp.model.errors.push( {'code':'VGSC001', 'message':'Invalid JSON in getShoppingCart( validation )'} );
         brp.model.modalError = true;
         return;
     }
     if( result.error ){
+        console.log( "JSON with ERROR" );
         brp.model.errors.push( {'code':result.error.code, 'message': result.error.message } );
         brp.model.modalError = true;
         return;
     }
+
+    console.log( result );
     //SUCCESS
     if( result.status == "Success" ){
         brp.model.order = result.order;
