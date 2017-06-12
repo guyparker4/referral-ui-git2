@@ -4,6 +4,10 @@
 const superagent = require('superagent');
 const agent = superagent.agent();
 
+global.application = {
+    console:console
+}
+
 //API DOES NOT USE COOKIES
 //const agent = require('superagent');
 
@@ -17,9 +21,14 @@ const callGet = function( path, args, res, next ){
     .query( {'HCAuthToken': config.token } )
     .send()
     .end( function( apierr , apires ){
+        settings.console.log( " CALLGET RESPONSE " );
         res.setHeader('Content-Type', 'application/json');
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        settings.console.log( JSON.stringify( apires ) );
+        settings.console.log( JSON.stringify( apierr ) );
         if( apierr || !apires.ok ){
-            res.end( apires.text );
+            res.end("");
+            settings.console.log( JSON.stringify( apierr ) );
         }else{
             res.end( apires.text );
         }
@@ -31,9 +40,14 @@ const callPost = function( path, args, res, next ){
     .query( {'HCAuthToken': config.token } )
     .send( args )
     .end( function( apierr , apires ){
+        settings.console.log( " CALLPOST RESPONSE " );
         res.setHeader('Content-Type', 'application/json');
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        settings.console.log( JSON.stringify( apires ) );
+        settings.console.log( JSON.stringify( apierr ) );
         if( apierr || !apires.ok ){
-            res.end( apires.text );
+            res.end("");
+            settings.console.log( JSON.stringify( apierr ) );
         }else{
             res.end( apires.text );
         }

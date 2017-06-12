@@ -14,7 +14,7 @@ servicesModule.applyPromoCode = function( promotionCode ){
             brp.model.errors.push( {'code':'SAPC001', 'message':'Error in call to applyPromoCode'} );
             brp.model.modalError = true;
         }else{
-            brp.validation.applyPromoCode( res );
+            brp.validation.applyPromoCode( res.text );
         }
     });
 
@@ -32,7 +32,7 @@ servicesModule.removePromoCode = function( promotionCode ){
             brp.model.errors.push( {'code':'SRPC001', 'message':'Error in call to removePromoCode'} );
             brp.model.modalError = true;
         }else{
-            brp.validation.removePromoCode( res );
+            brp.validation.removePromoCode( res.text );
         }
     });
 }
@@ -49,7 +49,7 @@ servicesModule.changeQuantity = function( relationshipId , quantity ){
             brp.model.errors.push( {'code':'SCQ001', 'message':'Error in call to changeQuantity'} );
             brp.model.modalError = true;
         }else{
-            brp.validation.changeQuantity( res );
+            brp.validation.changeQuantity( res.text );
         }
     });
 }
@@ -66,7 +66,7 @@ servicesModule.removeOrderItem = function( relationshipId ){
             brp.model.errors.push( {'code':'SROI001', 'message':'Error in call to removeOrderItem'} );
             brp.model.modalError = true;
         }else{
-            brp.validation.removeOrderItem( res );
+            brp.validation.removeOrderItem( res.text );
         }
     });
 }
@@ -98,7 +98,7 @@ servicesModule.getCatalogSummary = function(){
             brp.model.errors.push( {'code':'SGCS001', 'message':'Error in call to getCatalogSummary'} );
             brp.model.modalError = true;
         }else{
-            brp.validation.getCatalogSummary( res );
+            brp.validation.getCatalogSummary( res.text );
         }
     });
 }
@@ -114,7 +114,7 @@ servicesModule.getRecommendedProducts = function(){
             brp.model.errors.push( {'code':'SGRP001', 'message':'Error in call to getRecommendedProducts'} );
             brp.model.modalError = true;
         }else{
-            brp.validation.getRecommendedProducts( res );
+            brp.validation.getRecommendedProducts( res.text );
         }
     });
 }
@@ -130,24 +130,24 @@ servicesModule.savedDesigns = function(){
             brp.model.errors.push( {'code':'SSD001', 'message':'Error in call to savedDesigns'} );
             brp.model.modalError = true;
         }else{
-            brp.validation.savedDesigns( res );
+            brp.validation.savedDesigns( res.text );
         }
     });
 }
 
-servicesModule.signin = function( login , password ){
+servicesModule.signin = function( login , password , autologin ){
     console.log( "brp.services.signin" );
     brp.libs.agent.post( brp.config.servicesBasePath + '/signin' )
     .type( 'json' )
     .query({'HCAuthToken': brp.config.token })
-    .send( { login:login , password:password } )
+    .send( { login:login , password:password , autologin:autologin } )
     .end( function( err , res ){
         if( err || !res.ok ){
             //error handling
             brp.model.errors.push( {'code':'SSI001', 'message':'Error in call to signin'} );
             brp.model.modalError = true;
         }else{
-            brp.validation.signin( res );
+            brp.validation.signin( res.text );
         }
     });
 }
@@ -164,7 +164,7 @@ servicesModule.create = function( login , password , question , answer , optin )
             brp.model.errors.push( {'code':'SCR001', 'message':'Error in call to create'} );
             brp.model.modalError = true;
         }else{
-            brp.validation.create( res );
+            brp.validation.create( res.text );
         }
     });
 }
@@ -181,7 +181,7 @@ servicesModule.guest = function( login , optin ){
             brp.model.errors.push( {'code':'SGU001', 'message':'Error in call to guest'} );
             brp.model.modalError = true;
         }else{
-            brp.validation.guest( res );
+            brp.validation.guest( res.text );
         }
     });
 }
@@ -198,7 +198,7 @@ servicesModule.setShippingAddress = function( data ){
             brp.model.errors.push( {'code':'SSSA001', 'message':'Error in call to setShippingAddress'} );
             brp.model.modalError = true;
         }else{
-            brp.validation.setShippingAddress( res );
+            brp.validation.setShippingAddress( res.text );
         }
     });
 }
@@ -215,7 +215,7 @@ servicesModule.setBillingAddress = function( data ){
             brp.model.errors.push( {'code':'SSBA001', 'message':'Error in call to setBillingAddress'} );
             brp.model.modalError = true;
         }else{
-            brp.validation.setBillingAddress( res );
+            brp.validation.setBillingAddress( res.text );
         }
     });
 }

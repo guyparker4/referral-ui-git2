@@ -15,108 +15,109 @@
             <div class="large-12 columns">
                 <div class="expanded button-group round toggle-expanded">
                     <div class="button">
-                        <input type="radio" name="customerType" value="new" class="radioButton" @click="toggle('registrationSection');" id="newCutomerTypeBtn" data-toggle="button">
+                        <input type="radio" name="customerType" value="new" class="radioButton" @click="view='register'" id="newCutomerTypeBtn" data-toggle="button">
                         <label class="button ajaxForm" for="newCutomerTypeBtn" id="newCutomerType">I'm a new customer</label>
                     </div>
                     <div class="button">
-                        <input type="radio" name="customerType" value="returning" class="radioButton" checked="checked" @click="toggle('loginSection');" id="returningCutomerTypeBtn" data-toggle="button">
+                        <input type="radio" name="customerType" value="returning" class="radioButton" checked="checked" @click="view='login'" id="returningCutomerTypeBtn"
+                            data-toggle="button">
                         <label class="button ajaxForm" for="returningCutomerTypeBtn" id="returningCutomerType">Existing customer</label>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="loginSection">
-            <form id="reauthenticationLoginForm" name="reauthenticationLoginForm" action="/estore/en/usr/reauthenticate/guestCheckOut.jsp?_DARGS=/estore/responsive/en/usr/reauthenticate/component/guestCheckOutBody.jsp.reauthenticationLoginForm" method="post"><div style="display:none"><input name="_dyncharset" value="ISO-8859-1" type="hidden"> </div><div style="display:none"><input name="_dynSessConf" value="-1654890127847186552" type="hidden"> </div>
-                <input name="/atg/userprofiling/RCProfileFormHandler.loginSuccessUrl" value="/estore/en/checkout/shippingInfo.jsp" type="hidden"><input name="_D:/atg/userprofiling/RCProfileFormHandler.loginSuccessUrl" value=" " type="hidden">
-                <input name="/atg/userprofiling/RCProfileFormHandler.notTrasientSuccessURL" value="/estore/en/usr/reauthenticate/reauthenticate.jsp" type="hidden"><input name="_D:/atg/userprofiling/RCProfileFormHandler.notTrasientSuccessURL" value=" " type="hidden">
-                <input name="/atg/userprofiling/RCProfileFormHandler.loginErrorUrl" value="/estore/en/usr/reauthenticate/guestCheckOut.jsp" type="hidden"><input name="_D:/atg/userprofiling/RCProfileFormHandler.loginErrorUrl" value=" " type="hidden">
-                <input name="/atg/userprofiling/RCProfileFormHandler.userType" value="registered" type="hidden"><input name="_D:/atg/userprofiling/RCProfileFormHandler.userType" value=" " type="hidden"><div class="row columns required_disabled">
+        <div v-if="view=='login'">
+            <form>
+                <div class="row columns required_disabled">
                     <div class="medium-3 columns">
-
-
-                        <label for="email" class="font-normal">Email address<sup>*</sup></label>
+                        <label for="userName" class="font-normal">Email address<sup>*</sup></label>
                     </div>
                     <div class="medium-9 columns">
-                        <input id="userName" name="userName" value="" type="text" autocomplete="off" size="50"><input name="_D:userName" value=" " type="hidden"></div>
-                </div>
-                <div class="row columns required">
-                    <div class="medium-3 columns">
-                        <label for="password" class="font-normal">Password<sup>*</sup></label>
+                        <input id="userName" name="userName" v-model="loginForm.login" type="text" autocomplete="off" size="50">
                     </div>
-                    <div class="medium-9 columns">
-                        <input id="password" name="password" value="" onkeypress="if(true == checkEnter(event)){javascript:reauthenticateLogin();}" type="password" autocomplete="off" size="50"><input name="_D:password" value=" " type="hidden">&nbsp;&nbsp;
+                    <div class="row columns required">
+                        <div class="medium-3 columns">
+                            <label for="password" class="font-normal">Password<sup>*</sup></label>
+                        </div>
+                        <div class="medium-9 columns">
+                            <input id="password" name="password" v-model="loginForm.password" type="password" autocomplete="off" size="50">
+                        </div>
+                    </div>
+                    <div class="row columns">
+                        <div class="medium-3 columns">&nbsp;</div>
+                        <div class="medium-9 columns labelstd">
+                            <input type="checkbox" id="remember-me" v-model="loginForm.autologin" name="remember-me" value="yes">
+                            <label for="remember-me" class="font-normal">Yes, remember me when using this computer.</label>
+                        </div>
+                    </div>
+                    <div class="row columns button-action">
+                        <div class="medium-3 columns">&nbsp;</div>
+                        <div class="medium-9 columns">
+                            <a title="Continue to next step" class="button ajaxForm margin-right-10px btn-target" @click="signin">Sign In</a>
+                            <div>
+                                <a href="#forgotPasswordBody" id="forgotPasswordLink" class="fancybox forgotPassword font-333333">forgot your password?</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="row columns">
-                    <div class="medium-3 columns">&nbsp;</div>
-                    <div class="medium-9 columns labelstd">
-                        <input type="checkbox" id="remember-me" name="remember-me" value="yes"><label for="remember-me" class="font-normal">Yes, remember me when using this computer.</label>
-                    </div>
-                </div>
-                <div class="row columns button-action">
-                    <div class="medium-3 columns">&nbsp;</div>
-                    <div class="medium-9 columns">
-                        <a title="Continue to next step" class="button ajaxForm margin-right-10px btn-target disabled" href="javascript:reauthenticateLogin();">Sign In</a>
-                        <input name="/atg/userprofiling/RCProfileFormHandler.guestLogin" value="" type="hidden"><input name="_D:/atg/userprofiling/RCProfileFormHandler.guestLogin" value=" " type="hidden"><div><a href="#forgotPasswordBody" id="forgotPasswordLink" class="fancybox forgotPassword font-333333">forgot your password?</a></div>
-                    </div>
-                </div>
-                <div style="display:none"><input name="_DARGS" value="/estore/responsive/en/usr/reauthenticate/component/guestCheckOutBody.jsp.reauthenticationLoginForm" type="hidden"> </div></form></div><!-- end login -->
-        <div id="registrationSection" style="display: none">
-            <form id="reauthenticationRegisterForm" name="reauthenticationRegisterForm" action="/estore/en/usr/reauthenticate/guestCheckOut.jsp?_DARGS=/estore/responsive/en/usr/reauthenticate/component/guestCheckOutBody.jsp.reauthenticationRegisterForm" method="POST"><div style="display:none"><input name="_dyncharset" value="ISO-8859-1" type="hidden"> </div><div style="display:none"><input name="_dynSessConf" value="-1654890127847186552" type="hidden"> </div>
-                <input name="/atg/userprofiling/RCProfileFormHandler.createSuccessURL" value="/estore/en/checkout/shippingInfo.jsp" type="hidden"><input name="_D:/atg/userprofiling/RCProfileFormHandler.createSuccessURL" value=" " type="hidden">
-                <input name="/atg/userprofiling/RCProfileFormHandler.userType" value="newUser" type="hidden"><input name="_D:/atg/userprofiling/RCProfileFormHandler.userType" value=" " type="hidden">
-
+            </form>
+        </div>
+        <!-- end login -->
+        <div v-if="view=='register'">
+            <form>
                 <div class="row columns required">
                     <div class="grid_5">
                         <label for="email" class="font-normal">Email address<sup>*</sup></label>
                     </div>
                     <div class="grid_11">
-                        <input id="email" maxlength="100" name="email" value="" type="text" autocomplete="off" size="50"><input name="_D:email" value=" " type="hidden"></div>
+                        <input id="email" maxlength="100" name="email" value="" type="text" autocomplete="off" size="50">
+                    </div>
                 </div>
                 <div class="row columns required_disabled">
                     <div class="grid_5">
                         <label for="confirm-email" class="font-normal">confirm email address<sup>*</sup></label>
                     </div>
                     <div class="grid_11">
-                        <input id="email" maxlength="100" name="email2" value="" type="text" autocomplete="off" size="50"><input name="_D:email2" value=" " type="hidden"></div>
+                        <input id="email" maxlength="100" name="email2" value="" type="text" autocomplete="off" size="50">
+                    </div>
                 </div>
                 <div class="row columns required_disabled">
                     <div class="grid_5">
                         <label for="password" class="font-normal">password<sup>*</sup></label>
                     </div>
                     <div class="grid_11">
-                        <input id="createPassword" maxlength="20" name="createPassword" value="" type="password" autocomplete="off" size="50"><input name="_D:createPassword" value=" " type="hidden"></div>
+                        <input id="createPassword" maxlength="20" name="createPassword" value="" type="password" autocomplete="off" size="50">
+                    </div>
                 </div>
                 <div class="row columns required_disabled">
                     <div class="grid_5">
                         <label for="confirm-password" class="font-normal">confirm password<sup>*</sup></label>
                     </div>
                     <div class="grid_11">
-                        <input id="retypePassword" maxlength="20" onpaste="return false" name="retypePassword" value="" onkeydown="return (event.keyCode!=13);" onkeypress="if(true == checkEnter(event)){javascript:reauthenticateRegister();}" type="password" autocomplete="off" size="50"><input name="_D:retypePassword" value=" " type="hidden"></div>
+                        <input id="retypePassword" maxlength="20" name="retypePassword" value="" type="password" autocomplete="off" size="50">
+                    </div>
                 </div>
-
-
 
                 <div class="row columns margin-bottom-10px">
                     <div class="grid_5">
                         <label for="securityQuestion">Security question</label>
                     </div>
                     <div class="grid_11">
-                        <input name="_D:/atg/userprofiling/RCProfileFormHandler.question" value=" " type="hidden">
-                        <select id="guestcheckoutquestion" style="width:289px" name="/atg/userprofiling/RCProfileFormHandler.question"><option selected="selected" value="">Select</option>
-                        <option value="cq001">What was your childhood nickname?</option>
-                        <option value="cq002">What street did you live on in sixth grade?</option>
-                        <option value="cq003">What school did you attend for third grade?</option>
-                        <option value="cq004">What was your childhood phone number including area code?</option>
-                        <option value="cq005">What was the name of your favorite stuffed animal?</option>
-                        <option value="cq006">In what city or town did your mother and father meet?</option>
-                        <option value="cq007">What was the last name of your third grade teacher?</option>
-                        <option value="cq008">What is your maternal grandmother's maiden name?</option>
-                        <option value="cq009">What is the name of the place your wedding reception was held?</option>
-                        <option value="cq010">What is the name of your first pet?</option>
-                        <option value="cq011">What was the color of your first car?</option>
-                        <option value="cq012">When you were young, what did you want to be when you grew up?</option>
-                        </select>
+                        <select id="guestcheckoutquestion" style="width:289px">
+                                <option selected="selected" value="">Select</option>
+                                <option value="cq001">What was your childhood nickname?</option>
+                                <option value="cq002">What street did you live on in sixth grade?</option>
+                                <option value="cq003">What school did you attend for third grade?</option>
+                                <option value="cq004">What was your childhood phone number including area code?</option>
+                                <option value="cq005">What was the name of your favorite stuffed animal?</option>
+                                <option value="cq006">In what city or town did your mother and father meet?</option>
+                                <option value="cq007">What was the last name of your third grade teacher?</option>
+                                <option value="cq008">What is your maternal grandmother's maiden name?</option>
+                                <option value="cq009">What is the name of the place your wedding reception was held?</option>
+                                <option value="cq010">What is the name of your first pet?</option>
+                                <option value="cq011">What was the color of your first car?</option>
+                                <option value="cq012">When you were young, what did you want to be when you grew up?</option>
+                            </select>
                     </div>
                 </div>
                 <div class="row columns">
@@ -124,7 +125,8 @@
                         <label for="securityAnswer">security answer</label>
                     </div>
                     <div class="grid_11">
-                        <input id="guestcheckoutanswer" maxlength="60" onpaste="return false" name="/atg/userprofiling/RCProfileFormHandler.answer" value="" onkeydown="return (event.keyCode!=13);" onkeypress="if(true == checkEnter(event)){javascript:register();}" type="text" autocomplete="off" size="50"><input name="_D:/atg/userprofiling/RCProfileFormHandler.answer" value=" " type="hidden"></div>
+                        <input id="guestcheckoutanswer" maxlength="60" value="" type="text" autocomplete="off" size="50">
+                    </div>
                 </div>
                 <!-- AGE VALIDATION START -->
                 <!-- AGE VALIDATION END -->
@@ -135,31 +137,23 @@
                     </div>
                     <div class="grid_11">
                         <div style="float:left;width:25px;">
-                            <input id="emailPreferences" name="customerType" value="returning" class="checkBox" type="checkbox"><input name="_D:customerType" value=" " type="hidden"></div>
-
-
-
-                        <div style="float:left;width:90%;">
-                            <label for="send-me" class="font-normal">Yes, please send me iPrint exclusive offers and promotions.  See our
-
-
-                                <a id="privacyPolicyLink" href="/estore/responsive/en/common/policies/privacy.jsp" target="_blank">Privacy Policy</a>
-                            </label>
+                            <input id="emailPreferences" name="customerType" value="returning" class="checkBox" type="checkbox">
+                            <div style="float:left;width:90%;">
+                                <label for="send-me" class="font-normal">Yes, please send me iPrint exclusive offers and promotions.  See our <a id="privacyPolicyLink" href="/estore/responsive/en/common/policies/privacy.jsp" target="_blank">Privacy Policy</a></label>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- AGE VALIDATION START -->
+                    <!-- AGE VALIDATION START -->
 
 
-                <!-- AGE VALIDATION END -->
-                <div class="row columns">
-                    <div class="grid_5">&nbsp;</div>
-                    <div class="grid_11">
-                        <a title="Continue to next step" class="button ajaxForm disabled" href="javascript:reauthenticateRegister();">Create a New Account</a>
+                    <!-- AGE VALIDATION END -->
+                    <div class="row columns">
+                        <div class="grid_5">&nbsp;</div>
+                        <div class="grid_11">
+                            <a title="Continue to next step" class="button ajaxForm disabled">Create a New Account</a>
+                        </div>
                     </div>
-                    <input name="/atg/userprofiling/RCProfileFormHandler.registration" value="" type="hidden"><input name="_D:/atg/userprofiling/RCProfileFormHandler.registration" value=" " type="hidden"></div>
-                <!-- </div>  ?? -->
-                <div style="display:none"><input name="_DARGS" value="/estore/responsive/en/usr/reauthenticate/component/guestCheckOutBody.jsp.reauthenticationRegisterForm" type="hidden"> </div></form></div> <!-- end registrationSection -->
+            </form>
+        </div>
     </div>
-</div> <!-- end grid 5 section -->
-<!-- the grid 5 section -->
+</div>

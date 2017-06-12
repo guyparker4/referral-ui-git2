@@ -9,6 +9,10 @@ var serveStatic = require('serve-static');
 var path = require('path');
 var serverPort = 8080;
 
+global.settings = {
+  console:console
+}
+
 // swaggerRouter configuration
 var options = {
   swaggerUi: '/swagger.json',
