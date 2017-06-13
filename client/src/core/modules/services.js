@@ -152,12 +152,12 @@ servicesModule.signin = function( login , password , autologin ){
     });
 }
 
-servicesModule.create = function( login , password , question , answer , optin ){
+servicesModule.create = function( data ){
     console.log( "brp.services.create" );
     brp.libs.agent.post( brp.config.servicesBasePath + '/create' )
     .type( 'json' )
     .query({'HCAuthToken': brp.config.token })
-    .send( { login:login , password:password , question:question , answer:answer , optin:optin } )
+    .send( data )
     .end( function( err , res ){
         if( err || !res.ok ){
             //error handling

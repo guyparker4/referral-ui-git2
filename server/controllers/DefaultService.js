@@ -41,8 +41,9 @@ const callPost = function( path, args, res, next ){
     .send( args )
     .end( function( apierr , apires ){
         settings.console.log( " CALLPOST RESPONSE " );
-        res.setHeader('Content-Type', 'application/json');
-        res.setHeader('Access-Control-Allow-Origin', '*');
+        res.setHeader( 'Content-Type', 'application/json' );
+        res.setHeader( 'Referrer-Policy', 'same-origin' );
+        res.setHeader( 'Access-Control-Allow-Origin', '*' );
         settings.console.log( JSON.stringify( apires ) );
         settings.console.log( JSON.stringify( apierr ) );
         if( apierr || !apires.ok ){

@@ -28,7 +28,7 @@
         </div>
         <div v-if="view=='login'">
             <form>
-                <div class="row columns required_disabled">
+                <div class="row columns">
                     <div class="medium-3 columns">
                         <label for="userName" class="font-normal">Email address<sup>*</sup></label>
                     </div>
@@ -62,7 +62,8 @@
                 </div>
             </form>
         </div>
-        <!-- end login -->
+
+
         <div v-if="view=='register'">
             <form>
                 <div class="row columns required">
@@ -70,31 +71,32 @@
                         <label for="email" class="font-normal">Email address<sup>*</sup></label>
                     </div>
                     <div class="grid_11">
-                        <input id="email" maxlength="100" name="email" value="" type="text" autocomplete="off" size="50">
+                        <input id="email" v-model="registerForm.email" :class="{ 'is-invalid-input':registerForm.email!=createConfirmEmail}" maxlength="100" value="" type="text" autocomplete="off" size="50">
                     </div>
                 </div>
-                <div class="row columns required_disabled">
+                <div class="row columns">
                     <div class="grid_5">
                         <label for="confirm-email" class="font-normal">confirm email address<sup>*</sup></label>
                     </div>
                     <div class="grid_11">
-                        <input id="email" maxlength="100" name="email2" value="" type="text" autocomplete="off" size="50">
+                        <input id="confirm-email" v-model="createConfirmEmail" :class="{ 'is-invalid-input':registerForm.email!=createConfirmEmail}" maxlength="100" value="" type="text" autocomplete="off" size="50">
                     </div>
                 </div>
-                <div class="row columns required_disabled">
+                <div class="row columns">
                     <div class="grid_5">
-                        <label for="password" class="font-normal">password<sup>*</sup></label>
+                        <label for="createPassword" class="font-normal">password<sup>*</sup></label>
                     </div>
                     <div class="grid_11">
-                        <input id="createPassword" maxlength="20" name="createPassword" value="" type="password" autocomplete="off" size="50">
+                        <input id="createPassword" :class="{ 'is-invalid-input':registerForm.password!=createConfirmPassword}" v-model="registerForm.password" maxlength="20" value="" type="password" autocomplete="off" size="50">
                     </div>
                 </div>
-                <div class="row columns required_disabled">
+
+                <div class="row columns">
                     <div class="grid_5">
-                        <label for="confirm-password" class="font-normal">confirm password<sup>*</sup></label>
+                        <label for="createConfirmPassword" class="font-normal" >confirm password<sup>*</sup></label>
                     </div>
                     <div class="grid_11">
-                        <input id="retypePassword" maxlength="20" name="retypePassword" value="" type="password" autocomplete="off" size="50">
+                        <input id="createConfirmPassword" v-model="createConfirmPassword" :class="{ 'is-invalid-input':registerForm.password!=createConfirmPassword}" maxlength="20" type="password" autocomplete="off" size="50">
                     </div>
                 </div>
 
@@ -103,56 +105,51 @@
                         <label for="securityQuestion">Security question</label>
                     </div>
                     <div class="grid_11">
-                        <select id="guestcheckoutquestion" style="width:289px">
-                                <option selected="selected" value="">Select</option>
-                                <option value="cq001">What was your childhood nickname?</option>
-                                <option value="cq002">What street did you live on in sixth grade?</option>
-                                <option value="cq003">What school did you attend for third grade?</option>
-                                <option value="cq004">What was your childhood phone number including area code?</option>
-                                <option value="cq005">What was the name of your favorite stuffed animal?</option>
-                                <option value="cq006">In what city or town did your mother and father meet?</option>
-                                <option value="cq007">What was the last name of your third grade teacher?</option>
-                                <option value="cq008">What is your maternal grandmother's maiden name?</option>
-                                <option value="cq009">What is the name of the place your wedding reception was held?</option>
-                                <option value="cq010">What is the name of your first pet?</option>
-                                <option value="cq011">What was the color of your first car?</option>
-                                <option value="cq012">When you were young, what did you want to be when you grew up?</option>
-                            </select>
+                        <select id="securityQuestion" v-model="registerForm.question" style="width:289px">
+                            <option selected="selected" value="">Select</option>
+                            <option value="cq001">What was your childhood nickname?</option>
+                            <option value="cq002">What street did you live on in sixth grade?</option>
+                            <option value="cq003">What school did you attend for third grade?</option>
+                            <option value="cq004">What was your childhood phone number including area code?</option>
+                            <option value="cq005">What was the name of your favorite stuffed animal?</option>
+                            <option value="cq006">In what city or town did your mother and father meet?</option>
+                            <option value="cq007">What was the last name of your third grade teacher?</option>
+                            <option value="cq008">What is your maternal grandmother's maiden name?</option>
+                            <option value="cq009">What is the name of the place your wedding reception was held?</option>
+                            <option value="cq010">What is the name of your first pet?</option>
+                            <option value="cq011">What was the color of your first car?</option>
+                            <option value="cq012">When you were young, what did you want to be when you grew up?</option>
+                        </select>
                     </div>
                 </div>
+
                 <div class="row columns">
                     <div class="grid_5">
                         <label for="securityAnswer">security answer</label>
                     </div>
                     <div class="grid_11">
-                        <input id="guestcheckoutanswer" maxlength="60" value="" type="text" autocomplete="off" size="50">
+                        <input id="securityAnswer" v-model="registerForm.answer" maxlength="60" type="text" autocomplete="off" size="50">
                     </div>
                 </div>
-                <!-- AGE VALIDATION START -->
-                <!-- AGE VALIDATION END -->
 
-                <div class="row columns required_disabled">
+                <div class="row columns">
                     <div class="grid_5">
                         &nbsp;
                     </div>
+                    <div class="grid_1">
+                        <input id="sendEmailPromotions" name="customerType" v-model="registerForm.sendEmailPromotions" class="checkBox" type="checkbox">
+                    </div>
+                    <div class="grid_10">
+                        <label for="sendEmailPromotions" class="font-normal">Yes, please send me iPrint exclusive offers and promotions.  See our <a id="privacyPolicyLink" href="/estore/responsive/en/common/policies/privacy.jsp" target="_blank">Privacy Policy</a></label>
+                    </div>
+                </div>
+
+                <div class="row columns">
+                    <div class="grid_5">&nbsp;</div>
                     <div class="grid_11">
-                        <div style="float:left;width:25px;">
-                            <input id="emailPreferences" name="customerType" value="returning" class="checkBox" type="checkbox">
-                            <div style="float:left;width:90%;">
-                                <label for="send-me" class="font-normal">Yes, please send me iPrint exclusive offers and promotions.  See our <a id="privacyPolicyLink" href="/estore/responsive/en/common/policies/privacy.jsp" target="_blank">Privacy Policy</a></label>
-                            </div>
-                        </div>
+                        <a title="Continue to next step" class="button ajaxForm" :disabled="createFormValid" @click="create">Create a New Account</a>
                     </div>
-                    <!-- AGE VALIDATION START -->
-
-
-                    <!-- AGE VALIDATION END -->
-                    <div class="row columns">
-                        <div class="grid_5">&nbsp;</div>
-                        <div class="grid_11">
-                            <a title="Continue to next step" class="button ajaxForm disabled">Create a New Account</a>
-                        </div>
-                    </div>
+                </div>
             </form>
         </div>
     </div>
