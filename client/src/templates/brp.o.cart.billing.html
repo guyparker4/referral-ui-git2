@@ -29,7 +29,8 @@
                         First name*
                     </div>
                     <div class="large-10 columns">
-                        <input type="text" placeholder="First Name (required)">
+                        <input type="text" v-model="billingForm.firstName" placeholder="First Name (required)">
+                    
                     </div>
                 </div>
                 <div class="row">
@@ -37,45 +38,42 @@
                         Last name*
                     </div>
                     <div class="large-10 columns">
-                        <input type="text" placeholder="Last Name (required)">
+                        <input type="text" v-model="billingForm.lastName" placeholder="Last Name (required)">
                     </div>
+                
                 </div>
                 <div class="row">
                     <div class="large-2 columns">
                         Company
                     </div>
                     <div class="large-10 columns">
-                        <input type="text" placeholder="Company">
+                        <input type="text" v-model="billingForm.companyName" placeholder="Company">
                     </div>
                 </div>
+                
                 <div class="row">
                     <div class="large-2 columns">
                         Address*
                     </div>
                     <div class="large-10 columns">
-                        <input type="text" placeholder="Address (required)">
+                        <input type="text" v-model="billingForm.street1" placeholder="Address (required)">
                     </div>
                 </div>
+                
                 <div class="row">
                     <div class="large-2 columns"> </div>
                     <div class="large-10 columns">
-                        <input type="text" placeholder="Address">
+                        <input type="text" v-model="billingForm.street2" placeholder="Address">
                     </div>
                 </div>
-                <div class="row">
-                    <div class="large-2 columns">
-                        Company
-                    </div>
-                    <div class="large-10 columns">
-                        <input type="text" placeholder="Company">
-                    </div>
-                </div>
+                
                 <div class="row">
                     <div class="large-2 columns">
                         City*
                     </div>
                     <div class="large-10 columns">
-                        <input type="text" placeholder="City">
+                        <input type="text" v-model="billingForm.city" placeholder="City">
+                
                     </div>
                 </div>
                 <div class="row">
@@ -83,7 +81,7 @@
                         State*
                     </div>
                     <div class="large-4 columns">
-                        <select class="required-field" size="1">
+                        <select class="required-field" v-model="billingForm.state" size="1">
                             <option value="">Select a State/Territory</option>
                             <optgroup label="US States">
                                 <option value="AL">AL-Alabama</option>
@@ -162,7 +160,8 @@
                         Zip*
                     </div>
                     <div class="large-4 columns">
-                        <input type="text" placeholder="Zip">
+                        <input type="text" v-model="billingForm.zipcode" placeholder="Zip">
+                
                     </div>
                 </div>
                 <div class="row">
@@ -170,14 +169,15 @@
                         Phone Number*
                     </div>
                     <div class="large-10 columns">
-                        <input type="text" placeholder="Phone Number (required)">
+                        <input type="text" v-model="billingForm.phoneNumber" placeholder="Phone Number (required)">
+                
                     </div>
                 </div>
             </form>
             <div class="row">
                 <div class="large-2 columns"> </div>
                 <div class="large-10 columns">
-                    <a.button class="button ajaxForm cta disabled" @click.native="onUseAddress()" title="Use this Address"></a.button>
+                    <a.button class="button ajaxForm cta" @click.native="onUseAddress()" title="Use this Address"></a.button>
                 </div>
             </div>
         </div>
