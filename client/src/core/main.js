@@ -43,6 +43,7 @@ brp.router = new brp.VueRouter({
   { path: '/cart', component: brp.mapping['o.cart'] , props: { toolbarState: 1 } },
   { path: '/cart/login', component: brp.mapping['o.login'] , props: { toolbarState: 2 } },
   { path: '/cart/shipping', component: brp.mapping['o.shipping'] , props: { toolbarState: 2 } },
+  { path: '/cart/shippingmethod', component: brp.mapping['o.shippingmethod'] , props: { toolbarState: 2 } },
   { path: '/cart/billing', component: brp.mapping['o.billing'] , props: { toolbarState: 2 } },
   { path: '/cart/payment', component: brp.mapping['o.paymentmethod'] , props: { toolbarState: 2 } },
   { path: '/cart/items', component: brp.mapping['o.youritems'] , props: { toolbarState: 2 } },

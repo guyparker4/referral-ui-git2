@@ -24,6 +24,7 @@
                 </div>
             </div>
         </div>
+
         <div class="large-9 columns">
             <form>
                 <div style="margin-bottom:1em;">Only domestic shipping available at this time.</div>
@@ -32,7 +33,8 @@
                         First name*
                     </div>
                     <div class="large-10 columns">
-                        <input type="text" placeholder="First Name (required)">
+                        <input type="text" v-model="shippingForm.firstName" placeholder="First Name (required)">
+                    
                     </div>
                 </div>
                 <div class="row">
@@ -40,45 +42,42 @@
                         Last name*
                     </div>
                     <div class="large-10 columns">
-                        <input type="text" placeholder="Last Name (required)">
+                        <input type="text" v-model="shippingForm.lastName" placeholder="Last Name (required)">
                     </div>
+                
                 </div>
                 <div class="row">
                     <div class="large-2 columns">
                         Company
                     </div>
                     <div class="large-10 columns">
-                        <input type="text" placeholder="Company">
+                        <input type="text" v-model="shippingForm.companyName" placeholder="Company">
                     </div>
                 </div>
+                
                 <div class="row">
                     <div class="large-2 columns">
                         Address*
                     </div>
                     <div class="large-10 columns">
-                        <input type="text" placeholder="Address (required)">
+                        <input type="text" v-model="shippingForm.street1" placeholder="Address (required)">
                     </div>
                 </div>
+                
                 <div class="row">
                     <div class="large-2 columns"> </div>
                     <div class="large-10 columns">
-                        <input type="text" placeholder="Address">
+                        <input type="text" v-model="shippingForm.street2" placeholder="Address">
                     </div>
                 </div>
-                <div class="row">
-                    <div class="large-2 columns">
-                        Company
-                    </div>
-                    <div class="large-10 columns">
-                        <input type="text" placeholder="Company">
-                    </div>
-                </div>
+                
                 <div class="row">
                     <div class="large-2 columns">
                         City*
                     </div>
                     <div class="large-10 columns">
-                        <input type="text" placeholder="City">
+                        <input type="text" v-model="shippingForm.city" placeholder="City">
+                
                     </div>
                 </div>
                 <div class="row">
@@ -86,7 +85,7 @@
                         State*
                     </div>
                     <div class="large-4 columns">
-                        <select class="required-field" size="1">
+                        <select class="required-field" v-model="shippingForm.state" size="1">
                             <option value="">Select a State/Territory</option>
                             <optgroup label="US States">
                                 <option value="AL">AL-Alabama</option>
@@ -165,7 +164,8 @@
                         Zip*
                     </div>
                     <div class="large-4 columns">
-                        <input type="text" placeholder="Zip">
+                        <input type="text" v-model="shippingForm.zipcode" placeholder="Zip">
+                
                     </div>
                 </div>
                 <div class="row">
@@ -173,14 +173,8 @@
                         Phone Number*
                     </div>
                     <div class="large-10 columns">
-                        <input type="text" placeholder="Phone Number (required)">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="large-2 columns"> </div>
-                    <div class="large-10 columns">
-                        <input id="add-addr-book" name="add-addr-book" value="true" type="checkbox" checked="checked">
-                        <label for="add-addr-book">Add this address to my address book</label>
+                        <input type="text" v-model="shippingForm.phoneNumber" placeholder="Phone Number (required)">
+                
                     </div>
                 </div>
                 <div class="row">
@@ -192,14 +186,14 @@
                 <div class="row">
                     <div class="large-2 columns"> </div>
                     <div class="large-10 columns">
-                        <input id="bill-addr-same-yes" name="bill-addr-same" value="same" type="radio" checked="checked">
+                        <input id="bill-addr-same-yes" value="true" type="radio" v-model="shippingForm.sameAsShipping">
                         <label for="bill-addr-same-yes">Yes, the billing address is the same</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="large-2 columns"> </div>
                     <div class="large-10 columns">
-                        <input id="bill-addr-same-no" name="bill-addr-same" value="different" type="radio">
+                        <input id="bill-addr-same-no" value="false" type="radio" v-model="shippingForm.sameAsShipping">
                         <label for="bill-addr-same-no">No, the billing address is different</label>
                     </div>
                 </div>
@@ -207,8 +201,8 @@
             <div class="row">
                 <div class="large-2 columns"> </div>
                 <div class="large-10 columns">
-                    <a.button class="button ajaxForm cta disabled" @click.native="onShipToAddress()" title="Ship to this Address"></a.button>
-                    <a.button class="button ajaxForm hollow" @click.native="onSelectAltAddress()" title="Ship to a different Address"></a.button>
+                    <a.button class="button cta" @click.native="onShipToAddress()" title="Ship to this Address"></a.button>
+                    <a.button class="button hollow" @click.native="onSelectAltAddress()" title="Ship to a different Address"></a.button>
                     <!--
                     <a class="button ajaxForm cta disabled" @click="onShipToAddress()">Ship to this Address</a>
                     <a class="button ajaxForm hollow" @click="onSelectAltAddress()">Ship to a different Address</a>-->
