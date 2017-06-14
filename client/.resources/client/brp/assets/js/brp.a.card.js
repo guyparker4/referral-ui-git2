@@ -1,0 +1,1 @@
+"use strict";mul.set("brp.a.card",[],{template:' <div class="card">\n    <slot></slot>\n </div>\n'});

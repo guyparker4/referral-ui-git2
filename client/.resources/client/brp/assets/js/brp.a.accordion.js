@@ -1,0 +1,1 @@
+"use strict";mul.set("brp.a.accordion",[],{template:'<ul class="accordion">\n  <slot></slot>\n</ul>',props:["mode"],methods:{childActivate:function(t){if("1"==this.mode){var i,c,e=this.$children.length;for(c=0;c<e;c++)i=this.$children[c],t!=i&&(i.active=!1)}}}});
