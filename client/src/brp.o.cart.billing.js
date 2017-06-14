@@ -14,7 +14,7 @@ mul.set( "brp.o.cart.billing" , [] , {
                 zipcode: "",
                 phoneNumber: "",
                 country: "US",
-                isDomestic: true
+                domestic: true
             }
         }
     },
@@ -35,7 +35,7 @@ mul.set( "brp.o.cart.billing" , [] , {
             this.billingForm.zipcode = "";
             this.billingForm.phoneNumber = "";
             this.billingForm.country = "US";
-            this.billingForm.isDomestic = true;
+            this.billingForm.domestic = true;
         }
     }
 });

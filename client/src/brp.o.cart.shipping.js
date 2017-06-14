@@ -14,8 +14,8 @@ mul.set( "brp.o.cart.shipping" , [] , {
                 zipcode: "",
                 phoneNumber: "",
                 country: "US",
-                sameAsShipping: true,
-                isDomestic: true
+                sameForBilling: true,
+                domestic: true
             }
         }
     },
@@ -48,8 +48,8 @@ mul.set( "brp.o.cart.shipping" , [] , {
             this.shippingForm.zipcode = "";
             this.shippingForm.phoneNumber = "";
             this.shippingForm.country = "US";
-            this.shippingForm.sameAsShipping = true;
-            this.shippingForm.isDomestic = true;
+            this.shippingForm.sameForBilling = true;
+            this.shippingForm.domestic = true;
         }
     }
 });
