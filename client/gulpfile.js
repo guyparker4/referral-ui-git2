@@ -19,13 +19,13 @@ var uglify = require('gulp-uglify');
 process.env.NODE_ENV = "production"
 
 gulp.task( 'clean' , function( cb ){
-    return del([ './assets/js/*' ],{ force:true })
+    return del([ './brp/assets/js/*' ],{ force:true })
 });
 
 gulp.task( 'libs' , function( cb ){
     pump([
         gulp.src( [ './src/libs/*.js' ]),
-        gulp.dest( './assets/js/' )
+        gulp.dest( './brp/assets/js/' )
         ],
         cb
     );
@@ -48,11 +48,11 @@ gulp.task( 'core' , function (cb) {
 
 gulp.task( 'build' , function( cb ){
     pump([
-        gulp.src( [ './src/*.js' , '!./src/core/main.js', '!./src/libs/*.js' , '!./src/core/modules/*.js' , './assets/js/main.js' ]),
+        gulp.src( [ './src/*.js' , '!./src/core/main.js', '!./src/libs/*.js' , '!./src/core/modules/*.js' , './brp/assets/js/main.js' ]),
         babel({ presets: [ 'es2015' ] }),
         htmlTemplates( { pre: 'embed(' , post: ')' } ),
         uglify( { mangle:true , compress:true , warnings:false } ),
-        gulp.dest( './assets/js/' )
+        gulp.dest( './brp/assets/js/' )
         ],
         cb
     );
@@ -68,5 +68,5 @@ gulp.task( 'css' , function(){
     .pipe( postcss( processors ) )
     .pipe( cssnano() )
     .pipe( rename( "style.css" ) )
-    .pipe( gulp.dest( 'assets/css/' ) );
+    .pipe( gulp.dest( 'brp/assets/css/' ) );
 });

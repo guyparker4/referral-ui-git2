@@ -10,7 +10,7 @@
     "url": "https://subversion.assembla.com/referal/"
   },
   "scripts": {
-    "build": "cross-env NODE_ENV=development browserify -e src/core/main.js > assets/js/main.js"
+    "build": "cross-env NODE_ENV=development browserify -e src/core/main.js > brp/assets/js/main.js"
   },
   "browserify": {
     "transform": [
