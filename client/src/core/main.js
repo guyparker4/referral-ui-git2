@@ -23,7 +23,7 @@ brp.Vue.use( brp.VueRouter );
 
 //async
 brp.mul = require( './modules/mul' );
-brp.mul.root = "/brp/assets/js/";
+brp.mul.root = "/resources/client/brp/assets/js/";
 
 brp.mapping = require( './modules/mapping' );
 brp.libs = require( './modules/libs' );
