@@ -1,0 +1,33 @@
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Could not resolve host: Accept-Encoding
+* Closing connection 0
+curl: (6) Could not resolve host: Accept-Encoding
+*   Trying 12.190.116.232...
+* Connected to uat.iprint.com (12.190.116.232) port 443 (#1)
+* TLS 1.2 connection using TLS_RSA_WITH_AES_256_GCM_SHA384
+* Server certificate: uat.iprint.com
+* Server certificate: Symantec Class 3 Secure Server SHA256 SSL CA
+* Server certificate: VeriSign Universal Root Certification Authority
+> GET /rest/model/com/hcrc/rest/service/OrderActor/cartSummary HTTP/1.1
+> Host: uat.iprint.com
+> User-Agent: curl/7.43.0
+> Accept: */*
+> Cookie: BIGipServer~RC-PROD~POOL-uat.iprint.com-84=rd140o00000000000000000000ffff0ad38e14o84; JSESSIONID=0000BNXWXbMBVTWOxxQkjxstcfk:1aaesuvcq
+> Content-Type: application/json
+> 
+< HTTP/1.1 200 OK
+< Date: Wed, 14 Jun 2017 20:14:48 GMT
+< X-Frame-Options: SAMEORIGIN
+< X-Powered-By: Servlet/3.0
+< X-ATG-Version: version=QVRHUGxhdGZvcm0vMTEuMg==
+< Access-Control-Allow-Origin: *
+< Access-Control-Allow-Headers: origin, x-requested-with, content-type
+< Transfer-Encoding: chunked
+< Content-Type: application/json; charset=UTF-8
+< Content-Language: en-US
+< 
+{ [1085 bytes data]
+{"order":{"userProfile":{"street2":"","isLogin":true,"street1":"11712 Palisades Pkwy","lastName":"Patrick","businessName":null,"zipcode":"78732","state":"TX","sendEmailPromotions":false,"companyName":null,"city":"Austin","country":"US","emailId":"ted@light.ly","phoneNumber":null,"profileId":"184202058","firstName":"Ted"},"recommendedProducts":[{"unitprice":"$16.45","onsale":false,"imageUrl":"/images/shared/catalog200x200/APPAREL1490023816/800_ffffff_p1-200x200.jpg","productUrl":"/estore/PROMOTIONAL+PRODUCTS/Apparel/Men's+Eperformance+Ottoman+Polo/prod3400023_prd.p","productName":"Men's Eperformance&trade; Ottoman Polo","success":true,"productId":"prod3400023_prd"},{"unitprice":"$19.75","onsale":false,"imageUrl":"/images/shared/catalog200x200/APPAREL1490021763/800_ffffff_p1-200x200.jpg","productUrl":"/estore/PROMOTIONAL+PRODUCTS/Apparel/Men's+Edry+Needle-Out+Interlock+Polo/prod3400021_prd.p","productName":"Men's Edry® Needle-Out Interlock Polo","success":true,"productId":"prod3400021_prd"},{"unitprice":"$10.95","onsale":false,"imageUrl":"/images/shared/catalog200x200/APPAREL1490025211/800_7c2020_p1-200x200.jpg","productUrl":"/estore/PROMOTIONAL+PRODUCTS/Apparel/Ladies'+Easy+Blend+Polo/prod3400082_prd.p","productName":"Ladies' Easy Blend&trade; Polo","success":true,"productId":"prod3400082_prd"},{"unitprice":"$12.05","onsale":false,"imageUrl":"/images/shared/catalog200x200/APPAREL1490024726/800_ffffff_p1-200x200.jpg","productUrl":"/estore/PROMOTIONAL+PRODUCTS/Apparel/Men's+Ringspun+Cotton+Piqu+Polo/prod3400078_prd.p","productName":"Men's Ringspun Cotton Piqué Polo","success":true,"productId":"prod3400078_prd"}],"promotionCode":[],"state":"INCOMPLETE","shippingGroups":[{"id":"sg101550005","relationshipId":"r86800005","shippingMethod":"hardgoodShippingGroup","shippingAddress":{"success":true},"success":true}],"commerceItems":[{"quantitySkus":[{"skuqty":24,"success":true},{"skuqty":48,"success":true},{"skuqty":72,"success":true},{"skuqty":144,"success":true},{"skuqty":999999,"success":true}],"productDisplayName":"Men's Easy Blend&trade; Polo - Classic Red (S)","imageUrl":"https://uat.iprint.com/services/UGCGetFileFromServer/2017/05/24/10/41/184202058/savedDesign/-1497477632/APPAREL1490024894_layout1_68766fe1.png","state":"INITIAL","editUrl":"/estore/PROMOTIONAL+PRODUCTS/Apparel/Men's+Easy+Blend+Polo/prod3400080_prd.p?commerceItemId=ci8722000010","productId":"prod3400080_prd","productType":"PROMO_APPAREL","id":"ci8722000010","relationshipId":"r86800005","priceInfo":{"amount":0,"currencyCode":"USD","success":true},"quantity":"24","success":true,"catalogRefId":"sku3352855_sk"}],"order":"o168362047","priceInfo":{"total":0,"subtotal":0,"discountAmount":0,"shipping":0,"tax":0},"upsellProducts":[{"unitprice":"$16.45","onsale":false,"imageUrl":"/images/shared/catalog200x200/APPAREL1490023816/800_ffffff_p1-200x200.jpg","productUrl":"/estore/PROMOTIONAL+PRODUCTS/Apparel/Men's+Eperformance+Ottoman+Polo/prod3400023_prd.p","productName":"Men's Eperformance&trade; Ottoman Polo","success":true,"productId":"prod3400023_prd"},{"unitprice":"$19.75","onsale":false,"imageUrl":"/images/shared/catalog200x200/APPAREL1490021763/800_ffffff_p1-200x200.jpg","productUrl":"/estore/PROMOTIONAL+PRODUCTS/Apparel/Men's+Edry+Needle-Out+Interlock+Polo/prod3400021_prd.p","productName":"Men's Edry® Needle-Out Interlock Polo","success":true,"productId":"prod3400021_prd"},{"unitprice":"$10.95","onsale":false,"imageUrl":"/images/shared/catalog200x200/APPAREL1490025211/800_7c2020_p1-200x200.jpg","productUrl":"/estore/PROMOTIONAL+PRODUCTS/Apparel/Ladies'+Easy+Blend+Polo/prod3400082_prd.p","productName":"Ladies' Easy Blend&trade; Polo","success":true,"productId":"prod3400082_prd"},{"unitprice":"$12.05","onsale":false,"imageUrl":"/images/shared/catalog200x200/APPAREL1490024726/800_ffffff_p1-200x200.jpg","productUrl":"/estore/PROMOTIONAL+PRODUCTS/Apparel/Men's+Ringspun+Cotton+Piqu+Polo/prod3400078_prd.p","productName":"Men's Ringspun Cotton Piqué Polo","success":true,"productId":"prod3400078_prd"}],"success":true,"totalCommerceItemCount":1},"status":"Success","type"100  4104    0  4104    0     0   8229      0 --:--:-- --:--:-- --:--:--  8229
+* Connection #1 to host uat.iprint.com left intact
+:"cart"}
