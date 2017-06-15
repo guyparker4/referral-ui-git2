@@ -1,36 +1,0 @@
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Could not resolve host: Accept-Encoding
-* Closing connection 0
-curl: (6) Could not resolve host: Accept-Encoding
-*   Trying 12.190.116.232...
-* Connected to uat.iprint.com (12.190.116.232) port 443 (#1)
-* TLS 1.2 connection using TLS_RSA_WITH_AES_256_GCM_SHA384
-* Server certificate: uat.iprint.com
-* Server certificate: Symantec Class 3 Secure Server SHA256 SSL CA
-* Server certificate: VeriSign Universal Root Certification Authority
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0> GET /services/savedDesigns?HCAuthToken=TestAuthToken123 HTTP/1.1
-> Host: uat.iprint.com
-> User-Agent: curl/7.43.0
-> Accept: */*
-> Cookie: BIGipServer~RC-PROD~POOL-uat.iprint.com-84=rd140o00000000000000000000ffff0ad38e14o84; JSESSIONID=0000BNXWXbMBVTWOxxQkjxstcfk:1aaesuvcq
-> Content-Type: application/json
-> 
-< HTTP/1.1 200 OK
-< Date: Wed, 14 Jun 2017 20:14:52 GMT
-< Server: WSO2-PassThrough-HTTP
-< X-Frame-Options: SAMEORIGIN
-< X-Frame-Options: SAMEORIGIN
-< Content-Language: en-US
-< Access-Control-Allow-Headers: origin, x-requested-with, content-type
-< Access-Control-Allow-Origin: *
-< X-ATG-Version: version=QVRHUGxhdGZvcm0vMTEuMg==
-< Content-Type: application/json; charset=UTF-8
-< X-Powered-By: Servlet/3.0
-< Access-Control-Allow-Headers: origin, x-requested-with, content-type
-< Transfer-Encoding: chunked
-< 
-{ [12 bytes data]
-100     2    0     2    0     0      3      0 --:--:-- --:--:-- --:--:--    16
-* Connection #1 to host uat.iprint.com left intact
-{}

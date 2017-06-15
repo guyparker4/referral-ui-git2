@@ -1,33 +1,0 @@
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Could not resolve host: Accept-Encoding
-* Closing connection 0
-curl: (6) Could not resolve host: Accept-Encoding
-*   Trying 12.190.116.232...
-* Connected to uat.iprint.com (12.190.116.232) port 443 (#1)
-  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0* TLS 1.2 connection using TLS_RSA_WITH_AES_256_GCM_SHA384
-* Server certificate: uat.iprint.com
-* Server certificate: Symantec Class 3 Secure Server SHA256 SSL CA
-* Server certificate: VeriSign Universal Root Certification Authority
-> GET /rest/model/com/hcrc/rest/service/savedDesignActor/savedDesign HTTP/1.1
-> Host: uat.iprint.com
-> User-Agent: curl/7.43.0
-> Accept: */*
-> Cookie: BIGipServer~RC-PROD~POOL-uat.iprint.com-84=rd140o00000000000000000000ffff0ad38e14o84; JSESSIONID=0000BNXWXbMBVTWOxxQkjxstcfk:1aaesuvcq
-> Content-Type: application/json
-> 
-< HTTP/1.1 200 OK
-< Date: Wed, 14 Jun 2017 20:14:52 GMT
-< X-Frame-Options: SAMEORIGIN
-< X-Powered-By: Servlet/3.0
-< X-ATG-Version: version=QVRHUGxhdGZvcm0vMTEuMg==
-< Access-Control-Allow-Origin: *
-< Access-Control-Allow-Headers: origin, x-requested-with, content-type
-< Transfer-Encoding: chunked
-< Content-Type: application/json; charset=UTF-8
-< Content-Language: en-US
-< 
-{ [7 bytes data]
-100     2    0     2    0     0      1      0 --:--:--  0:00:01 --:--:--     9
-* Connection #1 to host uat.iprint.com left intact
-{}
