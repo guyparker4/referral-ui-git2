@@ -4,6 +4,7 @@ rm *.out
 #UAT.signin.url = /rest/model/com/hcrc/rest/service/UserProfileActor/userLogin
 
 #WORKING
+
 #echo "DIRECT signin"
 #curl -b cookie.txt -c cookie.txt -k -L -v -H "Content-Type: application/json"  "Accept-Encoding: application/json" -d  "{ "login" : "ted@light.ly" , "password" :
 #"Powersdk00" }" -X POST "https://uat.iprint.com/rest/model/com/hcrc/rest/service/UserProfileActor/userLogin" &> UAT_IPRINT_REST_signin.out
@@ -95,15 +96,26 @@ rm *.out
 
 #UAT.setShippingAddress.url = /rest/model/com/hcrc/rest/service/ShippingGroupActor/setShippingAddress
 
-#UNTESTED
+#WORKING
 #echo "DIRECT setShippingAddress"
-#curl -b cookie.txt -c cookie.txt -k -L -v -H "Content-Type: application/json"  "Accept-Encoding: application/json" -d  "{ "login" : "ted@light.ly" , "password" :
-#"Powersdk00" }" -X POST "https://uat.iprint.com/rest/model/com/hcrc/rest/service/ShippingGroupActor/setShippingAddress" &> UAT_IPRINT_REST_setShippingAddress.out
+#curl -b cookie.txt -c cookie.txt -k -L -v -H "Content-Type: application/json"  "Accept-Encoding: application/json" -d  "{\"firstName\": \"Ravindernath\",\"lastName\": \"Vishwanath\",\"companyName\": \"HC\",\"street1\": \"15955 La Cantera Pkwy\",\"street2\": \"\",\"city\": \"San Antonio\",\"state\": \"TX\",\"zipcode\": \"78256\",\"phoneNumber\": \"2101234560\",  \"country\": \"US\",  \"sameForBilling\": true, \"domestic\": true }" -X POST "https://uat.iprint.com/rest/model/com/hcrc/rest/service/ShippingGroupActor/setShippingAddress" &> UAT_IPRINT_REST_setShippingAddress.out
 
 #UNTESTED
 #echo "setShippingAddress"
 #curl -b cookie.txt -c cookie.txt -k -L -v -H "Content-Type: application/json"  "Accept-Encoding: application/json" -d  "{ "login" : "ted@light.ly" , "password" :
 #"Powersdk00" }" -X POST "https://uat.iprint.com/services/setShippingAddress?HCAuthToken=TestAuthToken123" &> UAT_IPRINT_SERVICES_setShippingAddress.out
+
+
+#UAT.changeShippingAddress.url = /rest/model/com/hcrc/rest/service/ShippingGroupActor/changeShippingAddress
+
+#UNTESTED
+#echo "DIRECT changeShippingAddress"
+#curl -b cookie.txt -c cookie.txt -k -L -v -H "Content-Type: application/json"  "Accept-Encoding: application/json" -d  "{\"firstName\": \"Ravindernath\",\"lastName\": \"Vishwanath\",\"companyName\": \"HC\",\"street1\": \"15955 La Cantera Pkwy\",\"street2\": \"\",\"city\": \"San Antonio\",\"state\": \"TX\",\"zipcode\": \"78256\",\"phoneNumber\": \"2101234560\",  \"country\": \"US\",  \"sameForBilling\": true, \"domestic\": true }" -X POST "https://uat.iprint.com/rest/model/com/hcrc/rest/service/ShippingGroupActor/changeShippingAddress" &> UAT_IPRINT_REST_changeShippingAddress.out
+
+#UNTESTED
+#echo "changeShippingAddress"
+#curl -b cookie.txt -c cookie.txt -k -L -v -H "Content-Type: application/json"  "Accept-Encoding: application/json" -d  "{ "login" : "ted@light.ly" , "password" :
+#"Powersdk00" }" -X POST "https://uat.iprint.com/services/changeShippingAddress?HCAuthToken=TestAuthToken123" &> UAT_IPRINT_SERVICES_changeShippingAddress.out
 
 
 

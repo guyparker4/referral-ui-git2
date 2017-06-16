@@ -9,6 +9,9 @@ mul.set( "brp.o.toolbar" , [] , {
 			if( this.$route.path=='/cart/shipping' ){
 				return 2;
 			}
+			if( this.$route.path=='/cart/shippingmethod' ){
+				return 2;
+			}
 			if( this.$route.path=='/cart/billing' ){
 				return 2;
 			}

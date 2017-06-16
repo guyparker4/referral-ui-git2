@@ -105,7 +105,7 @@ validationModule.getShoppingCart = function( data ){
     console.log( result );
     //SUCCESS
     if( result.status == "Success" ){
-        brp.model.order = result.order;
+        //brp.model.order = result.order;
         return;
     }
 }

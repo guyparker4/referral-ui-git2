@@ -9,6 +9,9 @@ mul.set( "brp.o.productmenu" , [] , {
 			if( this.$route.path=='/cart/shipping' ){
 				return false;
 			}
+			if( this.$route.path=='/cart/shippingmethod' ){
+				return false;
+			}
 			if( this.$route.path=='/cart/billing' ){
 				return false;
 			}
