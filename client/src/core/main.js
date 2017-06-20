@@ -6,7 +6,7 @@ var brp = require( './modules/model' );
 //output to global
 window.brp = brp;
 
-brp.version = "001";
+brp.version = "0.{xxxxxxx}";
 
 //lodash
 brp._ = {};
@@ -27,6 +27,7 @@ brp.mul.root = "/resources/client/brp/assets/js/";
 
 brp.mapping = require( './modules/mapping' );
 brp.libs = require( './modules/libs' );
+brp.configuration = require( './modules/configuration' );
 brp.methods = require( './modules/methods' );
 brp.validation = require( './modules/validation' );
 brp.services = require( './modules/services' );
@@ -36,6 +37,7 @@ brp.config = {
     token:"TestAuthToken123",
     servicesBasePath: "/services"
 }
+
 //load version from html
 
 brp.router = new brp.VueRouter({

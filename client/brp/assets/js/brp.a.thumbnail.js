@@ -1,1 +1,0 @@
-"use strict";mul.set("brp.a.thumbnail",[],{template:' <div class="thumbnail">\n    <img :src="src">\n </div>\n',props:["src"]});

@@ -1,17 +1,16 @@
 {
-  "name": "build",
+  "name": "referral-build",
   "version": "1.0.0",
   "description": "build",
   "private": true,
   "license": "UNLICENSED",
   "engines": {
-    "node": "0.6.1"
+    "node": "0.6.11"
   },
   "repository": {
-    "type": "svn",
-    "url": "https://subversion.assembla.com/svn/streamline-ccp/"
+    "type": "git",
+    "url": "https://github.com/HarlandClarke/referral-ui.git"
   },
-  "devDependencies": {},
   "dependencies": {
     "shelljs": "0.6.0"
   }

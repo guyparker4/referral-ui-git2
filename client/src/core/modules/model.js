@@ -21,7 +21,8 @@ var modelModule = {
         modalError:false
     },
     methods: {},
-    storage:{}
+    storage:{},
+    configuration: {}
 };
 
 module.exports = modelModule;

@@ -1,1 +1,0 @@
-"use strict";mul.set("brp.a.callout",[],{template:'<div class="callout">\n    <slot></slot>\n</div>'});

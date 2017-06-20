@@ -1,1 +1,0 @@
-"use strict";mul.set("brp.a.cardheader",[],{template:' <div class="card-divider">\n    <slot></slot>\n </div>\n'});

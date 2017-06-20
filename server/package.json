@@ -13,9 +13,9 @@
   "license": "Apache-2.0",
   "private": true,
   "dependencies": {
-    "connect": "^3.2.0",
+    "connect": "3.6.2",
     "cors": "2.8.3",
-    "js-yaml": "^3.3.0",
+    "js-yaml": "3.8.4",
     "serve-static": "1.12.3",
     "superagent": "3.5.2",
     "swagger-tools": "0.10.1"

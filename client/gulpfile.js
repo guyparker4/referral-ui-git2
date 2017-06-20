@@ -15,11 +15,12 @@ var runSequence = require('run-sequence');
 var htmlTemplates = require('gulp-inject-stringified-html');
 var pump = require('pump');
 var uglify = require('gulp-uglify');
+var changed = require('gulp-changed');
 
 process.env.NODE_ENV = "production"
 
 gulp.task( 'clean' , function( cb ){
-    return del([ './resources/client/brp/assets/js/*' ],{ force:true })
+    return del([ './resources/client/brp/assets/js/*', './resources/client/brp/assets/css/*' ],{ force:true })
 });
 
 gulp.task( 'libs' , function( cb ){
@@ -32,7 +33,7 @@ gulp.task( 'libs' , function( cb ){
 });
 
 var server = require('gulp-server-livereload');
- 
+
 gulp.task('serve', function() {
   gulp.src('.')
     .pipe(server({
@@ -51,16 +52,16 @@ gulp.task( 'build' , function( cb ){
         gulp.src( [ './src/*.js' , '!./src/core/main.js', '!./src/libs/*.js' , '!./src/core/modules/*.js' , './resources/client/brp/assets/js/main.js' ]),
         babel({ presets: [ 'es2015' ] }),
         htmlTemplates( { pre: 'embed(' , post: ')' } ),
-        uglify( { mangle:true , compress:true , warnings:false } ),
+        uglify( { mangle:true , compress:true , warnings:false } ).on('error', function(e){
+          console.log( e ); }),
         gulp.dest( './resources/client/brp/assets/js/' )
         ],
         cb
     );
 });
 
-    
 gulp.task( 'prod' , function( callback ){
-    runSequence( 'clean' , 'libs' , 'core' , 'build' , callback );
+    runSequence( 'clean' , 'css', 'img', 'fonts', 'libs' , 'core' , 'build' , callback );
 });
 
 gulp.task( 'css' , function(){
@@ -70,3 +71,20 @@ gulp.task( 'css' , function(){
     .pipe( rename( "style.css" ) )
     .pipe( gulp.dest( 'resources/client/brp/assets/css/' ) );
 });
+
+gulp.task('img', function () {
+    return gulp.src(['./img/**/*'], { dot: true })
+      .pipe( changed( './resources/client/brp/assets/img/' ) )
+      .pipe( gulp.dest( './resources/client/brp/assets/img/' ) )
+});
+
+gulp.task( 'fonts', function () {
+    return gulp.src(['./fonts/**/*'], { dot: true })
+      .pipe( changed( './resources/client/brp/assets/fonts/' ) )
+      .pipe( gulp.dest( './resources/client/brp/assets/fonts/' ) )
+});
+
+gulp.task( 'automation', function () {
+    runSequence( 'clean' , 'css', 'img', 'fonts', 'libs' , 'core' , 'build' );
+});
+
