@@ -1,1 +1,0 @@
-"use strict";mul.set("brp.a.topbar",[],{template:'<div class="top-bar">\n    <slot></slot>\n</div>',props:["vertical","alignRight","alignLeft","alignCenter","expanded","simple"]});
