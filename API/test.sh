@@ -1,18 +1,18 @@
-rm *.out
-
+rm *.txt
+rm *.json
+#rm cookie.txt
 
 #UAT.signin.url = /rest/model/com/hcrc/rest/service/UserProfileActor/userLogin
 
 #WORKING
-
 #echo "DIRECT signin"
-#curl -b cookie.txt -c cookie.txt -k -L -v -H "Content-Type: application/json"  "Accept-Encoding: application/json" -d  "{ "login" : "ted@light.ly" , "password" :
-#"Powersdk00" }" -X POST "https://uat.iprint.com/rest/model/com/hcrc/rest/service/UserProfileActor/userLogin" &> UAT_IPRINT_REST_signin.out
+#curl -c cookie.txt -b cookie.txt -k -L -v -H "Content-Type: application/json" -H "Accept-Encoding: application/json" -d  '{ "login" : "ted@light.ly" , "password" :
+#"Powersdk00" }' -X POST "https://uat.iprint.com/rest/model/com/hcrc/rest/service/UserProfileActor/userLogin" &> UAT_IPRINT_REST_signin.txt
 
-#FAILURE
+#WORKING
 #echo "signin"
-#curl -b cookie.txt -c cookie.txt -k -L -v -H "Content-Type: application/json"  "Accept-Encoding: application/json" -d  "{ "login" : "ted@light.ly" , "password" :
-#"Powersdk00" }" -X POST "https://uat.iprint.com/services/signin?HCAuthToken=TestAuthToken123" &> UAT_IPRINT_SERVICES_signin.out
+#curl -c cookie.txt -b cookie.txt -k -L -v -H "Content-Type: application/json" -H "Accept-Encoding: application/json" -d  '{ "login" : "ted@light.ly" , "password" :
+#"Powersdk00" }' -X POST "https://uat.iprint.com/services/signin?HCAuthToken=TestAuthToken123" &> UAT_IPRINT_SERVICES_signin.txt
 
 
 
@@ -20,13 +20,13 @@ rm *.out
 
 #UNTESTED
 #echo "DIRECT create"
-#curl -b cookie.txt -c cookie.txt -k -L -v -H "Content-Type: application/json"  "Accept-Encoding: application/json" -d  "{ "login" : "ted@light.ly" , "password" :
-#"Powersdk00" }" -X POST "https://uat.iprint.com/rest/model/com/hcrc/rest/service/UserProfileActor/userRegistartion" &> UAT_IPRINT_REST_create.out
+#curl -c cookie.txt -b cookie.txt -k -L -v -H "Content-Type: application/json" -H "Accept-Encoding: application/json" -d  '{ "login" : "ted@light.ly" , "password" :
+#"Powersdk00" }' -X POST "https://uat.iprint.com/rest/model/com/hcrc/rest/service/UserProfileActor/userRegistartion" &> UAT_IPRINT_REST_create.txt
 
 #UNTESTED
 #echo "create"
-#curl -b cookie.txt -c cookie.txt -k -L -v -H "Content-Type: application/json"  "Accept-Encoding: application/json" -d  "{ "login" : "ted@light.ly" , "password" :
-#"Powersdk00" }" -X POST "https://uat.iprint.com/services/create?HCAuthToken=TestAuthToken123" &> UAT_IPRINT_SERVICES_create.out
+#curl -c cookie.txt -b cookie.txt -k -L -v -H "Content-Type: application/json" -H "Accept-Encoding: application/json" -d  '{ "login" : "ted@light.ly" , "password" :
+#"Powersdk00" }' -X POST "https://uat.iprint.com/services/create?HCAuthToken=TestAuthToken123" &> UAT_IPRINT_SERVICES_create.txt
 
 
 
@@ -34,13 +34,13 @@ rm *.out
 
 #UNTESTED
 #echo "DIRECT guest"
-#curl -b cookie.txt -c cookie.txt -k -L -v -H "Content-Type: application/json"  "Accept-Encoding: application/json" -d  "{ "login" : "ted@light.ly" , "password" :
-#"Powersdk00" }" -X POST "https://uat.iprint.com/rest/model/com/hcrc/rest/service/UserProfileActor/guestRegistartion" &> UAT_IPRINT_REST_guest.out
+#curl -c cookie.txt -b cookie.txt -k -L -v -H "Content-Type: application/json" -H "Accept-Encoding: application/json" -d  '{ "login" : "ted@light.ly" , "password" :
+#"Powersdk00" }' -X POST "https://uat.iprint.com/rest/model/com/hcrc/rest/service/UserProfileActor/guestRegistartion" &> UAT_IPRINT_REST_guest.txt
 
 #UNTESTED
 #echo "guest"
-#curl -b cookie.txt -c cookie.txt -k -L -v -H "Content-Type: application/json"  "Accept-Encoding: application/json" -d  "{ "login" : "ted@light.ly" , "password" :
-#"Powersdk00" }" -X POST "https://uat.iprint.com/services/guest?HCAuthToken=TestAuthToken123" &> UAT_IPRINT_SERVICES_guest.out
+#curl -c cookie.txt -b cookie.txt -k -L -v -H "Content-Type: application/json" -H "Accept-Encoding: application/json" -d  '{ "login" : "ted@light.ly" , "password" :
+#"Powersdk00" }' -X POST "https://uat.iprint.com/services/guest?HCAuthToken=TestAuthToken123" &> UAT_IPRINT_SERVICES_guest.txt
 
 
 
@@ -48,11 +48,11 @@ rm *.out
 
 #WORKING
 #echo "DIRECT changeQuantity"
-#curl -b cookie.txt -c cookie.txt -k -L -v -H "Content-Type: application/json"  "Accept-Encoding: application/json" -d  "{ "quantity": 32, "relationshipId": "r86800005"}" -X POST "https://uat.iprint.com/rest/model/com/hcrc/rest/service/CartModifierActor/changeQuantity" &> UAT_IPRINT_REST_changeQuantity.out
+#curl -c cookie.txt -b cookie.txt -k -L -v -H "Content-Type: application/json" -H "Accept-Encoding: application/json" -d  '{ "quantity": 50, "relationshipId": "r86800005"}' -X POST "https://uat.iprint.com/rest/model/com/hcrc/rest/service/CartModifierActor/changeQuantity" &> UAT_IPRINT_REST_changeQuantity.txt
 
-#FAILURE
+#WORKING
 #echo "changeQuantity"
-#curl -b cookie.txt -c cookie.txt -k -L -v -H "Content-Type: application/json"  "Accept-Encoding: application/json" -d  "{ "quantity": 30, "relationshipId": "r86800005"}" -X POST "https://uat.iprint.com/services/changeQuantity?HCAuthToken=TestAuthToken123" &> UAT_IPRINT_SERVICES_changeQuantity.out
+#curl -c cookie.txt -b cookie.txt -k -L -v -H "Content-Type: application/json" -H "Accept-Encoding: application/json" -d  '{ "quantity": 60, "relationshipId": "r86800005"}' -X POST "https://uat.iprint.com/services/changeQuantity?HCAuthToken=TestAuthToken123" &> UAT_IPRINT_SERVICES_changeQuantity.txt
 
 
 
@@ -60,11 +60,11 @@ rm *.out
 
 #WORKING
 #echo "DIRECT applyPromoCode"
-#curl -b cookie.txt -c cookie.txt -k -L -v -H "Content-Type: application/json"  "Accept-Encoding: application/json" -d "{ "promotionCode" : "BIZ30" }" -X POST "https://uat.iprint.com/rest/model/com/hcrc/rest/service/PromotionalActor/applyPromoCode" &> UAT_IPRINT_REST_applyPromoCode.out
+#curl -c cookie.txt -b cookie.txt -k -L -v -H "Content-Type: application/json" -H "Accept-Encoding: application/json" -d '{ "promotionCode" : "BIZ30" }' -X POST "https://uat.iprint.com/rest/model/com/hcrc/rest/service/PromotionalActor/applyPromoCode" &> UAT_IPRINT_REST_applyPromoCode.txt
 
-#FAILURE
+#WORKING
 #echo "applyPromoCode"
-#curl -b cookie.txt -c cookie.txt -k -L -v -H "Content-Type: application/json"  "Accept-Encoding: application/json" -d "{ "promotionCode" : "BIZ30" }" -X POST "https://uat.iprint.com/services/applyPromoCode?HCAuthToken=TestAuthToken123" &> UAT_IPRINT_SERVICES_applyPromoCode.out
+#curl -c cookie.txt -b cookie.txt -k -L -v -H "Content-Type: application/json" -H "Accept-Encoding: application/json" -d '{ "promotionCode" : "BIZ30" }' -X POST "https://uat.iprint.com/services/applyPromoCode?HCAuthToken=TestAuthToken123" &> UAT_IPRINT_SERVICES_applyPromoCode.txt
 
 
 
@@ -72,25 +72,23 @@ rm *.out
 
 #WORKING
 #echo "DIRECT removePromoCode"
-#curl -b cookie.txt -c cookie.txt -k -L -v -H "Content-Type: application/json"  "Accept-Encoding: application/json" -d "{ "promotionCode" : "BIZ30" }" -X POST "https://uat.iprint.com/rest/model/com/hcrc/rest/service/PromotionalActor/removePromoCode" &> UAT_IPRINT_REST_removePromoCode.out
+#curl -c cookie.txt -b cookie.txt -k -L -v -H "Content-Type: application/json" -H "Accept-Encoding: application/json" -d '{ "promotionCode" : "BIZ30" }' -X POST "https://uat.iprint.com/rest/model/com/hcrc/rest/service/PromotionalActor/removePromoCode" &> UAT_IPRINT_REST_removePromoCode.txt
 
-#FAILURE
+#WORKING
 #echo "removePromoCode"
-#curl -b cookie.txt -c cookie.txt -k -L -v -H "Content-Type: application/json"  "Accept-Encoding: application/json" -d "{ "promotionCode" : "BIZ30" }" -X POST "https://uat.iprint.com/services/removePromoCode?HCAuthToken=TestAuthToken123" &> UAT_IPRINT_SERVICES_removePromoCode.out
+#curl -c cookie.txt -b cookie.txt -k -L -v -H "Content-Type: application/json" -H "Accept-Encoding: application/json" -d '{ "promotionCode" : "BIZ30" }' -X POST "https://uat.iprint.com/services/removePromoCode?HCAuthToken=TestAuthToken123" &> UAT_IPRINT_SERVICES_removePromoCode.txt
 
 
 
 #UAT.removeOrderItem.url = /rest/model/com/hcrc/rest/service/CartModifierActor/removeOrderItem
 
-#UNTESTED
+#ERROR
 #echo "DIRECT removeOrderItem"
-#curl -b cookie.txt -c cookie.txt -k -L -v -H "Content-Type: application/json"  "Accept-Encoding: application/json" -d  "{ "login" : "ted@light.ly" , "password" :
-#"Powersdk00" }" -X POST "https://uat.iprint.com/rest/model/com/hcrc/rest/service/CartModifierActor/removeOrderItem" &> UAT_IPRINT_REST_removeOrderItem.out
+#curl -c cookie.txt -b cookie.txt -k -L -v -H "Content-Type: application/json" -H "Accept-Encoding: application/json" -d  '{ "relationshipId" : "r86800005" }' -X POST "https://uat.iprint.com/rest/model/com/hcrc/rest/service/CartModifierActor/removeOrderItem" &> UAT_IPRINT_REST_removeOrderItem.txt
 
-#UNTESTED
+#ERROR
 #echo "removeOrderItem"
-#curl -b cookie.txt -c cookie.txt -k -L -v -H "Content-Type: application/json"  "Accept-Encoding: application/json" -d  "{ "login" : "ted@light.ly" , "password" :
-#"Powersdk00" }" -X POST "https://uat.iprint.com/services/removeOrderItem?HCAuthToken=TestAuthToken123" &> UAT_IPRINT_SERVICES_removeOrderItem.out
+#curl -c cookie.txt -b cookie.txt -k -L -v -H "Content-Type: application/json" -H "Accept-Encoding: application/json" -d  '{ "relationshipId" : "r86800005"}' -X POST "https://uat.iprint.com/services/removeOrderItem?HCAuthToken=TestAuthToken123" &> UAT_IPRINT_SERVICES_removeOrderItem.txt
 
 
 
@@ -98,24 +96,11 @@ rm *.out
 
 #WORKING
 #echo "DIRECT setShippingAddress"
-#curl -b cookie.txt -c cookie.txt -k -L -v -H "Content-Type: application/json"  "Accept-Encoding: application/json" -d  "{\"firstName\": \"Ravindernath\",\"lastName\": \"Vishwanath\",\"companyName\": \"HC\",\"street1\": \"15955 La Cantera Pkwy\",\"street2\": \"\",\"city\": \"San Antonio\",\"state\": \"TX\",\"zipcode\": \"78256\",\"phoneNumber\": \"2101234560\",  \"country\": \"US\",  \"sameForBilling\": true, \"domestic\": true }" -X POST "https://uat.iprint.com/rest/model/com/hcrc/rest/service/ShippingGroupActor/setShippingAddress" &> UAT_IPRINT_REST_setShippingAddress.out
+#curl -c cookie.txt -b cookie.txt -k -L -v -H "Content-Type: application/json" -H "Accept-Encoding: application/json" -d  '{"firstName":"Ted","lastName":"Patrick","companyName":"Lightly LLC","street1":"11712 Palisades Parkway","street2":"Suite 1","city":"Austin","state":"TX","zipcode":"78732","phoneNumber":"4156453448","country":"US","sameForBilling":true,"domestic":true}' -X POST "https://uat.iprint.com/rest/model/com/hcrc/rest/service/ShippingGroupActor/setShippingAddress" &> UAT_IPRINT_REST_setShippingAddress.txt
 
 #UNTESTED
 #echo "setShippingAddress"
-#curl -b cookie.txt -c cookie.txt -k -L -v -H "Content-Type: application/json"  "Accept-Encoding: application/json" -d  "{ "login" : "ted@light.ly" , "password" :
-#"Powersdk00" }" -X POST "https://uat.iprint.com/services/setShippingAddress?HCAuthToken=TestAuthToken123" &> UAT_IPRINT_SERVICES_setShippingAddress.out
-
-
-#UAT.changeShippingAddress.url = /rest/model/com/hcrc/rest/service/ShippingGroupActor/changeShippingAddress
-
-#UNTESTED
-#echo "DIRECT changeShippingAddress"
-#curl -b cookie.txt -c cookie.txt -k -L -v -H "Content-Type: application/json"  "Accept-Encoding: application/json" -d  "{\"firstName\": \"Ravindernath\",\"lastName\": \"Vishwanath\",\"companyName\": \"HC\",\"street1\": \"15955 La Cantera Pkwy\",\"street2\": \"\",\"city\": \"San Antonio\",\"state\": \"TX\",\"zipcode\": \"78256\",\"phoneNumber\": \"2101234560\",  \"country\": \"US\",  \"sameForBilling\": true, \"domestic\": true }" -X POST "https://uat.iprint.com/rest/model/com/hcrc/rest/service/ShippingGroupActor/changeShippingAddress" &> UAT_IPRINT_REST_changeShippingAddress.out
-
-#UNTESTED
-#echo "changeShippingAddress"
-#curl -b cookie.txt -c cookie.txt -k -L -v -H "Content-Type: application/json"  "Accept-Encoding: application/json" -d  "{ "login" : "ted@light.ly" , "password" :
-#"Powersdk00" }" -X POST "https://uat.iprint.com/services/changeShippingAddress?HCAuthToken=TestAuthToken123" &> UAT_IPRINT_SERVICES_changeShippingAddress.out
+#curl -c cookie.txt -b cookie.txt -k -L -v -H "Content-Type: application/json" -H "Accept-Encoding: application/json" -d  '{"firstName":"Ted","lastName":"Patrick","companyName":"Lightly LLC","street1":"11712 Palisades Parkway","street2":"Suite 1","city":"Austin","state":"TX","zipcode":"78732","phoneNumber":"4156453448","country":"US","sameForBilling":true,"domestic":true}' -X POST "https://uat.iprint.com/services/setShippingAddress?HCAuthToken=TestAuthToken123" &> UAT_IPRINT_SERVICES_setShippingAddress.txt
 
 
 
@@ -123,11 +108,11 @@ rm *.out
 
 #WORKING
 #echo "DIRECT getShoppingCart"
-#curl -b cookie.txt -c cookie.txt -v -H "Content-Type: application/json"  "Accept-Encoding: application/json" -X GET "https://uat.iprint.com/rest/model/com/hcrc/rest/service/OrderActor/cartSummary" &> UAT_IPRINT_REST_getShoppingCart.out
+#curl -c cookie.txt -b cookie.txt -v -H "Content-Type: application/json" -H "Accept-Encoding: application/json" -X GET "https://uat.iprint.com/rest/model/com/hcrc/rest/service/OrderActor/cartSummary" &> UAT_IPRINT_REST_getShoppingCart.txt
 
 #WORKING
 #echo "getShoppingCart"
-#curl -b cookie.txt -c cookie.txt -v -H "Content-Type: application/json"  "Accept-Encoding: application/json" -X GET "https://uat.iprint.com/services/getShoppingCart?HCAuthToken=TestAuthToken123" &> UAT_IPRINT_SERVICES_getShoppingCart.out
+#curl -c cookie.txt -b cookie.txt -v -H "Content-Type: application/json" -H "Accept-Encoding: application/json" -X GET "https://uat.iprint.com/services/getShoppingCart?HCAuthToken=TestAuthToken123" > UAT_IPRINT_SERVICES_getShoppingCart.txt
 
 
 
@@ -135,11 +120,11 @@ rm *.out
 
 #WORKING
 #echo "DIRECT getHeaderInfo"
-#curl -b cookie.txt -c cookie.txt -v -H "Content-Type: application/json"  "Accept-Encoding: application/json" -X GET "https://uat.iprint.com/rest/model/com/hcrc/rest/service/ProductCatalogActor/catalogSummary" &> UAT_IPRINT_REST_getHeaderInfo.out
+#curl -c cookie.txt -b cookie.txt -v -H "Content-Type: application/json" -H "Accept-Encoding: application/json" -X GET "https://uat.iprint.com/rest/model/com/hcrc/rest/service/ProductCatalogActor/catalogSummary" &> UAT_IPRINT_REST_getHeaderInfo.txt
 
 #WORKING
 #echo "getHeaderInfo"
-#curl -b cookie.txt -c cookie.txt -v -H "Content-Type: application/json"  "Accept-Encoding: application/json" -X GET "https://uat.iprint.com/services/getHeaderInfo?HCAuthToken=TestAuthToken123" &> UAT_IPRINT_SERVICES_getHeaderInfo.out
+#curl -c cookie.txt -b cookie.txt -v -H "Content-Type: application/json" -H "Accept-Encoding: application/json" -X GET "https://uat.iprint.com/services/getHeaderInfo?HCAuthToken=TestAuthToken123" &> UAT_IPRINT_SERVICES_getHeaderInfo.txt
 
 
 
@@ -147,11 +132,11 @@ rm *.out
 
 #WORKING
 #echo "DIRECT getCartRecommendedProducts"
-#curl -b cookie.txt -c cookie.txt -v -H "Content-Type: application/json"  "Accept-Encoding: application/json" -X GET "https://uat.iprint.com/rest/model/com/hcrc/rest/service/OrderActor/recommendedProducts" &> UAT_IPRINT_REST_getCartRecommendedProducts.out
+#curl -c cookie.txt -b cookie.txt -v -H "Content-Type: application/json" -H "Accept-Encoding: application/json" -X GET "https://uat.iprint.com/rest/model/com/hcrc/rest/service/OrderActor/recommendedProducts" &> UAT_IPRINT_REST_getCartRecommendedProducts.txt
 
 #WORKING
 #echo "getCartRecommendedProducts"
-#curl -b cookie.txt -c cookie.txt -v -H "Content-Type: application/json"  "Accept-Encoding: application/json" -X GET "https://uat.iprint.com/services/getCartRecommendedProducts?HCAuthToken=TestAuthToken123" &> UAT_IPRINT_SERVICES_getCartRecommendedProducts.out
+#curl -c cookie.txt -b cookie.txt -v -H "Content-Type: application/json" -H "Accept-Encoding: application/json" -X GET "https://uat.iprint.com/services/getCartRecommendedProducts?HCAuthToken=TestAuthToken123" &> UAT_IPRINT_SERVICES_getCartRecommendedProducts.txt
 
 
 
@@ -159,8 +144,8 @@ rm *.out
 
 #FAILURE
 #echo "DIRECT savedDesigns"
-#curl -b cookie.txt -c cookie.txt -v -H "Content-Type: application/json"  "Accept-Encoding: application/json" -X GET "https://uat.iprint.com/rest/model/com/hcrc/rest/service/savedDesignActor/savedDesign" &> UAT_IPRINT_REST_savedDesigns.out
+#curl -c cookie.txt -b cookie.txt -v -H "Content-Type: application/json" -H "Accept-Encoding: application/json" -X GET "https://uat.iprint.com/rest/model/com/hcrc/rest/service/savedDesignActor/savedDesign" &> UAT_IPRINT_REST_savedDesigns.txt
 
 #FAILURE
 #echo "savedDesigns"
-#curl -b cookie.txt -c cookie.txt -v -H "Content-Type: application/json"  "Accept-Encoding: application/json" -X GET "https://uat.iprint.com/services/savedDesigns?HCAuthToken=TestAuthToken123" &> UAT_IPRINT_SERVICES_savedDesigns.out
+#curl -c cookie.txt -b cookie.txt -v -H "Content-Type: application/json" -H "Accept-Encoding: application/json" -X GET "https://uat.iprint.com/services/savedDesigns?HCAuthToken=TestAuthToken123" &> UAT_IPRINT_SERVICES_savedDesigns.txt

@@ -1,0 +1,44 @@
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 12.190.116.232...
+* Connected to uat.iprint.com (12.190.116.232) port 443 (#0)
+* TLS 1.2 connection using TLS_RSA_WITH_AES_256_GCM_SHA384
+* Server certificate: uat.iprint.com
+* Server certificate: Symantec Class 3 Secure Server SHA256 SSL CA
+* Server certificate: VeriSign Universal Root Certification Authority
+> POST /services/applyPromoCode?HCAuthToken=TestAuthToken123 HTTP/1.1
+> Host: uat.iprint.com
+> User-Agent: curl/7.43.0
+> Accept: */*
+> Content-Type: application/json
+> Accept-Encoding: application/json
+> Content-Length: 29
+> 
+} [29 bytes data]
+* upload completely sent off: 29 out of 29 bytes
+100    29    0     0  100    29      0    287 --:--:-- --:--:-- --:--:--   287< HTTP/1.1 200 OK
+< Date: Tue, 27 Jun 2017 19:29:49 GMT
+< Server: WSO2-PassThrough-HTTP
+< X-Frame-Options: SAMEORIGIN
+< X-Frame-Options: SAMEORIGIN
+< Content-Language: en-US
+< Access-Control-Allow-Headers: origin, x-requested-with, content-type
+< Access-Control-Allow-Origin: *
+< X-ATG-Version: version=QVRHUGxhdGZvcm0vMTEuMg==
+< Expires: Thu, 01 Dec 1994 16:00:00 GMT
+< Content-Type: application/json; charset=UTF-8
+< X-Powered-By: Servlet/3.0
+< Cache-Control: no-cache="set-cookie, set-cookie2"
+* Added cookie BIGipServer~RC-PROD~POOL-uat.iprint.com-84="rd140o00000000000000000000ffff0ad38e14o84" for domain uat.iprint.com, path /, expire 0
+< Set-Cookie: BIGipServer~RC-PROD~POOL-uat.iprint.com-84=rd140o00000000000000000000ffff0ad38e14o84; path=/
+* Added cookie JSESSIONID="0000q0xDIom9Z7UArdGNMwcOzBx:1aaesuvcq" for domain uat.iprint.com, path /, expire 0
+< Set-Cookie: JSESSIONID=0000q0xDIom9Z7UArdGNMwcOzBx:1aaesuvcq; Path=/; HttpOnly
+< Access-Control-Allow-Headers: origin, x-requested-with, content-type
+< Transfer-Encoding: chunked
+* Replaced cookie BIGipServer~RC-PROD~POOL-uat.iprint.com-84="rd140o00000000000000000000ffff0ad38e14o84" for domain uat.iprint.com, path /, expire 0
+< Set-Cookie: BIGipServer~RC-PROD~POOL-uat.iprint.com-84=rd140o00000000000000000000ffff0ad38e14o84; path=/
+< 
+{ [647 bytes data]
+100   664    0   635  100    29   6210    283 --:--:-- --:--:-- --:--:--  6165
+* Connection #0 to host uat.iprint.com left intact
+{"order":{"userProfile":{"street2":null,"isLogin":false,"street1":null,"lastName":null,"businessName":null,"zipcode":null,"state":null,"sendEmailPromotions":true,"companyName":null,"domestic":true,"city":null,"country":"US","emailId":null,"phoneNumber":null,"profileId":"188182382","firstName":null},"recommendedProducts":[],"promotionCode":[{"couponCode":"BIZ30","success":true}],"state":"INCOMPLETE","shippingGroups":[],"commerceItems":[],"order":"o170292317","priceInfo":{"total":0,"subtotal":0,"discountAmount":0,"shipping":0,"tax":0},"upsellProducts":[],"success":true,"totalCommerceItemCount":0},"status":"Success","type":"cart"}

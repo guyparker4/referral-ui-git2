@@ -110,6 +110,28 @@ validationModule.getShoppingCart = function( data ){
     }
 }
 
+validationModule.validateAddress = function( data ){
+    console.log( "brp.validation.validateAddress" );
+    try{
+        var result = JSON.parse( data );
+    }catch(e){
+        brp.model.errors.push( {'code':'VVAS001', 'message':'Invalid JSON in validateAddress( validation )'} );
+        brp.model.modalError = true;
+        return;
+    }
+    if( result.error ){
+        brp.model.errors.push( {'code':result.error.code, 'message': result.error.message } );
+        brp.model.modalError = true;
+        return;
+    }
+    //SUCCESS
+    if( result.status == "Success" ){
+        brp.model.catalog = result.catalog;
+        return;
+    }
+}
+
+
 validationModule.getCatalogSummary = function( data ){
     console.log( "brp.validation.getCatalogSummary" );
     try{

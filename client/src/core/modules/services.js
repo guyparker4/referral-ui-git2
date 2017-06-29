@@ -203,6 +203,23 @@ servicesModule.setShippingAddress = function( data ){
     });
 }
 
+servicesModule.validateAddress = function( data ){
+    console.log( "brp.services.validateAddress" );
+    brp.libs.agent.post( brp.config.servicesBasePath + '/validateAddress' )
+    .type( 'json' )
+    .query({'HCAuthToken': brp.config.token })
+    .send( data )
+    .end( function( err , res ){
+        if( err || !res.ok ){
+            //error handling
+            brp.model.errors.push( {'code':'SVA001', 'message':'Error in call to validateAddress'} );
+            brp.model.modalError = true;
+        }else{
+            brp.validation.validateAddress( res.text );
+        }
+    });
+}
+
 servicesModule.setBillingAddress = function( data ){
     console.log( "brp.services.setBillingAddress" );
     brp.libs.agent.post( brp.config.servicesBasePath + '/setBillingAddress' )
