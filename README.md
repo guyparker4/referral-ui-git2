@@ -19,3 +19,4 @@ RUN:
     - Build the client project using "gulp prod"
     - Starts local API Server mocking real API at https://uat.iprint.com/services
   
+test change by Guy
