@@ -41,7 +41,7 @@ function init () {
 }
 
 function setDomain() {
-  configurationModule.domain = 'https://uat.iprint.com/';
+  configurationModule.domain = 'https://uat.iprint.com';
 }
 
 function setSession() {

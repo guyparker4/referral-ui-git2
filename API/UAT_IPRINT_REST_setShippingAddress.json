@@ -75,9 +75,37 @@
                     "priceInfo": {
                         "currencyCode": "USD",
                         "amount": 0,
-                        "rawShipping": 0
+                        "rawShipping": 9.11
                     },
-                    "shippingOptions": [],
+                    "shippingOptions": [
+                        {
+                            "shipMethod": "UPS Ground",
+                            "shippingPrice": "9.1096",
+                            "estimatedDeliveryDate": "07-17-2017 01:00:00",
+                            "carrier": "UPS",
+                            "shipMethodId": "03",
+                            "carrierURL": "http://wwwapps.ups.com/WebTracking/OnlineTool?InquiryNumber1",
+                            "success": true
+                        },
+                        {
+                            "shipMethod": "UPS 2nd Day",
+                            "shippingPrice": "17.0156",
+                            "estimatedDeliveryDate": "07-17-2017 01:00:00",
+                            "carrier": "UPS",
+                            "shipMethodId": "02",
+                            "carrierURL": "http://wwwapps.ups.com/WebTracking/OnlineTool?InquiryNumber1",
+                            "success": true
+                        },
+                        {
+                            "shipMethod": "UPS Next Day ",
+                            "shippingPrice": "29.795",
+                            "estimatedDeliveryDate": "07-14-2017 01:00:00",
+                            "carrier": "UPS",
+                            "shipMethodId": "01",
+                            "carrierURL": "http://wwwapps.ups.com/WebTracking/OnlineTool?InquiryNumber1",
+                            "success": true
+                        }
+                    ],
                     "company": "Lightly LLC",
                     "firstName": "Ted",
                     "success": true

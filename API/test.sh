@@ -5,9 +5,9 @@ rm *.json
 #UAT.signin.url = /rest/model/com/hcrc/rest/service/UserProfileActor/userLogin
 
 #WORKING
-#echo "DIRECT signin"
-#curl -c cookie.txt -b cookie.txt -k -L -v -H "Content-Type: application/json" -H "Accept-Encoding: application/json" -d  '{ "login" : "ted@light.ly" , "password" :
-#"Powersdk00" }' -X POST "https://uat.iprint.com/rest/model/com/hcrc/rest/service/UserProfileActor/userLogin" &> UAT_IPRINT_REST_signin.txt
+echo "DIRECT signin"
+curl -c cookie.txt -b cookie.txt -k -L -v -H "Content-Type: application/json" -H "Accept-Encoding: application/json" -d  '{ "login" : "ted@light.ly" , "password" :
+"Powersdk00" }' -X POST "https://uat.iprint.com/rest/model/com/hcrc/rest/service/UserProfileActor/userLogin" &> UAT_IPRINT_REST_signin.txt
 
 #WORKING
 #echo "signin"
@@ -95,8 +95,8 @@ rm *.json
 #UAT.setShippingAddress.url = /rest/model/com/hcrc/rest/service/ShippingGroupActor/setShippingAddress
 
 #WORKING
-#echo "DIRECT setShippingAddress"
-#curl -c cookie.txt -b cookie.txt -k -L -v -H "Content-Type: application/json" -H "Accept-Encoding: application/json" -d  '{"firstName":"Ted","lastName":"Patrick","companyName":"Lightly LLC","street1":"11712 Palisades Parkway","street2":"Suite 1","city":"Austin","state":"TX","zipcode":"78732","phoneNumber":"4156453448","country":"US","sameForBilling":true,"domestic":true}' -X POST "https://uat.iprint.com/rest/model/com/hcrc/rest/service/ShippingGroupActor/setShippingAddress" &> UAT_IPRINT_REST_setShippingAddress.txt
+echo "DIRECT setShippingAddress"
+curl -c cookie.txt -b cookie.txt -k -L -v -H "Content-Type: application/json" -H "Accept-Encoding: application/json" -d  '{"firstName":"Ted","lastName":"Patrick","companyName":"Lightly LLC","street1":"11712 Palisades Parkway","street2":"Suite 1","city":"Austin","state":"TX","zipcode":"78732","phoneNumber":"4156453448","country":"US","sameForBilling":true,"domestic":true}' -X POST "https://uat.iprint.com/rest/model/com/hcrc/rest/service/ShippingGroupActor/setShippingAddress" &> UAT_IPRINT_REST_setShippingAddress.txt
 
 #UNTESTED
 #echo "setShippingAddress"
